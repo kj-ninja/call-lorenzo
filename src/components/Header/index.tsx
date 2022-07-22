@@ -1,8 +1,15 @@
+import Navbar from "../Navbar";
+import StyledHeader from "./styles";
+import {header} from "../../content";
+
 const Header = () => {
+  const {title, navigation} = header;
+
   return (
-    <header>
-      Header
-    </header>
+    <StyledHeader>
+      <h1>{title}</h1>
+      <Navbar navigation={navigation} />
+    </StyledHeader>
   );
 };
 
