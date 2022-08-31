@@ -8,6 +8,6 @@ const theme = {
   fontFamily: {
     primaryFont: '"Roboto", "sans-serif"',
   },
-}
+};
 
 export default theme;

@@ -1,9 +1,9 @@
 import Navbar from "../Navbar";
 import StyledHeader from "./styles";
-import {header} from "../../content";
+import {content} from "../../content";
 
 const Header = () => {
-  const {title, navigation} = header;
+  const {title, navigation} = content.header;
 
   return (
     <StyledHeader>

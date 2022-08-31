@@ -1,10 +1,11 @@
 import Header from "./components/Header";
+import HowAreWeDoing from "./components/HowAreWeDoing";
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <h1>Hello World!</h1>
+      <HowAreWeDoing/>
     </div>
   );
 }
