@@ -86,9 +86,16 @@ export const ImportantNotes = styled.div`
   padding: 10px;
   border: 3px solid ${(props) => props.theme.colors.secondaryColor};
 
-  @media only screen and ${breakpoint.device.pc} {
-    .text-margin {
-      margin-bottom: 5px;
+  .text-margin {
+    margin-bottom: 5px;
+  }
+  
+  .payment-methods {
+    display: flex;
+    justify-content: space-between;
+    
+    span {
+      margin-right: 5px;
     }
   }
 `;

@@ -22,7 +22,7 @@ const HowMuchIsIt = () => {
         </div>
         <ImportantNotes>
           <span className="text-margin">! WAŻNE !</span>
-          <span>W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie</span>
+          <span>W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.</span>
         </ImportantNotes>
       </Pricing>
 
@@ -40,7 +40,12 @@ const HowMuchIsIt = () => {
         </div>
         <ImportantNotes>
           <span className="text-margin">DOSTĘPNE FORMY PŁATNOŚCI</span>
-          <span>- BLIK -gotówka -przelew bankowy</span>
+          <div className='payment-methods'>
+            <span>-BLIK</span>
+            <span>-gotówka</span>
+            <span>-przelew bankowy</span>
+          </div>
+
         </ImportantNotes>
       </AdditionalFees>
 
