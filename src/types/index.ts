@@ -4,5 +4,17 @@ export interface ITile {
   icon: string | null;
 }
 
+export interface IPricing {
+  price: number | string;
+  additionalCharacter: string;
+  km: number | string;
+}
+
+export interface IAdditionalFees {
+  feesText: string;
+  feesDescription: string;
+  feesValue: string;
+}
+
 // general
 export type KeyString = { [key: string]: string };

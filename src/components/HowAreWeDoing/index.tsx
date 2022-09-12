@@ -8,7 +8,6 @@ interface Props {
 const HowAreWeDoing: FC<Props> = () => {
 const {tiles} = content.howAreWeDoing;
 
-  console.log(tiles);
   return (
     <StyledHowAreWeDoing>
       <h2>Jak działamy?</h2>
