@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import breakpoint from "../../styles/breakpoint";
 
 export const StyledHowMuchIsIt = styled.section`
   display: flex;
   flex-direction: column;
+  
   
   h2 {
     text-align: center;
@@ -38,7 +40,12 @@ export const Pricing = styled.div`
   .table-row__km-cells__text {
     font-weight: bolder;
   }
-`
+
+  @media only screen and ${breakpoint.device.pc} {
+    align-self: center;
+    width: 40%;
+  }
+`;
 
 export const AdditionalFees = styled.div`
   width: 80%;
@@ -61,7 +68,12 @@ export const AdditionalFees = styled.div`
   .table-row__text-style {
     font-weight: bold;
   }
-`
+
+  @media only screen and ${breakpoint.device.pc} {
+    align-self: center;
+    width: 40%;
+  }
+`;
 
 export const ImportantNotes = styled.div`
   width: 100%;
@@ -71,4 +83,10 @@ export const ImportantNotes = styled.div`
   margin: 15px 0;
   padding: 10px;
   border: 3px solid ${(props) => props.theme.colors.secondaryColor};
-`
+
+  @media only screen and ${breakpoint.device.pc} {
+    .text-margin {
+      margin-bottom: 5px;
+    }
+  }
+`;
