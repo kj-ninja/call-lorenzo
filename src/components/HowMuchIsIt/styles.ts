@@ -10,7 +10,7 @@ export const StyledHowMuchIsIt = styled.section`
 `
 
 export const Pricing = styled.div`
-  width: 75%;
+  width: 80%;
   align-self: flex-start;
   margin-top: 15px;
   
@@ -41,7 +41,7 @@ export const Pricing = styled.div`
 `
 
 export const AdditionalFees = styled.div`
-  width: 75%;
+  width: 80%;
   align-self: flex-end;
   margin-top: 15px;
 
@@ -62,7 +62,6 @@ export const AdditionalFees = styled.div`
     font-weight: bold;
   }
 `
-
 
 export const ImportantNotes = styled.div`
   width: 100%;

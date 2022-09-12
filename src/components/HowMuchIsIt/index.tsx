@@ -1,5 +1,5 @@
-import { AdditionalFees, ImportantNotes, Pricing, StyledHowMuchIsIt } from "./styles";
 import { content } from "../../content";
+import { AdditionalFees, ImportantNotes, Pricing, StyledHowMuchIsIt } from "./styles";
 
 const HowMuchIsIt = () => {
   const { prices,additionalFees } = content.howMuchIsIt;
