@@ -92,10 +92,12 @@ export const ImportantNotes = styled.div`
   
   .payment-methods {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     
     span {
-      margin-right: 5px;
+      margin-right: 2px;
+      font-size: 12px;
     }
   }
 `;

@@ -121,7 +121,7 @@ export const content: IContent = {
       },
       {
         method: "przelew bankowy"
-      },
+      }
     ]
   }
 };
