@@ -16,5 +16,9 @@ export interface IAdditionalFees {
   feesValue: string;
 }
 
+export interface IPaymentMethod {
+  method: string;
+}
+
 // general
 export type KeyString = { [key: string]: string };

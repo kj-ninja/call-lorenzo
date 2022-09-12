@@ -1,4 +1,4 @@
-import { ITile, IPricing, IAdditionalFees } from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod } from "../types";
 
 interface IContent {
   header: {
@@ -11,6 +11,7 @@ interface IContent {
   howMuchIsIt: {
     prices: IPricing[];
     additionalFees: IAdditionalFees[];
+    paymentMethods: IPaymentMethod[];
   }
 }
 
@@ -110,6 +111,17 @@ export const content: IContent = {
         feesDescription: "oczekiwania",
         feesValue: "+ 10 zł"
       }
+    ],
+    paymentMethods: [
+      {
+        method: "BLIK"
+      },
+      {
+        method: "gotówka"
+      },
+      {
+        method: "przelew bankowy"
+      },
     ]
   }
 };

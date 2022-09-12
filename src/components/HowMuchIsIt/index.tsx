@@ -2,7 +2,7 @@ import { content } from "../../content";
 import { AdditionalFees, ImportantNotes, Pricing, StyledHowMuchIsIt } from "./styles";
 
 const HowMuchIsIt = () => {
-  const { prices,additionalFees } = content.howMuchIsIt;
+  const { prices,additionalFees, paymentMethods } = content.howMuchIsIt;
 
   return (
     <StyledHowMuchIsIt>
@@ -41,9 +41,9 @@ const HowMuchIsIt = () => {
         <ImportantNotes>
           <span className="text-margin">DOSTĘPNE FORMY PŁATNOŚCI</span>
           <div className='payment-methods'>
-            <span>-BLIK</span>
-            <span>-gotówka</span>
-            <span>-przelew bankowy</span>
+            {paymentMethods.map((method) => (
+              <span>-{method.method}</span>
+            ))}
           </div>
 
         </ImportantNotes>
