@@ -9,7 +9,7 @@ const HowMuchIsIt = () => {
       <h2>Ile to kosztuje?</h2>
 
       <Pricing>
-        <div>
+        <div className="table">
         {prices.map((price) => (
           <div className="table-row">
             <div className='table-row__price-cell'>{price.price}</div>

@@ -24,6 +24,7 @@ export const Pricing = styled.div`
     border-bottom: 1px solid black;
     background-color: ${(props) => props.theme.colors.secondaryColor};
   }
+  
   .table-row:last-child {
     border-bottom: none;
   }
@@ -43,7 +44,8 @@ export const Pricing = styled.div`
 
   @media only screen and ${breakpoint.device.pc} {
     align-self: center;
-    width: 40%;
+    width: 45%;
+    margin-bottom: 20px;
   }
 `;
 
@@ -71,7 +73,7 @@ export const AdditionalFees = styled.div`
 
   @media only screen and ${breakpoint.device.pc} {
     align-self: center;
-    width: 40%;
+    width: 45%;
   }
 `;
 
