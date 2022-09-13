@@ -8,7 +8,7 @@ interface IContent {
   howAreWeDoing: {
     tiles: ITile[];
   },
-  howMuchIsIt: {
+  howMuchItCost: {
     prices: IPricing[];
     additionalFees: IAdditionalFees[];
     paymentMethods: IPaymentMethod[];
@@ -64,7 +64,7 @@ export const content: IContent = {
       },
     ],
   },
-  howMuchIsIt: {
+  howMuchItCost: {
     prices: [
       {
         price: "80 zł",

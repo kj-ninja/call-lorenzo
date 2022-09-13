@@ -2,7 +2,7 @@ import { content } from "../../content";
 import { AdditionalFees, ImportantNotes, Pricing, StyledHowMuchIsIt } from "./styles";
 
 const HowMuchItCost = () => {
-  const { prices,additionalFees, paymentMethods, texts } = content.howMuchIsIt;
+  const { prices,additionalFees, paymentMethods, texts } = content.howMuchItCost;
 
   return (
     <StyledHowMuchIsIt>
