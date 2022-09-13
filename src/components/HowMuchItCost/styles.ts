@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import breakpoint from "../../settings/media";
+import { IDevice } from "../../settings/media";
 
 export const StyledHowMuchIsIt = styled.section`
   display: flex;
@@ -41,7 +41,7 @@ export const Pricing = styled.div`
     font-weight: bolder;
   }
 
-  @media only screen and ${breakpoint.IDevice.desktopXS} {
+  @media only screen and ${IDevice.desktopXS} {
     align-self: center;
     width: 45%;
     margin-bottom: 20px;
@@ -70,7 +70,7 @@ export const AdditionalFees = styled.div`
     font-weight: bold;
   }
 
-  @media only screen and ${breakpoint.IDevice.desktopXS} {
+  @media only screen and ${IDevice.desktopXS} {
     align-self: center;
     width: 45%;
   }
