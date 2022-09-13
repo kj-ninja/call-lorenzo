@@ -6,6 +6,7 @@ export const StyledHowMuchIsIt = styled.section`
   flex-direction: column;
   
   h2 {
+    margin-top: 10px;
     text-align: center;
   }
 `
@@ -13,13 +14,13 @@ export const StyledHowMuchIsIt = styled.section`
 export const Pricing = styled.div`
   width: 80%;
   align-self: flex-start;
-  margin-top: 15px;
+  margin-top: 14px;
   
   .table-row {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 5px 0;
+    padding: 2.5px 0;
     border-bottom: 1px solid black;
     background-color: ${(props) => props.theme.colors.secondaryColor};
   }
@@ -51,13 +52,13 @@ export const Pricing = styled.div`
 export const AdditionalFees = styled.div`
   width: 80%;
   align-self: flex-end;
-  margin-top: 15px;
+  margin-top: 10px;
 
   .table-row {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 5px 0;
+    padding: 2px 0;
     border-bottom: 1px solid black;
     background-color: ${(props) => props.theme.colors.secondaryColor};
   }
@@ -81,8 +82,8 @@ export const ImportantNotes = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px 0;
-  padding: 10px;
+  margin: 15px 0 5px 0;
+  padding: 5px;
   border: 3px solid ${(props) => props.theme.colors.secondaryColor};
 
   .payments-title {

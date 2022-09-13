@@ -1,17 +1,23 @@
-import { StyledWhenWeWork } from "./styles";
-import driver from "../../assets/driver.svg";
+import { content } from "../../content";
+import {
+  StyledWhenWeWork,
+  ImageContainer
+} from "./styles";
 
 const WhenWeWork = () => {
+  const {sectionTexts } = content.whenWeWork;
+
   return (
     <StyledWhenWeWork>
-      <h2>Kiedy Pracujemy?</h2>
+      <h2>{sectionTexts.title}</h2>
       <div className="container">
-        <div>
-          <span>Codziennie 18:00 - 1:00*</span>
+        <div className="container__first-tile">
+          {sectionTexts.coreHours}
         </div>
-        <img src={driver} alt="My Happy SVG"/>
-        <div>
-          *po wcześniejszym umówieniu, jesteśmy do dyspozycji <span>24/7</span>
+        <ImageContainer />
+        <div className="container__second-tile">
+          <span className='tile-description'>{sectionTexts.description} </span>
+          <span className='tile-description tile-margin'>{sectionTexts.description2} <span className='tile-hours'>{sectionTexts.additionalHours}</span></span>
         </div>
       </div>
     </StyledWhenWeWork>

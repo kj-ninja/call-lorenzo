@@ -1,4 +1,4 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText } from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork } from "../types";
 
 interface IContent {
   header: {
@@ -14,7 +14,9 @@ interface IContent {
     paymentMethods: IPaymentMethod[];
     texts: ICostText;
   },
-
+  whenWeWork: {
+    sectionTexts: IWhenWeWork
+  }
 }
 
 export const content: IContent = {
@@ -125,13 +127,20 @@ export const content: IContent = {
         method: "przelew bankowy"
       }
     ],
-    texts:
-      {
-        title: "Ile to kosztuje?",
-        paymentNoteText: "W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.",
-        firstPaymentTitle: "! WAŻNE !",
-        secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
-      }
-
+    texts: {
+      title: "Ile to kosztuje?",
+      paymentNoteText: "W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.",
+      firstPaymentTitle: "! WAŻNE !",
+      secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
+    }
+  },
+  whenWeWork: {
+    sectionTexts: {
+      title: "Kiedy Pracujemy?",
+      coreHours: "Codziennie 18:00 - 1:00*",
+      description: "*po wcześniejszym umówieniu,",
+      description2: "jesteśmy do dyspozycji",
+      additionalHours: "24/7"
+    }
   }
 };
