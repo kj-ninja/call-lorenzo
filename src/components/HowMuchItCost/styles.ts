@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import breakpoint from "../settings/media";
+import breakpoint from "../../settings/media";
 
 export const StyledHowMuchIsIt = styled.section`
   display: flex;
