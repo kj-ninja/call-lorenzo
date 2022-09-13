@@ -1,13 +1,13 @@
 import Header from "./components/Header";
 import HowAreWeDoing from "./components/HowAreWeDoing";
-import HowMuchIsIt from "./components/HowMuchIsIt";
+import HowMuchItCost from "./components/HowMuchItCost";
 
 function App() {
   return (
     <div className="App">
       <Header/>
       <HowAreWeDoing/>
-      <HowMuchIsIt />
+      <HowMuchItCost />
     </div>
   );
 }

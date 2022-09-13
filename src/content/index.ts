@@ -1,4 +1,4 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod } from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText } from "../types";
 
 interface IContent {
   header: {
@@ -12,7 +12,9 @@ interface IContent {
     prices: IPricing[];
     additionalFees: IAdditionalFees[];
     paymentMethods: IPaymentMethod[];
-  }
+    texts: ICostText;
+  },
+
 }
 
 export const content: IContent = {
@@ -122,6 +124,14 @@ export const content: IContent = {
       {
         method: "przelew bankowy"
       }
-    ]
+    ],
+    texts:
+      {
+        title: "Ile to kosztuje?",
+        paymentNoteText: "W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.",
+        firstPaymentTitle: "! WAŻNE !",
+        secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
+      }
+
   }
 };

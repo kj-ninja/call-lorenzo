@@ -20,5 +20,12 @@ export interface IPaymentMethod {
   method: string;
 }
 
+export interface ICostText {
+  title: string;
+  paymentNoteText: string;
+  firstPaymentTitle: string;
+  secondPaymentTitle: string;
+}
+
 // general
 export type KeyString = { [key: string]: string };

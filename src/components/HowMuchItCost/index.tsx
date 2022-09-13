@@ -1,12 +1,12 @@
 import { content } from "../../content";
 import { AdditionalFees, ImportantNotes, Pricing, StyledHowMuchIsIt } from "./styles";
 
-const HowMuchIsIt = () => {
-  const { prices,additionalFees, paymentMethods } = content.howMuchIsIt;
+const HowMuchItCost = () => {
+  const { prices,additionalFees, paymentMethods, texts } = content.howMuchIsIt;
 
   return (
     <StyledHowMuchIsIt>
-      <h2>Ile to kosztuje?</h2>
+      <h2>{texts.title}</h2>
 
       <Pricing>
         <div className="table">
@@ -21,8 +21,8 @@ const HowMuchIsIt = () => {
         ))}
         </div>
         <ImportantNotes>
-          <span className="text-margin">! WAŻNE !</span>
-          <span>W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.</span>
+          <span className="payments-title">{texts.firstPaymentTitle}</span>
+          <span>{texts.paymentNoteText}</span>
         </ImportantNotes>
       </Pricing>
 
@@ -39,7 +39,7 @@ const HowMuchIsIt = () => {
           ))}
         </div>
         <ImportantNotes>
-          <span className="text-margin">DOSTĘPNE FORMY PŁATNOŚCI</span>
+          <span className="payments-title">{texts.secondPaymentTitle}</span>
           <div className='payment-methods'>
             {paymentMethods.map((method) => (
               <span>-{method.method}</span>
@@ -53,4 +53,4 @@ const HowMuchIsIt = () => {
   )
 }
 
-export default HowMuchIsIt;
+export default HowMuchItCost;

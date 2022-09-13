@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import breakpoint from "../../styles/breakpoint";
+import breakpoint from "../settings/media";
 
 export const StyledHowMuchIsIt = styled.section`
   display: flex;
   flex-direction: column;
-  
   
   h2 {
     text-align: center;
@@ -42,7 +41,7 @@ export const Pricing = styled.div`
     font-weight: bolder;
   }
 
-  @media only screen and ${breakpoint.device.pc} {
+  @media only screen and ${breakpoint.IDevice.desktopXS} {
     align-self: center;
     width: 45%;
     margin-bottom: 20px;
@@ -71,7 +70,7 @@ export const AdditionalFees = styled.div`
     font-weight: bold;
   }
 
-  @media only screen and ${breakpoint.device.pc} {
+  @media only screen and ${breakpoint.IDevice.desktopXS} {
     align-self: center;
     width: 45%;
   }
@@ -86,7 +85,7 @@ export const ImportantNotes = styled.div`
   padding: 10px;
   border: 3px solid ${(props) => props.theme.colors.secondaryColor};
 
-  .text-margin {
+  .payments-title {
     margin-bottom: 5px;
   }
   
