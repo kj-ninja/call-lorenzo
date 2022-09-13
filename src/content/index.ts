@@ -1,4 +1,4 @@
-import {ITile} from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText } from "../types";
 
 interface IContent {
   header: {
@@ -7,7 +7,14 @@ interface IContent {
   };
   howAreWeDoing: {
     tiles: ITile[];
-  }
+  },
+  howMuchItCost: {
+    prices: IPricing[];
+    additionalFees: IAdditionalFees[];
+    paymentMethods: IPaymentMethod[];
+    texts: ICostText;
+  },
+
 }
 
 export const content: IContent = {
@@ -56,5 +63,75 @@ export const content: IContent = {
         icon: null,
       },
     ],
+  },
+  howMuchItCost: {
+    prices: [
+      {
+        price: "80 zł",
+        additionalCharacter: "do",
+        km: "5 km"
+      },
+      {
+        price: "100 zł",
+        additionalCharacter: "do",
+        km: "10 km"
+      },
+      {
+        price: "120 zł",
+        additionalCharacter: "do",
+        km: "20 km"
+      },
+      {
+        price: "160 zł",
+        additionalCharacter: "do",
+        km: "30 km"
+      },
+      {
+        price: "200 zł",
+        additionalCharacter: "do",
+        km: "40 km"
+      },
+      {
+        price: "240 zł",
+        additionalCharacter: "do",
+        km: "50 km"
+      },
+      {
+        price: "wycena indywidualna",
+        additionalCharacter: ">",
+        km: "50 km"
+      },
+    ],
+    additionalFees: [
+      {
+        feesText: "pierwsze 10 min",
+        feesDescription: "oczekiwania na klienta",
+        feesValue: "0 zł"
+      },
+      {
+        feesText: "każde kolejne 10 min",
+        feesDescription: "oczekiwania",
+        feesValue: "+ 10 zł"
+      }
+    ],
+    paymentMethods: [
+      {
+        method: "BLIK"
+      },
+      {
+        method: "gotówka"
+      },
+      {
+        method: "przelew bankowy"
+      }
+    ],
+    texts:
+      {
+        title: "Ile to kosztuje?",
+        paymentNoteText: "W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.",
+        firstPaymentTitle: "! WAŻNE !",
+        secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
+      }
+
   }
 };
