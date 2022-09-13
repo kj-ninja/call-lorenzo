@@ -28,5 +28,13 @@ export interface ICostText {
   secondPaymentTitle: string;
 }
 
+export interface IOurOfferTile {
+  tileText: string;
+  tileOrder: string;
+  tileTitle: string;
+  tileDescription: string;
+  tileBoldText?: string;
+}
+
 // general
 export type KeyString = { [key: string]: string };
