@@ -1,9 +1,10 @@
-// How are we doing
+// How are we doing?
 export interface ITile {
   description: string | null;
   icon: string | null;
 }
 
+// How Much It Cost?
 export interface IPricing {
   price: number | string;
   additionalCharacter: string;
