@@ -28,5 +28,15 @@ export interface ICostText {
   secondPaymentTitle: string;
 }
 
+export interface IContactUs {
+  title: string;
+  firstContactUsTile: string;
+  secondContactUsTile: string;
+  firstImportantText: string;
+  firstBoldText: string;
+  secondImportantText: string;
+  secondBoldText: string;
+}
+
 // general
 export type KeyString = { [key: string]: string };

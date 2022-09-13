@@ -1,4 +1,4 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText } from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IContactUs } from "../types";
 
 interface IContent {
   header: {
@@ -14,7 +14,9 @@ interface IContent {
     paymentMethods: IPaymentMethod[];
     texts: ICostText;
   },
-
+  HowToContactUs: {
+    texts: IContactUs;
+  }
 }
 
 export const content: IContent = {
@@ -125,13 +127,22 @@ export const content: IContent = {
         method: "przelew bankowy"
       }
     ],
-    texts:
-      {
-        title: "Ile to kosztuje?",
-        paymentNoteText: "W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.",
-        firstPaymentTitle: "! WAŻNE !",
-        secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
-      }
-
+    texts: {
+      title: "Ile to kosztuje?",
+      paymentNoteText: "W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.",
+      firstPaymentTitle: "! WAŻNE !",
+      secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
+    }
+  },
+  HowToContactUs: {
+    texts: {
+      title: "Jak się z nami skontaktować?",
+      firstContactUsTile: "+48 799 269 844",
+      secondContactUsTile: "zadzwoń lub napisz",
+      firstImportantText: "W przypadku usług we Wrocławiu lub okolic prosimy o kontakt",
+      firstBoldText: " min. 1h przed,",
+      secondImportantText: " w przypadku innych usług",
+      secondBoldText: " min. 1 dzień."
+    }
   }
 };

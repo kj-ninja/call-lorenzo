@@ -45,7 +45,6 @@ const HowMuchItCost = () => {
               <span>-{method.method}</span>
             ))}
           </div>
-
         </ImportantNotes>
       </AdditionalFees>
 
