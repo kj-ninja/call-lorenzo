@@ -18,13 +18,13 @@ export const StyledHowToContactUs = styled.section`
   
   .container {
     width: 100%;
-    height: calc(100vh - 260px);
+    height: calc(100vh - 267px);
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 30px;
 
     @media only screen and ${IDevice.desktopXS} {
-      height: calc(100vh - 330px);
+      height: calc(100vh - 310px);
     }
   }
   
