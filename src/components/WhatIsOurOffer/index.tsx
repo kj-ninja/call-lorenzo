@@ -4,11 +4,11 @@ import { content } from "../../content";
 
 
 const WhatIsOurOffer = () => {
-  const {tileTexts} = content.WhatIsOurOffer;
+  const {title, tileTexts} = content.WhatIsOurOffer;
 
   return (
     <StyledWhatIsOurOffer>
-      <h2>aaa</h2>
+      <h2>{title}</h2>
       <div className="tiles-container">
         {tileTexts.map((tile) => (
           <Tile tile={tile} key={tile.tileOrder}/>

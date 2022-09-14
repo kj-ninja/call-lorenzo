@@ -36,5 +36,10 @@ export interface IOurOfferTile {
   tileBoldText?: string;
 }
 
+export interface IOurOfferToggle {
+  show: string;
+  hide: string;
+}
+
 // general
 export type KeyString = { [key: string]: string };

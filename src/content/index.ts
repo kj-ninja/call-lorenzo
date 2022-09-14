@@ -1,4 +1,4 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IOurOfferTile } from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IOurOfferTile, IOurOfferToggle } from "../types";
 
 interface IContent {
   header: {
@@ -15,6 +15,8 @@ interface IContent {
     texts: ICostText;
   },
   WhatIsOurOffer: {
+    title: string;
+    toggleText: IOurOfferToggle;
     tileTexts: IOurOfferTile[];
   }
 }
@@ -135,20 +137,25 @@ export const content: IContent = {
     }
   },
   WhatIsOurOffer: {
+    title: "Jaka jest nasza oferta?",
+    toggleText: {
+      show: "rozwiń",
+      hide: "zwiń"
+    },
     tileTexts: [
       {
-        tileText: "SURROGATE DRIVER/KIEROWCA ZASTĘPCZY",
+        tileTitle: "SURROGATE DRIVER/ KIEROWCA ZASTĘPCZY",
         tileOrder: "1.",
-        tileTitle: "Przyjechałeś swoim samochodem na imprezę, ale ze względu na spożyty alkohol nie możesz " +
+        tileText: "Przyjechałeś swoim samochodem na imprezę, ale ze względu na spożyty alkohol nie możesz " +
           "wrócić do domu?",
         tileDescription: "Bezpiecznie odwieziemy Cię do domu twoim samochodem,\n" +
           "tak żebyś spokojnie zaczął kolejny dzień." ,
         tileBoldText: "Zamów surrogate driver na terenie Wrocławia i okolic."
       },
       {
-        tileText: "PRYWATNY KIEROWCA",
+        tileTitle: "PRYWATNY KIEROWCA",
         tileOrder: "2.",
-        tileTitle: "Potrzebujesz kierowcy, który bezpiecznie\n" +
+        tileText: "Potrzebujesz kierowcy, który bezpiecznie\n" +
           "poprowadzi Twój samochód?",
         tileDescription: "Jesteśmy gotowi na wszelkie zlecenia. Podróże nie muszą\n" +
           "wymagać zatrudnienia osobnego kierowcy, zlecenia mogą\n" +
@@ -156,9 +163,9 @@ export const content: IContent = {
         tileBoldText: ""
       },
       {
-        tileText: "ODWOŻENIE SAMOCHODU NA SERWIS/MYJNIĘ",
+        tileTitle: "ODWOŻENIE SAMOCHODU NA SERWIS/MYJNIĘ",
         tileOrder: "3.",
-        tileTitle: "Posiadasz kilka samochodów i nie masz czasu na ich\n" +
+        tileText: "Posiadasz kilka samochodów i nie masz czasu na ich\n" +
           "obsługę oraz potrzebujesz kogoś, kto zadba\n" +
           "o firmową flotę?",
         tileDescription: "Oferujemy usługi outsourcingowe w zakresie obsługi\n" +
@@ -168,18 +175,18 @@ export const content: IContent = {
         tileBoldText: ""
       },
       {
-        tileText: "RELOKACJA SAMOCHODÓW",
+        tileTitle: "RELOKACJA SAMOCHODÓW",
         tileOrder: "4.",
-        tileTitle: "Potrzebujesz przetransportować samochód między\n" +
+        tileText: "Potrzebujesz przetransportować samochód między\n" +
           "dwiema lokalizacjami?",
         tileDescription: "Realizujemy zlecenia w zakresie relokacji pojazdów\n" +
           "między umówionymi miejscami.",
         tileBoldText: ""
       },
       {
-        tileText: "KURIER EKSPRESOWY",
+        tileTitle: "KURIER EKSPRESOWY",
         tileOrder: "5.",
-        tileTitle: "Potrzebujesz kierowcy, który niezwłocznie wsiądzie\n" +
+        tileText: "Potrzebujesz kierowcy, który niezwłocznie wsiądzie\n" +
           "do samochodu i dostarczy twoją przesyłkę we wskazane\n" +
           "miejsce?",
         tileDescription: "Oferujemy kierowcę „na już” który z Wrocławia i okolic\n" +

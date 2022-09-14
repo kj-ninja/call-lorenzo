@@ -2,7 +2,9 @@ const theme = {
   colors: {
     primaryColor: '#002541',
     secondaryColor: '#64809D',
-    white: "#ffffff"
+    additionalTextColor: '#2596be',
+    white: "#ffffff",
+
   },
 
   fontFamily: {
