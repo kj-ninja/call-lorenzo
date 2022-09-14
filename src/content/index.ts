@@ -165,9 +165,6 @@ export const content: IContent = {
       secondBoldText: " min. 1 dzień."
     }
   },
-  Footer: {
-    text: "Regulamin",
-  },
   WhatIsOurOffer: {
     title: "Jaka jest nasza oferta?",
     toggleText: {
@@ -227,5 +224,8 @@ export const content: IContent = {
         tileBoldText: ""
       },
     ]
-  }
+  },
+  Footer: {
+    text: "Regulamin",
+  },
 };
