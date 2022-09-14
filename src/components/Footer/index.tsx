@@ -1,11 +1,17 @@
 import { Fragment } from "react";
-import { UpperLine, LowerLine} from "./styles";
+import {
+  UpperLine,
+  LowerLine
+} from "./styles";
+import { content } from "../../content";
 
 const Footer = () => {
+  const { text } = content.Footer;
+
   return (
     <Fragment>
       <UpperLine />
-      <LowerLine>Regulamin</LowerLine>
+      <LowerLine>{text}</LowerLine>
     </Fragment>
   )
 }

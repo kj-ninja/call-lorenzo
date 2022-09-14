@@ -43,7 +43,7 @@ const HowMuchItCost = () => {
             </div>
           ))}
         </div>
-        <ImportantNotes className="important-notes-padding">
+        <ImportantNotes className="important-notes">
           <span className="payments-title">{texts.secondPaymentTitle}</span>
           <div className='payment-methods'>
             {paymentMethods.map((method) => (

@@ -16,6 +16,9 @@ interface IContent {
   },
   whenWeWork: {
     sectionTexts: IWhenWeWork
+  },
+  Footer: {
+    text: string;
   }
 }
 
@@ -142,5 +145,8 @@ export const content: IContent = {
       description2: "jesteśmy do dyspozycji",
       additionalHours: "24/7"
     }
+  },
+  Footer: {
+    text: "Regulamin"
   }
 };
