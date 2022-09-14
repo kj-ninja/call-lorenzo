@@ -167,12 +167,6 @@ export const content: IContent = {
   },
   Footer: {
     text: "Regulamin",
-    texts: {
-      title: "Ile to kosztuje?",
-      paymentNoteText: "W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.",
-      firstPaymentTitle: "! WAŻNE !",
-      secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
-    },
   },
   WhatIsOurOffer: {
     title: "Jaka jest nasza oferta?",
