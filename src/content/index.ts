@@ -1,4 +1,4 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork } from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork, IContactUs } from "../types";
 
 interface IContent {
   header: {
@@ -16,6 +16,9 @@ interface IContent {
   },
   whenWeWork: {
     sectionTexts: IWhenWeWork
+  },
+  HowToContactUs: {
+    texts: IContactUs;
   },
   Footer: {
     text: string;
