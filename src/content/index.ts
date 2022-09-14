@@ -1,4 +1,4 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork } from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork, IContactUs } from "../types";
 
 interface IContent {
   header: {
@@ -16,6 +16,9 @@ interface IContent {
   },
   whenWeWork: {
     sectionTexts: IWhenWeWork
+  },
+  HowToContactUs: {
+    texts: IContactUs;
   },
   Footer: {
     text: string;
@@ -144,6 +147,17 @@ export const content: IContent = {
       description: "*po wcześniejszym umówieniu,",
       description2: "jesteśmy do dyspozycji",
       additionalHours: "24/7"
+    }
+  },
+  HowToContactUs: {
+    texts: {
+      title: "Jak się z nami skontaktować?",
+      firstContactUsTile: "+48 799 269 844",
+      secondContactUsTile: "zadzwoń lub napisz",
+      firstImportantText: "W przypadku usług we Wrocławiu lub okolic prosimy o kontakt",
+      firstBoldText: " min. 1h przed,",
+      secondImportantText: " w przypadku innych usług",
+      secondBoldText: " min. 1 dzień."
     }
   },
   Footer: {

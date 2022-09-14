@@ -37,30 +37,16 @@ export interface IWhenWeWork {
   additionalHours: string;
 }
 
-// How Much It Cost?
-export interface IPricing {
-  price: number | string;
-  additionalCharacter: string;
-  km: number | string;
-}
-
-export interface IAdditionalFees {
-  feesText: string;
-  feesDescription: string;
-  feesValue: string;
-}
-
-export interface IPaymentMethod {
-  method: string;
-}
-
-export interface ICostText {
+// How to contact us
+export interface IContactUs {
   title: string;
-  paymentNoteText: string;
-  firstPaymentTitle: string;
-  secondPaymentTitle: string;
+  firstContactUsTile: string;
+  secondContactUsTile: string;
+  firstImportantText: string;
+  firstBoldText: string;
+  secondImportantText: string;
+  secondBoldText: string;
 }
 
 // general
 export type KeyString = { [key: string]: string };
-
