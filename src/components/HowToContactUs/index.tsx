@@ -6,8 +6,8 @@ import {
   SmsImage,
   ImportantNotes
 } from "./styles";
-import telephone from "../../assets/telephone.svg";
-import sms from "../../assets/sms.svg";
+import phone from "../../assets/phone.svg";
+import message from "../../assets/message.svg";
 
 const WhenWeWork = () => {
   const { texts } = content.HowToContactUs;
@@ -20,8 +20,8 @@ const WhenWeWork = () => {
           <span className="first-tile__text">{texts.firstContactUsTile}</span>
         </div>
         <ImageWrapper>
-          <TelephoneImage src={telephone} alt=""/>
-          <SmsImage src={sms} alt=""/>
+          <TelephoneImage src={phone} alt=""/>
+          <SmsImage src={message} alt=""/>
         </ImageWrapper>
         <div className="container__second-tile">
           {texts.secondContactUsTile}
