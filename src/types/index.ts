@@ -37,7 +37,7 @@ export interface IWhenWeWork {
   additionalHours: string;
 }
 
-// How to contact us
+// How to contact us?
 export interface IContactUs {
   title: string;
   firstContactUsTile: string;
@@ -46,6 +46,20 @@ export interface IContactUs {
   firstBoldText: string;
   secondImportantText: string;
   secondBoldText: string;
+}
+
+//What is our offer?
+export interface IOurOfferTile {
+  tileText: string;
+  tileOrder: string;
+  tileTitle: string;
+  tileDescription: string;
+  tileBoldText?: string;
+}
+
+export interface IOurOfferToggle {
+  show: string;
+  hide: string;
 }
 
 // general

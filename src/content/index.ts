@@ -1,4 +1,4 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork, IContactUs } from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork, IContactUs, IOurOfferTile, IOurOfferToggle } from "../types";
 
 interface IContent {
   header: {
@@ -22,6 +22,11 @@ interface IContent {
   },
   Footer: {
     text: string;
+  }
+  WhatIsOurOffer: {
+    title: string;
+    toggleText: IOurOfferToggle;
+    tileTexts: IOurOfferTile[];
   }
 }
 
@@ -160,7 +165,67 @@ export const content: IContent = {
       secondBoldText: " min. 1 dzień."
     }
   },
+  WhatIsOurOffer: {
+    title: "Jaka jest nasza oferta?",
+    toggleText: {
+      show: "rozwiń",
+      hide: "zwiń"
+    },
+    tileTexts: [
+      {
+        tileTitle: "SURROGATE DRIVER/ KIEROWCA ZASTĘPCZY",
+        tileOrder: "1.",
+        tileText: "Przyjechałeś swoim samochodem na imprezę, ale ze względu na spożyty alkohol nie możesz " +
+          "wrócić do domu?",
+        tileDescription: "Bezpiecznie odwieziemy Cię do domu twoim samochodem,\n" +
+          "tak żebyś spokojnie zaczął kolejny dzień." ,
+        tileBoldText: "Zamów surrogate driver na terenie Wrocławia i okolic."
+      },
+      {
+        tileTitle: "PRYWATNY KIEROWCA",
+        tileOrder: "2.",
+        tileText: "Potrzebujesz kierowcy, który bezpiecznie\n" +
+          "poprowadzi Twój samochód?",
+        tileDescription: "Jesteśmy gotowi na wszelkie zlecenia. Podróże nie muszą\n" +
+          "wymagać zatrudnienia osobnego kierowcy, zlecenia mogą\n" +
+          "być realizowane przez nas doraźnie.",
+        tileBoldText: ""
+      },
+      {
+        tileTitle: "ODWOŻENIE SAMOCHODU NA SERWIS/MYJNIĘ",
+        tileOrder: "3.",
+        tileText: "Posiadasz kilka samochodów i nie masz czasu na ich\n" +
+          "obsługę oraz potrzebujesz kogoś, kto zadba\n" +
+          "o firmową flotę?",
+        tileDescription: "Oferujemy usługi outsourcingowe w zakresie obsługi\n" +
+          "samochodów, skupiające się na odprowadzeniu pojazdu\n" +
+          "na serwis,myjnię oraz w inne miejsce, w które tylko\n" +
+          "potrzebujesz.",
+        tileBoldText: ""
+      },
+      {
+        tileTitle: "RELOKACJA SAMOCHODÓW",
+        tileOrder: "4.",
+        tileText: "Potrzebujesz przetransportować samochód między\n" +
+          "dwiema lokalizacjami?",
+        tileDescription: "Realizujemy zlecenia w zakresie relokacji pojazdów\n" +
+          "między umówionymi miejscami.",
+        tileBoldText: ""
+      },
+      {
+        tileTitle: "KURIER EKSPRESOWY",
+        tileOrder: "5.",
+        tileText: "Potrzebujesz kierowcy, który niezwłocznie wsiądzie\n" +
+          "do samochodu i dostarczy twoją przesyłkę we wskazane\n" +
+          "miejsce?",
+        tileDescription: "Oferujemy kierowcę „na już” który z Wrocławia i okolic\n" +
+          "dojedzie gdzie tylko potrzebujesz w jak najszybszym\n" +
+          "czasie.",
+        tileBoldText: ""
+      },
+    ]
+  },
   Footer: {
-    text: "Regulamin"
-  }
+    text: "Regulamin",
+  },
 };
