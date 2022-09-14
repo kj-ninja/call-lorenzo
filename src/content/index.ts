@@ -1,4 +1,4 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IOurOfferTile, IOurOfferToggle } from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork, IContactUs, IOurOfferTile, IOurOfferToggle } from "../types";
 
 interface IContent {
   header: {
@@ -14,6 +14,15 @@ interface IContent {
     paymentMethods: IPaymentMethod[];
     texts: ICostText;
   },
+  whenWeWork: {
+    sectionTexts: IWhenWeWork
+  },
+  HowToContactUs: {
+    texts: IContactUs;
+  },
+  Footer: {
+    text: string;
+  }
   WhatIsOurOffer: {
     title: string;
     toggleText: IOurOfferToggle;
@@ -135,6 +144,35 @@ export const content: IContent = {
       firstPaymentTitle: "! WAŻNE !",
       secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
     }
+  },
+  whenWeWork: {
+    sectionTexts: {
+      title: "Kiedy Pracujemy?",
+      coreHours: "Codziennie 18:00 - 1:00*",
+      description: "*po wcześniejszym umówieniu,",
+      description2: "jesteśmy do dyspozycji",
+      additionalHours: "24/7"
+    }
+  },
+  HowToContactUs: {
+    texts: {
+      title: "Jak się z nami skontaktować?",
+      firstContactUsTile: "+48 799 269 844",
+      secondContactUsTile: "zadzwoń lub napisz",
+      firstImportantText: "W przypadku usług we Wrocławiu lub okolic prosimy o kontakt",
+      firstBoldText: " min. 1h przed,",
+      secondImportantText: " w przypadku innych usług",
+      secondBoldText: " min. 1 dzień."
+    }
+  },
+  Footer: {
+    text: "Regulamin",
+    texts: {
+      title: "Ile to kosztuje?",
+      paymentNoteText: "W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.",
+      firstPaymentTitle: "! WAŻNE !",
+      secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
+    },
   },
   WhatIsOurOffer: {
     title: "Jaka jest nasza oferta?",
