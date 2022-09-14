@@ -1,7 +1,6 @@
-import Tile from "./Tile";
+import Tile from "../Tile";
 import { StyledWhatIsOurOffer } from "./styles";
 import { content } from "../../content";
-
 
 const WhatIsOurOffer = () => {
   const {title, tileTexts} = content.WhatIsOurOffer;
