@@ -1,4 +1,4 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IContactUs } from "../types";
+import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork } from "../types";
 
 interface IContent {
   header: {
@@ -14,8 +14,11 @@ interface IContent {
     paymentMethods: IPaymentMethod[];
     texts: ICostText;
   },
-  HowToContactUs: {
-    texts: IContactUs;
+  whenWeWork: {
+    sectionTexts: IWhenWeWork
+  },
+  Footer: {
+    text: string;
   }
 }
 
@@ -134,6 +137,15 @@ export const content: IContent = {
       secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
     }
   },
+  whenWeWork: {
+    sectionTexts: {
+      title: "Kiedy Pracujemy?",
+      coreHours: "Codziennie 18:00 - 1:00*",
+      description: "*po wcześniejszym umówieniu,",
+      description2: "jesteśmy do dyspozycji",
+      additionalHours: "24/7"
+    }
+  },
   HowToContactUs: {
     texts: {
       title: "Jak się z nami skontaktować?",
@@ -144,5 +156,8 @@ export const content: IContent = {
       secondImportantText: " w przypadku innych usług",
       secondBoldText: " min. 1 dzień."
     }
+  },
+  Footer: {
+    text: "Regulamin"
   }
 };

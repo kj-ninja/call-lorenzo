@@ -28,6 +28,16 @@ export interface ICostText {
   secondPaymentTitle: string;
 }
 
+// When we work?
+export interface IWhenWeWork {
+  title: string;
+  coreHours: string;
+  description: string;
+  description2: string;
+  additionalHours: string;
+}
+
+// How to contact us
 export interface IContactUs {
   title: string;
   firstContactUsTile: string;

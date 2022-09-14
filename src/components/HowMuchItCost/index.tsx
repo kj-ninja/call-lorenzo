@@ -1,5 +1,10 @@
 import { content } from "../../content";
-import { AdditionalFees, ImportantNotes, Pricing, StyledHowMuchIsIt } from "./styles";
+import {
+  AdditionalFees,
+  ImportantNotes,
+  Pricing,
+  StyledHowMuchIsIt
+} from "./styles";
 
 const HowMuchItCost = () => {
   const { prices,additionalFees, paymentMethods, texts } = content.howMuchItCost;
@@ -38,7 +43,7 @@ const HowMuchItCost = () => {
             </div>
           ))}
         </div>
-        <ImportantNotes>
+        <ImportantNotes className="important-notes">
           <span className="payments-title">{texts.secondPaymentTitle}</span>
           <div className='payment-methods'>
             {paymentMethods.map((method) => (
@@ -47,7 +52,6 @@ const HowMuchItCost = () => {
           </div>
         </ImportantNotes>
       </AdditionalFees>
-
     </StyledHowMuchIsIt>
   )
 }
