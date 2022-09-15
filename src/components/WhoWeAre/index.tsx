@@ -1,15 +1,26 @@
 import { content } from "../../content";
-import { StyledWhoWeAre, ImageContainer, GraphicsContainer, Image, Graphic } from "./styles";
 import picture from "../../assets/group-final.jpeg";
 import ford from "../../assets/ford.jpeg";
 import nmk from "../../assets/nmk.jpeg"
+import {
+  StyledWhoWeAre,
+  ImageContainer,
+  GraphicsContainer,
+  Image,
+  Graphic
+} from "./styles";
 
 const WhoWeAre = () => {
-  const { title, source } = content.WhoWeAre.shortTexts;
+  const {
+    title,
+    source
+  } = content.WhoWeAre.shortTexts;
+
   const {
     colorTextSentences,
     standardText
   } = content.WhoWeAre.firstTextContainer;
+
   const {
     colorText,
     firstStandardText,
@@ -19,6 +30,7 @@ const WhoWeAre = () => {
     thirdStandardText,
     thirdBoldText
   } = content.WhoWeAre.secondTextContainer;
+
   return (
     <StyledWhoWeAre>
       <h2>{title}</h2>
@@ -37,7 +49,7 @@ const WhoWeAre = () => {
           <span className='second-paragraph__bold-text'>{thirdBoldText}</span>
         </div>
         <ImageContainer>
-          <Image src={picture} alt="" />
+          <Image src={picture} alt=""/>
           <span className="source">{source}</span>
         </ImageContainer>
         <GraphicsContainer>
