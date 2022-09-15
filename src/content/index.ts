@@ -45,35 +45,35 @@ export const content: IContent = {
     tiles: [
       {
         description: 'jedziesz na imprez swoim samochodem',
-        icon: null,
+        icon: "null",
       },
       {
         description: null,
-        icon: 'Auto'
+        icon: 'auto'
       },
       {
         description: null,
-        icon: 'Kieliszki'
+        icon: 'glass'
       },
       {
         description: 'dobrze się bawisz popijając alkohol',
-        icon: null,
+        icon: "null",
       },
       {
         description: 'dzwonisz lub piszesz do nas 1h przed wyjściem',
-        icon: null,
+        icon: "null",
       },
       {
         description: null,
-        icon: 'Telefon'
+        icon: 'telefon'
       },
       {
         description: null,
-        icon: 'Auto'
+        icon: 'auto2'
       },
       {
         description: 'bezpiecznie wracasz do domu swoim samochodem',
-        icon: null,
+        icon: "null",
       },
     ],
   },

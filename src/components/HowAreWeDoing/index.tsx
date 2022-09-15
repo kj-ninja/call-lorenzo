@@ -1,6 +1,8 @@
 import {FC} from 'react';
-import {StyledHowAreWeDoing, StyledTile} from "./styles";
+import { StyledHowAreWeDoing, StyledTile, CarContainer, LeftGlassContainer, SoundContainer, RightGlassContainer, PhoneContainer} from "./styles";
 import {content} from "../../content";
+
+
 
 interface Props {
 }
@@ -17,7 +19,22 @@ const {tiles} = content.howAreWeDoing;
             {tile.description}
           </StyledTile>
         ))}
-      </div>
+        </div>
+        <CarContainer>
+          <div className="car"/>
+        </CarContainer>
+        <LeftGlassContainer>
+          <div className="left-glass"/>
+        </LeftGlassContainer>
+        <SoundContainer>
+          <div className="sound"/>
+        </SoundContainer>
+        <RightGlassContainer>
+          <div className="right-glass"/>
+        </RightGlassContainer>
+        <PhoneContainer>
+          <div className="calling"/>
+        </PhoneContainer>
     </StyledHowAreWeDoing>
   );
 };
