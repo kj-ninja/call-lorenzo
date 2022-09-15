@@ -4,7 +4,9 @@ import HowMuchItCost from "./components/HowMuchItCost";
 import WhenWeWork from "./components/WhenWeWork";
 import HowToContactUs from "./components/HowToContactUs";
 import WhatIsOurOffer from "./components/WhatIsOurOffer";
+import AdditionalInfo from "./components/AdditionalInfo";
 import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -14,7 +16,8 @@ function App() {
       {/*<HowMuchItCost />*/}
       {/*<WhenWeWork />*/}
       {/*<HowToContactUs />*/}
-      <WhatIsOurOffer />
+      {/*<WhatIsOurOffer />*/}
+      <AdditionalInfo />
       <Footer />
     </div>
   );

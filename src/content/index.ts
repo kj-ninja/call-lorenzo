@@ -1,4 +1,15 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork, IContactUs, IOurOfferTile, IOurOfferToggle } from "../types";
+import {
+  ITile,
+  IPricing,
+  IAdditionalFees,
+  IPaymentMethod,
+  ICostText,
+  IWhenWeWork,
+  IContactUs,
+  IOurOfferTile,
+  IOurOfferToggle,
+  IAdditionalInfo
+} from "../types";
 
 interface IContent {
   header: {
@@ -27,6 +38,9 @@ interface IContent {
     title: string;
     toggleText: IOurOfferToggle;
     tileTexts: IOurOfferTile[];
+  },
+  AdditionalInfo: {
+    additionalTexts: IAdditionalInfo;
   }
 }
 
@@ -224,6 +238,19 @@ export const content: IContent = {
         tileBoldText: ""
       },
     ]
+  },
+  AdditionalInfo: {
+    additionalTexts: {
+      colouredWords: "Odznaczamy się ",
+      firstParagraph: "wysoką kulturą osobistą, poufnością,odpowiedzialną i bezpieczną jazdą, a także wiedzą z zakresu" +
+        " udzielania pierwszej pomocy.",
+      firstLineText: "BEZPIECZEŃSTWO",
+      secondLineText: "PROFESJONALIZM",
+      thirdLineText: "NIEZAWODNOŚĆ",
+      fourthLineText: "KOMFORT",
+      colouredSentence: "Jako firma, stawiamy na:",
+      colouredParagraph: "Staramy się zapewnić Państwu usługi na najwyższym możliwym poziomie"
+    }
   },
   Footer: {
     text: "Regulamin",
