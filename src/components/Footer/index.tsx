@@ -12,9 +12,11 @@ const Footer = () => {
     <Fragment>
       <UpperLine />
       <LowerLine>
-        <span>
+        <div className='lower-line-container'>
+          <span>
           {text}
         </span>
+        </div>
       </LowerLine>
     </Fragment>
   )

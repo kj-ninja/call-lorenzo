@@ -14,9 +14,9 @@ export const LowerLine = styled.div`
   margin-top: 5px;
   background-color: ${(props) => props.theme.colors.primaryColor};
   color: white;
-  
-  span {
-    max-width: 1200px;
+
+  .lower-line-container {
+    max-width: ${(props) => (props.theme.widthLimit.desktop)};
     width: 100%;
   }
 `;
