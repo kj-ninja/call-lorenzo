@@ -17,7 +17,6 @@ const moveCarParty = keyframes`
   0% {
     transform: translate(160px);
   }
-  
   100% {
     transform: translate(0);
   }
@@ -25,19 +24,35 @@ const moveCarParty = keyframes`
 
 const desktopMoveCarParty = keyframes`
   0% {
-    transform: translate(300px);
+    transform: translate(320px);
   }
-  
   100% {
-    transform: translate(-550px);
+    transform: translate(0);
   }
 `;
 
 const moveCarHome = keyframes`
   0% {
+    transform: translate(1800px);
+  }
+  60% {
+    transform: translate(1000px);
+  }
+  100% {
+    transform: translate(0);
+  }
+`;
+
+const desktopMoveCarHome = keyframes`
+  0% {
     transform: translate(2000px);
   }
-  
+  15% {
+    transform: translate(1500px);
+  }
+  75% {
+    transform: translate(450px);
+  }
   100% {
     transform: translate(0);
   }
@@ -48,7 +63,19 @@ const moveGlass = keyframes`
     transform: translate(-400px);
   }
   80% {
-    transform: translate(3px);
+    transform: translate(4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+`;
+
+const desktopMoveGlass = keyframes`
+  0% {
+    transform: translate(-550px);
+  }
+  80% {
+    transform: translate(6px);
   }
   100% {
     transform: translate(0);
@@ -118,6 +145,7 @@ export const StyledHowAreWeDoing = styled.section`
       animation-iteration-count: 1;
 
       @media only screen and ${IDevice.desktopXS} {
+        right: 30%;
         animation: ${desktopMoveCarParty} 3s ease;
         animation-iteration-count: 1;
       }
@@ -129,6 +157,10 @@ export const StyledHowAreWeDoing = styled.section`
       position: absolute;
       top: 1%;
       left: 0;
+
+      @media only screen and ${IDevice.desktopXS} {
+        left: 30%;
+      }
     }
   }
 
@@ -142,10 +174,16 @@ export const StyledHowAreWeDoing = styled.section`
       content: url(${calling});
       position: absolute;
       top: 12%;
-      right: 32%;
+      right: 40%;
       animation: ${shake} 0.5s;
       animation-iteration-count: 5;
       animation-delay: 5.5s;
+
+      @media only screen and ${IDevice.desktopXS} {
+        top: 12%;
+        right: 52%;
+        animation-iteration-count: 2;
+      }
     }
   }
   
@@ -155,25 +193,39 @@ export const StyledHowAreWeDoing = styled.section`
     width: 100%;
     height: 140%;
     background-repeat: no-repeat;
-    background-position: 82% 10%;
+    background-position: 70% 11%;
     overflow: hidden;
+
+    @media only screen and ${IDevice.desktopXS} {
+      background-position: 45% 11%;
+    }
     
     &:before {
       content: url(${leftGlass});
       position: absolute;
-      bottom: 35%;
-      right: 29%;
+      bottom: 36%;
+      right: 36%;
       animation: ${moveGlass} 5s linear;
       animation-iteration-count: 1;
+
+      @media only screen and ${IDevice.desktopXS} {
+        bottom: 36%;
+        right: 53%;
+        animation: ${desktopMoveGlass} 6s linear;
+      }
     }
 
     &:after {
       content: url(${sound});
       position: absolute;
       bottom: 73%;
-      left: 41%;
+      left: 35%;
       animation: ${soundAnimation} 4.5s linear;
       animation-iteration-count: 1;
+
+      @media only screen and ${IDevice.desktopXS} {
+        animation: ${soundAnimation} 5.5s linear;
+      }
     }
   }
   
@@ -195,8 +247,14 @@ export const StyledHowAreWeDoing = styled.section`
       position: absolute;
       top: 30%;
       left: 22%;
-      animation: ${moveCarHome} 12s ease;
+      animation: ${moveCarHome} 10s ease;
       animation-iteration-count: 1;
+
+      @media only screen and ${IDevice.desktopXS} {
+        top: 30%;
+        left: 34%;
+        animation: ${desktopMoveCarHome} 8s ease;
+      }
     }
   }
 `;
@@ -213,5 +271,4 @@ export const StyledTile = styled.div<ITileProps>`
   display: flex;
   align-items: center;
   text-align: center;
-  padding: 10px;
 `
