@@ -281,13 +281,16 @@ export const StyledTile = styled.div<ITileProps>`
   )};
   display: flex;
   align-items: center;
-
-  
+    
   .tile-order {
     display: flex;
     align-self: flex-start;
     font-weight: bold;
     font-size: 24px;
+
+    @media only screen and ${IDevice.desktopXS} {
+      align-self: center;
+    }
   }
   
   .tile-description {
@@ -295,5 +298,9 @@ export const StyledTile = styled.div<ITileProps>`
     align-self: flex-start;
     text-align: left;
     margin-left: 10px;
+
+    @media only screen and ${IDevice.desktopXS} {
+      align-self: center;
+    }
   }
 `
