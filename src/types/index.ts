@@ -62,6 +62,27 @@ export interface IOurOfferToggle {
   hide: string;
 }
 
+//Who we are?
+export interface IWhoWeAreFirstParagraph {
+  colorTextSentences: string;
+  standardText: string;
+}
+
+export interface IWhoWeAreSecondParagraph {
+  colorText: string;
+  firstStandardText: string;
+  firstBoldText: string;
+  secondStandardText: string;
+  secondBoldText: string;
+  thirdStandardText: string;
+  thirdBoldText: string;
+}
+
+export interface IWhoWeAreShortTexts {
+  title: string;
+  source: string;
+}
+
 //Additional Information
 export interface IAdditionalInfo {
   colouredWords: string;

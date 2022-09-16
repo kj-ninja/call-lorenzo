@@ -8,6 +8,9 @@ import {
   IContactUs,
   IOurOfferTile,
   IOurOfferToggle,
+  IWhoWeAreFirstParagraph,
+  IWhoWeAreSecondParagraph,
+  IWhoWeAreShortTexts,
   IAdditionalInfo
 } from "../types";
 
@@ -30,17 +33,22 @@ interface IContent {
   },
   HowToContactUs: {
     texts: IContactUs;
-  },
-  Footer: {
-    text: string;
   }
   WhatIsOurOffer: {
     title: string;
     toggleText: IOurOfferToggle;
     tileTexts: IOurOfferTile[];
   },
+  WhoWeAre: {
+    shortTexts: IWhoWeAreShortTexts;
+    firstTextContainer: IWhoWeAreFirstParagraph;
+    secondTextContainer: IWhoWeAreSecondParagraph;
+  },
   AdditionalInfo: {
     additionalTexts: IAdditionalInfo;
+  },
+  Footer: {
+    text: string;
   }
 }
 
@@ -238,6 +246,26 @@ export const content: IContent = {
         tileBoldText: ""
       },
     ]
+  },
+  WhoWeAre: {
+    shortTexts: {
+      title: "Kim jesteśmy?",
+      source: "Żródło: www.pzm.pl"
+    },
+    firstTextContainer: {
+      colorTextSentences: "Jesteśmy młodym zespołem kierowców, którzy posiadają duże doświadczenie, za kierownicą.",
+      standardText: "Prowadziliśmy szeroką gamę samochodów, co przekłada się na zapewnieniu Państwu jak najlepiej " +
+        "wykonywanych przez nas usług."
+    },
+    secondTextContainer: {
+      colorText: "Nasze umiejętności poparte są ",
+      firstStandardText: "kursami doskonalenia techniki jazdy takimi jak ",
+      firstBoldText: "Ford Driving Skills for Life. ",
+      secondStandardText: "Jednocześnie jesteśmy finalistami konkursu ",
+      secondBoldText: "„Najbezpieczniejszy Młody Kierowca” ",
+      thirdStandardText: "w roku 2020 oraz 2021, organizowanego przez ",
+      thirdBoldText: "Polski Związek Motorowy.",
+    }
   },
   AdditionalInfo: {
     additionalTexts: {
