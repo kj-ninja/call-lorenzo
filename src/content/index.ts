@@ -49,7 +49,7 @@ export const content: IContent = {
       },
       {
         description: null,
-        icon: 'auto'
+        icon: 'auto-party'
       },
       {
         description: null,
@@ -69,7 +69,7 @@ export const content: IContent = {
       },
       {
         description: null,
-        icon: 'auto2'
+        icon: 'auto-home'
       },
       {
         description: 'bezpiecznie wracasz do domu swoim samochodem',

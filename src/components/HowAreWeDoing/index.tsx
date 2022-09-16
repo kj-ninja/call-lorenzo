@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import { StyledHowAreWeDoing, StyledTile, CarContainer, LeftGlassContainer, SoundContainer, RightGlassContainer, PhoneContainer} from "./styles";
+import { StyledHowAreWeDoing, StyledTile } from "./styles";
 import {content} from "../../content";
 
 
@@ -20,23 +20,6 @@ const {tiles} = content.howAreWeDoing;
             {!tile.description ? <div className={`${tile.icon}-icon`}></div> : null}
           </StyledTile>
         ))}
-        {/*<div>*/}
-        {/*  <CarContainer className="tile">*/}
-        {/*    <div className="car"/>*/}
-        {/*  </CarContainer>*/}
-        {/*  <LeftGlassContainer>*/}
-        {/*    <div className="left-glass"/>*/}
-        {/*  </LeftGlassContainer>*/}
-        {/*  <SoundContainer>*/}
-        {/*    <div className="sound"/>*/}
-        {/*  </SoundContainer>*/}
-        {/*  <RightGlassContainer>*/}
-        {/*    <div className="right-glass"/>*/}
-        {/*  </RightGlassContainer>*/}
-        {/*  <PhoneContainer>*/}
-        {/*    <div className="calling"/>*/}
-        {/*  </PhoneContainer>*/}
-        {/*</div>*/}
         </div>
 
     </StyledHowAreWeDoing>
