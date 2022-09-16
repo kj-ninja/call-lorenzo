@@ -195,7 +195,7 @@ export const content: IContent = {
     },
     tileTexts: [
       {
-        tileTitle: "SURROGATE DRIVER/ KIEROWCA ZASTĘPCZY",
+        tileTitle: "KIEROWCA ZASTĘPCZY",
         tileOrder: "1.",
         tileText: "Przyjechałeś swoim samochodem na imprezę, ale ze względu na spożyty alkohol nie możesz " +
           "wrócić do domu?",

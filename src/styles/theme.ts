@@ -9,8 +9,9 @@ const theme = {
   fontFamily: {
     primaryFont: '"Roboto", "sans-serif"',
   },
-  widthLimit: {
+  additionalStyles: {
     desktop: "1200px",
+    lineHeight: "1.2",
   }
 };
 
