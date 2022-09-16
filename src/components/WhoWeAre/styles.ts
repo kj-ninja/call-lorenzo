@@ -15,7 +15,6 @@ export const StyledWhoWeAre = styled.section`
   }
 
   .content-container {
-    height: calc(100vh - 175px);
     display: flex;
     flex-wrap: wrap;
     align-items: center;

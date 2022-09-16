@@ -8,6 +8,7 @@ const StyledNavbar = styled.nav`
   height: 40px;
   
   ul {
+    max-width: ${(props) => (props.theme.widthLimit.desktop)};
     width: 100%;
     height: 100%;
     display: flex;

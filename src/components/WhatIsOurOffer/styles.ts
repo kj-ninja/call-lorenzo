@@ -12,7 +12,6 @@ export const StyledWhatIsOurOffer = styled.section`
   }
 
   .tiles-container {
-    min-height: calc(100vh - 200px);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

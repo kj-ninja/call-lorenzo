@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100vh;
-  text-align: center;
+  max-width: ${(props) => (props.theme.widthLimit.desktop)};
+  margin: 0 auto;
 `
