@@ -6,13 +6,15 @@ export const StyledHowToContactUs = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 1.2;
   
   h2 {
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     width: 70%;
     text-align: center;
     @media only screen and ${IDevice.desktopXS} {
-      margin: 50px;
+      margin: 50px 0;
     }
   }
   

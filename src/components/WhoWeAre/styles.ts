@@ -1,7 +1,11 @@
 import styled from "styled-components";
+import picture from "../../assets/group-final.jpeg";
 import { IDevice } from "../../settings/media";
 
 export const StyledWhoWeAre = styled.section`
+  margin-top: 60px;
+  padding: 0 3%;
+  line-height: 1.2;
   
   @media only screen and ${IDevice.desktopXS} {
     display: flex;
@@ -10,7 +14,7 @@ export const StyledWhoWeAre = styled.section`
   }
   
   h2 {
-    margin-top: 20px;
+    margin-bottom: 35px;
     text-align: center;
   }
 
@@ -28,9 +32,9 @@ export const StyledWhoWeAre = styled.section`
   }
   
   .first-paragraph {
-    width: 94%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
 
     @media only screen and ${IDevice.desktopXS} {
       text-align: center;
@@ -44,7 +48,7 @@ export const StyledWhoWeAre = styled.section`
   }
 
   .second-paragraph {
-    width: 94%;
+    margin-bottom: 30px;
 
     @media only screen and ${IDevice.desktopXS} {
       text-align: center;
@@ -63,15 +67,16 @@ export const StyledWhoWeAre = styled.section`
 `;
 
 export const ImageContainer = styled.div`
-  width: 94%;
-  height: 210px;
+  width: 100%;
+  height: 280px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-bottom: 30px;
 
   @media only screen and ${IDevice.desktopXS} {
     width: 80%;
-    height: 400px;
+    height: 320px;
   }
   
   .source {
@@ -79,8 +84,18 @@ export const ImageContainer = styled.div`
     margin: 8px 10px;
   }
 `;
+
+export const Image = styled.div`
+  width: 100%;
+  height: 100%;
+  background-image: url(${picture});
+  background-repeat: no-repeat;
+  background-size: cover;
+  `;
+
+
 export const GraphicsContainer = styled.div`
-  width: 94%;
+  width: 100%;
   height: 30px;
   display: flex;
   justify-content: space-around;
@@ -91,12 +106,6 @@ export const GraphicsContainer = styled.div`
   }
 `;
 
-export const Image = styled.img`
-  width: 100%;
-  height: 100%;
-`;
-
 export const Graphic = styled.img`
-  width: 25%;
   height: 100%;
 `;

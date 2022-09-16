@@ -2,12 +2,15 @@ import styled from "styled-components";
 import { IDevice } from "../../settings/media";
 
 export const StyledWhatIsOurOffer = styled.section`
+  margin-top: 60px;
+  line-height: 1.2;
+  
   h2 {
-    margin-top: 20px;
     text-align: center;
-
+    margin: 10px 0;
+    
     @media only screen and ${IDevice.desktopXS} {
-      margin-top: 60px;
+      margin: 20px 0;
     }
   }
 

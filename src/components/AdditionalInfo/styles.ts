@@ -2,7 +2,9 @@ import styled from "styled-components";
 import { IDevice } from "../../settings/media";
 
 export const StyledAdditionalInfo = styled.section`
-  margin-top: 35px;
+  margin-top: 100px;
+  padding: 0 3%;
+  line-height: 1.2;
   
   .section-container {
     display: flex;
@@ -12,7 +14,8 @@ export const StyledAdditionalInfo = styled.section`
   }
   
   .first-paragraph {
-    width: 88%;
+    
+    margin-bottom: 10px;
 
     @media only screen and ${IDevice.desktopXS} {
       width: 37%;
@@ -26,7 +29,7 @@ export const StyledAdditionalInfo = styled.section`
   }
   
   .second-paragraph {
-    width: 88%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 30px;
@@ -49,12 +52,12 @@ export const StyledAdditionalInfo = styled.section`
   }
   
   .third-paragraph {
-    width: 75%;
-    margin-top: 160px;
+    width: 81%;
+    margin: 150px 0;
     text-align: center;
 
     @media only screen and ${IDevice.desktopXS} {
-      width: 15%;
+      width: 25%;
     }
   }
   

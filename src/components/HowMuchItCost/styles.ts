@@ -4,9 +4,10 @@ import { IDevice } from "../../settings/media";
 export const StyledHowMuchIsIt = styled.section`
   display: flex;
   flex-direction: column;
+  line-height: 1.2;
   
   h2 {
-    margin-top: 10px;
+    margin: 20px 0;
     text-align: center;
   }
 `
@@ -20,7 +21,7 @@ export const Pricing = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2.5px 0;
+    padding: 5px 0;
     border-bottom: 1px solid black;
     background-color: ${(props) => props.theme.colors.secondaryColor};
   }
@@ -82,7 +83,7 @@ export const ImportantNotes = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px 0 5px 0;
+  margin: 25px 0 15px 0;
   padding: 5px;
   border: 3px solid ${(props) => props.theme.colors.secondaryColor};
 

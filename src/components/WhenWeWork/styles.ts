@@ -3,14 +3,14 @@ import driver from "../../assets/driver.svg"
 import { IDevice } from "../../settings/media";
 
 export const StyledWhenWeWork = styled.section`
+    margin: 60px 0;
+    line-height: 1.2;
     
   h2 {
-    margin-top: 30px;
     text-align: center;
   }
   
   .container {
-    height: calc(100vh - 260px);
     display: flex;
     flex-direction: column;
     margin-top: 50px;
