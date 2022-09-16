@@ -10,7 +10,7 @@ const theme = {
     primaryFont: '"Roboto", "sans-serif"',
   },
   additionalStyles: {
-    desktop: "1200px",
+    desktop: "900px",
     lineHeight: "1.2",
   }
 };

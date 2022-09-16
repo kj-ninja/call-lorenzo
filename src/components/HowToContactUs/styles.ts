@@ -40,7 +40,7 @@ export const StyledHowToContactUs = styled.section`
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
-          width: 45%;
+          width: 600px;
           align-self: center;
           margin-bottom: 20px;
       }
@@ -71,7 +71,7 @@ export const StyledHowToContactUs = styled.section`
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
-        width: 45%;
+        width: 600px;
         align-self: center;
         margin-top: 20px;
       }

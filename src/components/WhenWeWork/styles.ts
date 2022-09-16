@@ -28,7 +28,7 @@ export const StyledWhenWeWork = styled.section`
     )};
 
       @media only screen and ${IDevice.desktopXS} {
-          width: 45%;
+          width: 600px;
           align-self: center;
       }
   }
@@ -39,15 +39,15 @@ export const StyledWhenWeWork = styled.section`
     display: flex;
     align-self: flex-end;
     flex-direction: column;
-    align-items: center;  
-      justify-content: center;
+    align-items: center;
+    justify-content: center;
     padding: 0 30px;
     background-color: ${(props) => (
             props.theme.colors.secondaryColor
     )};
 
       @media only screen and ${IDevice.desktopXS} {
-          width: 45%;
+          width: 600px;
           align-self: center;
       }
   }
@@ -83,7 +83,7 @@ export const ImageContainer = styled.div`
     @media only screen and ${IDevice.desktopXS} {
         width: 70%;
         align-self: center;
-        height: 450px;
+        height: 300px;
         background-size: 70%;
     }
 `;

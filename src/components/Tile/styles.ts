@@ -55,6 +55,17 @@ export const TileWrapper = styled.div`
       }
     }
   }
+
+  .hover-effect {
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+    transition-property: box-shadow;
+  }
+  .hover-effect:hover, .hover-effect:focus, .hover-effect:active {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+  }
 `
 
 export const StyledTile = styled.div`
@@ -67,7 +78,7 @@ export const StyledTile = styled.div`
   margin: 20px 0;
 
   @media only screen and ${IDevice.desktopXS} {
-    width: 45%;
+    width: 100%;
     margin: 30px 0;
   }
 
