@@ -4,6 +4,8 @@ import HowMuchItCost from "./components/HowMuchItCost";
 import WhenWeWork from "./components/WhenWeWork";
 import HowToContactUs from "./components/HowToContactUs";
 import WhatIsOurOffer from "./components/WhatIsOurOffer";
+import WhoWeAre from "./components/WhoWeAre";
+import AdditionalInfo from "./components/AdditionalInfo";
 import Footer from "./components/Footer";
 
 function App() {
@@ -11,10 +13,12 @@ function App() {
     <div className="App">
       <Header/>
       <HowAreWeDoing/>
-      {/*<HowMuchItCost />*/}
-      {/*<WhenWeWork />*/}
-      {/*<HowToContactUs />*/}
-      {/*<WhatIsOurOffer />*/}
+      <HowMuchItCost />
+      <WhenWeWork />
+      <HowToContactUs />
+      <WhatIsOurOffer />
+      <WhoWeAre/>
+      <AdditionalInfo />
       <Footer />
     </div>
   );

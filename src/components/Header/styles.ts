@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
     width: 100%;
     text-align: center;
     border-bottom: 5px solid ${(props) => props.theme.colors.white};
-    padding-bottom: 15px;
+    padding: 15px 0;
   }
 `;
 

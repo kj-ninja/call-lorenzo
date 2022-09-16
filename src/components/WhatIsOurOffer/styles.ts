@@ -2,17 +2,19 @@ import styled from "styled-components";
 import { IDevice } from "../../settings/media";
 
 export const StyledWhatIsOurOffer = styled.section`
+  margin-top: 60px;
+  line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
+  
   h2 {
-    margin-top: 20px;
     text-align: center;
-
+    margin: 10px 0;
+    
     @media only screen and ${IDevice.desktopXS} {
-      margin-top: 60px;
+      margin: 20px 0;
     }
   }
 
   .tiles-container {
-    min-height: calc(100vh - 200px);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

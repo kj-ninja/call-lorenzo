@@ -3,14 +3,14 @@ import driver from "../../assets/driver.svg"
 import { IDevice } from "../../settings/media";
 
 export const StyledWhenWeWork = styled.section`
+    margin: 60px 0;
+    line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
     
   h2 {
-    margin-top: 30px;
     text-align: center;
   }
   
   .container {
-    height: calc(100vh - 260px);
     display: flex;
     flex-direction: column;
     margin-top: 50px;
@@ -28,7 +28,7 @@ export const StyledWhenWeWork = styled.section`
     )};
 
       @media only screen and ${IDevice.desktopXS} {
-          width: 45%;
+          width: 600px;
           align-self: center;
       }
   }
@@ -39,15 +39,15 @@ export const StyledWhenWeWork = styled.section`
     display: flex;
     align-self: flex-end;
     flex-direction: column;
-    align-items: center;  
-      justify-content: center;
+    align-items: center;
+    justify-content: center;
     padding: 0 30px;
     background-color: ${(props) => (
             props.theme.colors.secondaryColor
     )};
 
       @media only screen and ${IDevice.desktopXS} {
-          width: 45%;
+          width: 600px;
           align-self: center;
       }
   }
@@ -83,7 +83,7 @@ export const ImageContainer = styled.div`
     @media only screen and ${IDevice.desktopXS} {
         width: 70%;
         align-self: center;
-        height: 450px;
+        height: 300px;
         background-size: 70%;
     }
 `;

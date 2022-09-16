@@ -6,26 +6,24 @@ export const StyledHowToContactUs = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   h2 {
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     width: 70%;
     text-align: center;
     @media only screen and ${IDevice.desktopXS} {
-      margin: 50px;
+      margin: 50px 0;
     }
   }
   
   .container {
     width: 100%;
-    height: calc(100vh - 267px);
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-
-    @media only screen and ${IDevice.desktopXS} {
-      height: calc(100vh - 310px);
-    }
+    
   }
   
   .container__first-tile {
@@ -38,7 +36,7 @@ export const StyledHowToContactUs = styled.section`
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
-          width: 45%;
+          width: 600px;
           align-self: center;
           margin-bottom: 20px;
       }
@@ -69,7 +67,7 @@ export const StyledHowToContactUs = styled.section`
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
-        width: 45%;
+        width: 600px;
         align-self: center;
         margin-top: 20px;
       }

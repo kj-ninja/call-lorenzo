@@ -1,4 +1,18 @@
-import { ITile, IPricing, IAdditionalFees, IPaymentMethod, ICostText, IWhenWeWork, IContactUs, IOurOfferTile, IOurOfferToggle } from "../types";
+import {
+  ITile,
+  IPricing,
+  IAdditionalFees,
+  IPaymentMethod,
+  ICostText,
+  IWhenWeWork,
+  IContactUs,
+  IOurOfferTile,
+  IOurOfferToggle,
+  IWhoWeAreFirstParagraph,
+  IWhoWeAreSecondParagraph,
+  IWhoWeAreShortTexts,
+  IAdditionalInfo
+} from "../types";
 
 interface IContent {
   header: {
@@ -19,14 +33,22 @@ interface IContent {
   },
   HowToContactUs: {
     texts: IContactUs;
-  },
-  Footer: {
-    text: string;
   }
   WhatIsOurOffer: {
     title: string;
     toggleText: IOurOfferToggle;
     tileTexts: IOurOfferTile[];
+  },
+  WhoWeAre: {
+    shortTexts: IWhoWeAreShortTexts;
+    firstTextContainer: IWhoWeAreFirstParagraph;
+    secondTextContainer: IWhoWeAreSecondParagraph;
+  },
+  AdditionalInfo: {
+    additionalTexts: IAdditionalInfo;
+  },
+  Footer: {
+    text: string;
   }
 }
 
@@ -173,7 +195,7 @@ export const content: IContent = {
     },
     tileTexts: [
       {
-        tileTitle: "SURROGATE DRIVER/ KIEROWCA ZASTĘPCZY",
+        tileTitle: "KIEROWCA ZASTĘPCZY",
         tileOrder: "1.",
         tileText: "Przyjechałeś swoim samochodem na imprezę, ale ze względu na spożyty alkohol nie możesz " +
           "wrócić do domu?",
@@ -224,6 +246,39 @@ export const content: IContent = {
         tileBoldText: ""
       },
     ]
+  },
+  WhoWeAre: {
+    shortTexts: {
+      title: "Kim jesteśmy?",
+      source: "Żródło: www.pzm.pl"
+    },
+    firstTextContainer: {
+      colorTextSentences: "Jesteśmy młodym zespołem kierowców, którzy posiadają duże doświadczenie, za kierownicą.",
+      standardText: "Prowadziliśmy szeroką gamę samochodów, co przekłada się na zapewnieniu Państwu jak najlepiej " +
+        "wykonywanych przez nas usług."
+    },
+    secondTextContainer: {
+      colorText: "Nasze umiejętności poparte są ",
+      firstStandardText: "kursami doskonalenia techniki jazdy takimi jak ",
+      firstBoldText: "Ford Driving Skills for Life. ",
+      secondStandardText: "Jednocześnie jesteśmy finalistami konkursu ",
+      secondBoldText: "„Najbezpieczniejszy Młody Kierowca” ",
+      thirdStandardText: "w roku 2020 oraz 2021, organizowanego przez ",
+      thirdBoldText: "Polski Związek Motorowy.",
+    }
+  },
+  AdditionalInfo: {
+    additionalTexts: {
+      colouredWords: "Odznaczamy się ",
+      firstParagraph: "wysoką kulturą osobistą, poufnością,odpowiedzialną i bezpieczną jazdą, a także wiedzą z zakresu" +
+        " udzielania pierwszej pomocy.",
+      firstLineText: "BEZPIECZEŃSTWO",
+      secondLineText: "PROFESJONALIZM",
+      thirdLineText: "NIEZAWODNOŚĆ",
+      fourthLineText: "KOMFORT",
+      colouredSentence: "Jako firma, stawiamy na:",
+      colouredParagraph: "Staramy się zapewnić Państwu usługi na najwyższym możliwym poziomie"
+    }
   },
   Footer: {
     text: "Regulamin",

@@ -82,11 +82,17 @@ const shake = keyframes`
 `;
 
 export const StyledHowAreWeDoing = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
+  
   h2 {
     text-align: center;
+    margin-bottom: 40px;
   }
   .tiles-container {
-    height: calc(100vh - 180px);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -196,10 +202,8 @@ export const StyledHowAreWeDoing = styled.section`
 `;
 
 export const StyledTile = styled.div<ITileProps>`
-  height: ${(props) => (
-    props.tile.description ?
-            '85px' : '85px'
-  )};
+  height: 90px;
+  margin-bottom: 50px;
   width: 50%;
   background-color: ${(props) => (
     props.tile.description ? 
@@ -209,6 +213,5 @@ export const StyledTile = styled.div<ITileProps>`
   display: flex;
   align-items: center;
   text-align: center;
-`;
-
-
+  padding: 10px;
+`
