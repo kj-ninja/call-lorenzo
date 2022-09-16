@@ -8,7 +8,10 @@ import {
   IContactUs,
   IOurOfferTile,
   IOurOfferToggle,
-  IWhoWeAreFirstParagraph, IWhoWeAreSecondParagraph, IWhoWeAreShortTexts
+  IWhoWeAreFirstParagraph,
+  IWhoWeAreSecondParagraph,
+  IWhoWeAreShortTexts,
+  IAdditionalInfo
 } from "../types";
 
 interface IContent {
@@ -30,9 +33,6 @@ interface IContent {
   },
   HowToContactUs: {
     texts: IContactUs;
-  },
-  Footer: {
-    text: string;
   }
   WhatIsOurOffer: {
     title: string;
@@ -43,6 +43,12 @@ interface IContent {
     shortTexts: IWhoWeAreShortTexts;
     firstTextContainer: IWhoWeAreFirstParagraph;
     secondTextContainer: IWhoWeAreSecondParagraph;
+  },
+  AdditionalInfo: {
+    additionalTexts: IAdditionalInfo;
+  },
+  Footer: {
+    text: string;
   }
 }
 
@@ -259,6 +265,19 @@ export const content: IContent = {
       secondBoldText: "„Najbezpieczniejszy Młody Kierowca” ",
       thirdStandardText: "w roku 2020 oraz 2021, organizowanego przez ",
       thirdBoldText: "Polski Związek Motorowy.",
+    }
+  },
+  AdditionalInfo: {
+    additionalTexts: {
+      colouredWords: "Odznaczamy się ",
+      firstParagraph: "wysoką kulturą osobistą, poufnością,odpowiedzialną i bezpieczną jazdą, a także wiedzą z zakresu" +
+        " udzielania pierwszej pomocy.",
+      firstLineText: "BEZPIECZEŃSTWO",
+      secondLineText: "PROFESJONALIZM",
+      thirdLineText: "NIEZAWODNOŚĆ",
+      fourthLineText: "KOMFORT",
+      colouredSentence: "Jako firma, stawiamy na:",
+      colouredParagraph: "Staramy się zapewnić Państwu usługi na najwyższym możliwym poziomie"
     }
   },
   Footer: {

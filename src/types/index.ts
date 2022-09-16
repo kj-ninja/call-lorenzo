@@ -83,5 +83,17 @@ export interface IWhoWeAreShortTexts {
   source: string;
 }
 
+//Additional Information
+export interface IAdditionalInfo {
+  colouredWords: string;
+  firstParagraph: string;
+  colouredSentence: string;
+  firstLineText: string;
+  secondLineText: string;
+  thirdLineText: string;
+  fourthLineText: string;
+  colouredParagraph: string;
+}
+
 // general
 export type KeyString = { [key: string]: string };

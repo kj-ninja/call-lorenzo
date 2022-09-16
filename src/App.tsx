@@ -5,6 +5,7 @@ import WhenWeWork from "./components/WhenWeWork";
 import HowToContactUs from "./components/HowToContactUs";
 import WhatIsOurOffer from "./components/WhatIsOurOffer";
 import WhoWeAre from "./components/WhoWeAre";
+import AdditionalInfo from "./components/AdditionalInfo";
 import Footer from "./components/Footer";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       {/*<WhenWeWork />*/}
       {/*<HowToContactUs />*/}
       {/*<WhatIsOurOffer />*/}
-      <WhoWeAre />
+      {/*<WhoWeAre/>*/}
+      <AdditionalInfo />
       <Footer />
     </div>
   );
