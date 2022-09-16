@@ -5,7 +5,6 @@ export const StyledAdditionalInfo = styled.section`
   margin-top: 35px;
   
   .section-container {
-    height: calc(100vh - 188px);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import {ITile} from "../../types";
+import { IDevice } from "../../settings/media";
 
 type ITileProps = {
   tile: ITile;
 }
 
 export const StyledHowAreWeDoing = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   h2 {
     text-align: center;
   }
@@ -14,6 +19,10 @@ export const StyledHowAreWeDoing = styled.section`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    @media only screen and ${IDevice.desktopXS} {
+      max-width: 45%;
+    }
   }
 `
 

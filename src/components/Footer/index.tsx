@@ -11,7 +11,11 @@ const Footer = () => {
   return (
     <Fragment>
       <UpperLine />
-      <LowerLine>{text}</LowerLine>
+      <LowerLine>
+        <span>
+          {text}
+        </span>
+      </LowerLine>
     </Fragment>
   )
 }
