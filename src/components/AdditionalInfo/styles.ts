@@ -18,7 +18,7 @@ export const StyledAdditionalInfo = styled.section`
     margin-bottom: 10px;
 
     @media only screen and ${IDevice.desktopXS} {
-      width: 37%;
+      width: 70%;
       text-align: center;
     }
   }
@@ -35,7 +35,6 @@ export const StyledAdditionalInfo = styled.section`
     margin-top: 30px;
 
     @media only screen and ${IDevice.desktopXS} {
-      width: 45%;
       margin-top: 120px;
       align-items: center;
     }
@@ -57,7 +56,7 @@ export const StyledAdditionalInfo = styled.section`
     text-align: center;
 
     @media only screen and ${IDevice.desktopXS} {
-      width: 25%;
+      width: 35%;
     }
   }
   

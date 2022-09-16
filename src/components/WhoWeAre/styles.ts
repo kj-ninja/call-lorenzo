@@ -11,6 +11,7 @@ export const StyledWhoWeAre = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
   
   h2 {
@@ -25,7 +26,7 @@ export const StyledWhoWeAre = styled.section`
     justify-content: center;
 
     @media only screen and ${IDevice.desktopXS} {
-      width: 45%;
+      width: 100%;
       align-items: unset;
       margin-top: 20px;
     }
@@ -75,13 +76,16 @@ export const ImageContainer = styled.div`
   margin-bottom: 30px;
 
   @media only screen and ${IDevice.desktopXS} {
-    width: 80%;
-    height: 320px;
+    height: 600px;
   }
   
   .source {
     font-size: 6px;
     margin: 8px 10px;
+
+    @media only screen and ${IDevice.desktopXS} {
+      font-size: 8px;
+    }
   }
 `;
 
@@ -91,7 +95,7 @@ export const Image = styled.div`
   background-image: url(${picture});
   background-repeat: no-repeat;
   background-size: cover;
-  `;
+`;
 
 
 export const GraphicsContainer = styled.div`
@@ -102,7 +106,9 @@ export const GraphicsContainer = styled.div`
   margin-top: 10px;
 
   @media only screen and ${IDevice.desktopXS} {
-    width: 80%;
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 30px;
   }
 `;
 
