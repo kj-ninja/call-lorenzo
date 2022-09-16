@@ -1,20 +1,25 @@
 import styled, { keyframes } from "styled-components";
 import {ITile} from "../../types";
+// import car from "../../assets/calling.jpeg";
+// import calling from "../../assets/calling.jpeg";
 import car from "../../assets/calling.svg";
 import calling from "../../assets/calling.svg";
 import leftGlass from "../../assets/left-glass.svg";
 import sound from "../../assets/sound.svg";
 import rightGlass from "../../assets/right-glass.svg";
+
 type ITileProps = {
   tile: ITile;
 }
 
 const moveCar = keyframes`
-  from {
-    margin-left: 100%;
+
+  0% {
+    transform: translate(121px);
   }
-  to {
-    margin-left: 0;
+  
+  100% {
+    transform: translate(0);
   }
 `;
 
@@ -28,6 +33,7 @@ const moveGlass = keyframes`
   }
   
   100% {
+    transform: translate(0);
   }
 `;
 
@@ -68,31 +74,83 @@ export const StyledHowAreWeDoing = styled.section`
     align-items: center;
   }
   
-  //.auto {
-  //  padding: 0;
-  //  display: block;
-  //  position: relative;
-  //  overflow: hidden;
-  //}
+  .null {
+    padding: 10px;
+  }
+  
+  .auto-icon {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    //jpeg
+    // ::before {
+    //   content: url(${car});
+    //   position: absolute;
+    //   top: 25%;
+    //   right: 30%;
+    //   animation: ${moveCar} 3s ease;
+    //   animation-iteration-count: 1;
+    // }
+    
+    // svg
+    ::before {
+      content: '';
+      position: absolute;
+      width: 143px;
+      height: 150px;
+      top: 0;
+      right: 30%;
+      background-image: url(${car});
+      background-repeat: no-repeat;
+      background-size: 300%;
+      background-position-x: 50%;
+      background-position-y: 49%;
+      animation: ${moveCar} 3s ease;
+      animation-iteration-count: 1;
+    }
+  }
 
-  // .auto-icon {
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-image: url(${car});
-  //   background-repeat: no-repeat;
-  //   background-size: 250%;
-  //   background-position-x: 54%;
-  //   background-position-y: 39%;
-  //   animation: ${moveCar} 2s ease;
-  //   animation-iteration-count: 1;
-  // }
+  .telefon-icon {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    // jpeg
+    // ::before {
+      //   content: url(${calling});
+    //   position: absolute;
+    //   top: 25%;
+    //   right: 30%;
+      //   animation: ${shake} 0.5s;
+    //   animation-iteration-count: 5;
+    //   animation-delay: 5s;
+    // }
+
+    //svg
+    // ::before {
+    //   content: '';
+    //   position: absolute;
+    //   width: 143px;
+    //   height: 150px;
+    //   top: -50%;
+    //   right: 20%;
+    //   background-image: url(${calling});
+    //   background-size: 100%;
+    //   background-position-x: 54%;
+    //   background-position-y: 34%;
+    //   animation: ${shake} 0.5s;
+    //   animation-iteration-count: 5;
+    //   animation-delay: 5s;
+    // }
+  }
 `;
 
 export const StyledTile = styled.div<ITileProps>`
   height: ${(props) => (
     props.tile.description ?
-            '17.5%' : '25%'
+            '85px' : '85px'
   )};
   width: 50%;
   background-color: ${(props) => (
@@ -103,48 +161,45 @@ export const StyledTile = styled.div<ITileProps>`
   display: flex;
   align-items: center;
   text-align: center;
-  padding: 10px;  
 `;
 
 export const CarContainer = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 45%;
+  height: 120px;
   position: absolute;
-  top: 17%;
+  top: 23%;
   left: 55%;
-  z-index: 1;
   overflow: hidden;
 
   .car {
-    z-index: 1;
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 69px;
+    height: 69px;
     background-image: url(${car});
     background-repeat: no-repeat;
-    background-size: 300%;
-    background-position-x: 54%;
-    background-position-y: 39%;
-    animation: ${moveCar} 2s ease;
+    //background-size: 300%;
+    //background-position-x: 54%;
+    //background-position-y: 39%;
+    animation: ${moveCar} 3s ease;
     animation-iteration-count: 1;
   }
 `;
 
 export const LeftGlassContainer = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 45%;
+  height: 150px;
   position: absolute;
-  top: 36%;
-  right: 68%;
+  top: 32%;
+  right: 54%;
   z-index: 1;
   overflow: hidden;
 
   .left-glass {
-    width: 100%;
-    height: 100%;
+    width: 143px;
+    height: 150px;
     position: relative;
     background-image: url(${leftGlass});
-    background-size: 400%;
+    background-size: 267%;
     background-position-x: 45%;
     background-position-y: 41%;
     animation: ${moveGlass} 5s linear;
@@ -196,21 +251,21 @@ export const RightGlassContainer = styled.div`
 `;
 
 export const PhoneContainer = styled.div`
-  width: 120px;
+  width: 38%;
   height: 120px;
   position: absolute;
-  top: 55%;
-  left: 55%;
+  top: 59%;
+  left: 62%;
   overflow: hidden;
 
   .calling {
-    width: 100%;
-    height: 100%;
+    width: 69px;
+    height: 69px;
     position: relative;
     background-image: url(${calling});
-    background-size: 380%;
-    background-position-x: 54%;
-    background-position-y: 34%;
+    //background-size: 380%;
+    //background-position-x: 54%;
+    //background-position-y: 34%;
     animation: ${shake} 0.5s;
     animation-iteration-count: 5;
     animation-delay: 5s;
