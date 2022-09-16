@@ -4,7 +4,7 @@ import { IDevice } from "../../settings/media";
 export const StyledAdditionalInfo = styled.section`
   margin-top: 100px;
   padding: 0 3%;
-  line-height: 1.2;
+  line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   .section-container {
     display: flex;

@@ -6,7 +6,7 @@ export const StyledHowToContactUs = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 1.2;
+  line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   h2 {
     margin-top: 40px;

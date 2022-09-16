@@ -4,7 +4,7 @@ import { IDevice } from "../../settings/media";
 
 export const StyledWhenWeWork = styled.section`
     margin: 60px 0;
-    line-height: 1.2;
+    line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
     
   h2 {
     text-align: center;

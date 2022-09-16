@@ -5,7 +5,7 @@ import { IDevice } from "../../settings/media";
 export const StyledWhoWeAre = styled.section`
   margin-top: 60px;
   padding: 0 3%;
-  line-height: 1.2;
+  line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   @media only screen and ${IDevice.desktopXS} {
     display: flex;

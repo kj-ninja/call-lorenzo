@@ -3,7 +3,7 @@ import { IDevice } from "../../settings/media";
 
 export const StyledWhatIsOurOffer = styled.section`
   margin-top: 60px;
-  line-height: 1.2;
+  line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   h2 {
     text-align: center;

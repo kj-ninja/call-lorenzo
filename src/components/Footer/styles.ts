@@ -16,7 +16,7 @@ export const LowerLine = styled.div`
   color: white;
 
   .lower-line-container {
-    max-width: ${(props) => (props.theme.widthLimit.desktop)};
+    max-width: ${(props) => (props.theme.additionalStyles.desktop)};
     width: 100%;
   }
 `;

@@ -11,7 +11,7 @@ export const StyledHowAreWeDoing = styled.section`
   flex-direction: column;
   align-items: center;
   margin: 40px 0;
-  line-height: 1.2;
+  line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   h2 {
     text-align: center;

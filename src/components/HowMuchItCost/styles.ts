@@ -4,7 +4,7 @@ import { IDevice } from "../../settings/media";
 export const StyledHowMuchIsIt = styled.section`
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   h2 {
     margin: 20px 0;
