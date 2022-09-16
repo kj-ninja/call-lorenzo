@@ -20,14 +20,10 @@ export const StyledHowToContactUs = styled.section`
   
   .container {
     width: 100%;
-    height: calc(100vh - 267px);
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-
-    @media only screen and ${IDevice.desktopXS} {
-      height: calc(100vh - 310px);
-    }
+    
   }
   
   .container__first-tile {
@@ -40,7 +36,7 @@ export const StyledHowToContactUs = styled.section`
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
-          width: 45%;
+          width: 600px;
           align-self: center;
           margin-bottom: 20px;
       }
@@ -71,7 +67,7 @@ export const StyledHowToContactUs = styled.section`
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
-        width: 45%;
+        width: 600px;
         align-self: center;
         margin-top: 20px;
       }

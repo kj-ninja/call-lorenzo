@@ -36,11 +36,11 @@ const HowMuchItCost = () => {
           <div>
             {additionalFees.map((fee) => (
               <div className="table-row">
-                <div>
+                <div className="table-row-text-wrapper">
                   <div className="table-row__text-style">{fee.feesText}</div>
                   <div>{fee.feesDescription}</div>
                 </div>
-                <div>{fee.feesValue}</div>
+                <div className="table-row-fees-style">{fee.feesValue}</div>
               </div>
             ))}
           </div>

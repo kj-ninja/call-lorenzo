@@ -51,7 +51,6 @@ const WhoWeAre = () => {
             <span className='second-paragraph__bold-text'>{thirdBoldText}</span>
           </div>
           <ImageContainer>
-            {/*<Image src={picture} alt=""/>*/}
             <Image />
             <span className="source">{source}</span>
           </ImageContainer>

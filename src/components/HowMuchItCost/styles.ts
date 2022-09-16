@@ -16,6 +16,10 @@ export const Pricing = styled.div`
   width: 80%;
   align-self: flex-start;
   margin-top: 14px;
+
+  @media only screen and ${IDevice.desktopXS} {
+    width: 100%;
+  }
   
   .table-row {
     display: flex;
@@ -24,6 +28,10 @@ export const Pricing = styled.div`
     padding: 5px 0;
     border-bottom: 1px solid black;
     background-color: ${(props) => props.theme.colors.secondaryColor};
+
+    @media only screen and ${IDevice.desktopXS} {
+      padding: 8px 0;
+    }
   }
   
   .table-row:last-child {
@@ -45,7 +53,6 @@ export const Pricing = styled.div`
 
   @media only screen and ${IDevice.desktopXS} {
     align-self: center;
-    width: 45%;
     margin-bottom: 20px;
   }
 `;
@@ -55,6 +62,10 @@ export const AdditionalFees = styled.div`
   align-self: flex-end;
   margin-top: 10px;
 
+  @media only screen and ${IDevice.desktopXS} {
+    width: 600px;
+  }
+  
   .table-row {
     display: flex;
     justify-content: space-around;
@@ -63,6 +74,14 @@ export const AdditionalFees = styled.div`
     border-bottom: 1px solid black;
     background-color: ${(props) => props.theme.colors.secondaryColor};
   }
+  
+  .table-row-text-wrapper {
+
+    @media only screen and ${IDevice.desktopXS} {
+      width: 50%;
+      display: flex;
+    }
+  }
 
   .table-row:last-child {
     border-bottom: none;
@@ -70,11 +89,16 @@ export const AdditionalFees = styled.div`
 
   .table-row__text-style {
     font-weight: bold;
+    margin-right: 4px;
+  }
+  
+  .table-row-fees-style {
+    width: 60px;
+    text-align: right;
   }
 
   @media only screen and ${IDevice.desktopXS} {
     align-self: center;
-    width: 45%;
   }
 `;
 

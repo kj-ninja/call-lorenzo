@@ -21,10 +21,6 @@ export const StyledHowAreWeDoing = styled.section`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
-    @media only screen and ${IDevice.desktopXS} {
-      max-width: 45%;
-    }
   }
 `
 

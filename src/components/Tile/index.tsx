@@ -23,7 +23,7 @@ const Tile: FC<Props> = (tile) => {
   return (
     <Fragment>
       <TileWrapper>
-        <StyledTile className="tile">
+        <StyledTile className="tile hover-effect" onClick={toggleHandler} >
           <div className='tile-text-wrapper'>
             <span className='tile-order'>
               {tile.tile.tileOrder}
@@ -33,7 +33,7 @@ const Tile: FC<Props> = (tile) => {
             </span>
 
           </div>
-          <span className='tile-toggle' onClick={toggleHandler}>
+          <span className='tile-toggle'>
               {!show ? toggleText.show : toggleText.hide}
             </span>
         </StyledTile>
