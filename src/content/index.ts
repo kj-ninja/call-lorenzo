@@ -68,34 +68,42 @@ export const content: IContent = {
       {
         description: 'jedziesz na imprez swoim samochodem',
         icon: "null",
+        order: "1.",
       },
       {
         description: null,
-        icon: 'auto-party'
+        icon: 'auto-party',
+        order: "",
       },
       {
         description: null,
-        icon: 'glass'
+        icon: 'glass',
+        order: "",
       },
       {
         description: 'dobrze się bawisz popijając alkohol',
         icon: "null",
+        order: "2.",
       },
       {
         description: 'dzwonisz lub piszesz do nas 1h przed wyjściem',
         icon: "null",
+        order: "3.",
       },
       {
         description: null,
-        icon: 'telefon'
+        icon: 'telefon',
+        order: "",
       },
       {
         description: null,
-        icon: 'auto-home'
+        icon: 'auto-home',
+        order: "",
       },
       {
         description: 'bezpiecznie wracasz do domu swoim samochodem',
         icon: "null",
+        order: "4.",
       },
     ],
   },

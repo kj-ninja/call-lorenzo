@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import {FC, Fragment} from 'react';
 import { StyledHowAreWeDoing, StyledTile } from "./styles";
 import {content} from "../../content";
 import { Container } from '../../styles/styled/Container';
@@ -16,8 +16,19 @@ const HowAreWeDoing: FC<Props> = () => {
         <div className='tiles-container'>
           {tiles.map((tile) => (
             <StyledTile className={tile.icon} tile={tile}>
-              {tile.description}
-              {!tile.description ? <div className={`${tile.icon}-icon`}></div> : null}
+              {
+                tile.description ?
+                <Fragment>
+                <span className="tile-order">{tile.order}</span>
+                <span className="tile-description">{tile.description}</span>
+                </Fragment>
+                : null
+              }
+              {
+                !tile.description ?
+                  <div className={`${tile.icon}-icon`}></div>
+                  : null
+              }
             </StyledTile>
           ))}
         </div>
