@@ -1,7 +1,8 @@
 // How are we doing?
 export interface ITile {
   description: string | null;
-  icon: string | null;
+  icon: string;
+  order: string;
 }
 
 // How Much It Cost?

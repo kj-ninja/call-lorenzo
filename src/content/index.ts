@@ -67,35 +67,43 @@ export const content: IContent = {
     tiles: [
       {
         description: 'jedziesz na imprez swoim samochodem',
-        icon: null,
+        icon: "null",
+        order: "1.",
       },
       {
         description: null,
-        icon: 'Auto'
+        icon: 'auto-party',
+        order: "",
       },
       {
         description: null,
-        icon: 'Kieliszki'
+        icon: 'glass',
+        order: "",
       },
       {
         description: 'dobrze się bawisz popijając alkohol',
-        icon: null,
+        icon: "null",
+        order: "2.",
       },
       {
         description: 'dzwonisz lub piszesz do nas 1h przed wyjściem',
-        icon: null,
+        icon: "null",
+        order: "3.",
       },
       {
         description: null,
-        icon: 'Telefon'
+        icon: 'telefon',
+        order: "",
       },
       {
         description: null,
-        icon: 'Auto'
+        icon: 'auto-home',
+        order: "",
       },
       {
         description: 'bezpiecznie wracasz do domu swoim samochodem',
-        icon: null,
+        icon: "null",
+        order: "4.",
       },
     ],
   },
