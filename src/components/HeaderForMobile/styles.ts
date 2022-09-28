@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type IBarProps = {
-  bar: boolean;
+  scrollOnFirstScreen: boolean;
 }
 
 export const StyledHeader = styled.header`
@@ -33,10 +33,10 @@ export const TitleContainer = styled.div`
 
 export const LeftTitleLine = styled.div<IBarProps>`
   width: ${(props) => (
-    props.bar ? "31%" : "25%"
+    props.scrollOnFirstScreen ? "31%" : "25%"
   )};
   height: ${(props) => (
-          props.bar ? "8px" : "13px"
+          props.scrollOnFirstScreen ? "8px" : "13px"
   )};
   background: white;
   margin-top: 3px;
@@ -44,10 +44,10 @@ export const LeftTitleLine = styled.div<IBarProps>`
 
 export const RightTitleLine = styled.div<IBarProps>`
   width: ${(props) => (
-          props.bar ? "31%" : "10%"
+          props.scrollOnFirstScreen ? "31%" : "10%"
   )};
   height: ${(props) => (
-          props.bar ? "8px" : "13px"
+          props.scrollOnFirstScreen ? "8px" : "13px"
   )};
   background: white;
   margin-top: 3px;
@@ -59,7 +59,7 @@ export const StyledLine = styled.div<IBarProps>`
   justify-content: space-between;
   align-items: center;
   height: ${(props) => (
-          props.bar ? "38px" : "15px"
+          props.scrollOnFirstScreen ? "38px" : "15px"
   )};
   
   .left-box {
@@ -83,7 +83,7 @@ export const StyledLine = styled.div<IBarProps>`
 export const MiddleBlankLine = styled.div<IBarProps>`
   width: 100%;
   height: ${(props) => (
-          props.bar ? "3px" : "5px"
+          props.scrollOnFirstScreen ? "3px" : "5px"
   )};
   background-color: white;
 `

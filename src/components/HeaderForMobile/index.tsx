@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import useCheckScroll from "../hooks/useCheckScroll";
 import {
   StyledHeader,
@@ -12,36 +11,35 @@ import {
 import { content } from "../../content";
 
 const HeaderForMobile = () => {
-  const { bar } = useCheckScroll();
+  const { scrollOnFirstScreen } = useCheckScroll();
   const { title } = content.header;
 
   return (
     <StyledHeader>
       <TitleContainer>
-        <LeftTitleLine bar={bar}/>
+        <LeftTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
-          bar ?
+          scrollOnFirstScreen ?
             <h2>{title}</h2>
             :
             <h1>{title}</h1>
         }
-        <RightTitleLine bar={bar}/>
+        <RightTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
-          !bar ?
+          !scrollOnFirstScreen &&
             <HamburgerMenu>
               <div />
               <div />
               <div />
             </HamburgerMenu>
-            :
-            null
+
         }
       </TitleContainer>
-      <MiddleBlankLine bar={bar}/>
-      <StyledLine bar={bar}>
+      <MiddleBlankLine scrollOnFirstScreen={scrollOnFirstScreen}/>
+      <StyledLine scrollOnFirstScreen={scrollOnFirstScreen}>
         {
-          bar ?
-             <Fragment>
+          scrollOnFirstScreen &&
+             <>
                <div className="left-box"/>
                <span className="phone-number">+48 537 522 788</span>
                <HamburgerMenu>
@@ -49,9 +47,7 @@ const HeaderForMobile = () => {
                  <div />
                  <div />
                </HamburgerMenu>
-             </Fragment>
-            :
-            null
+             </>
         }
       </StyledLine>
     </StyledHeader>
