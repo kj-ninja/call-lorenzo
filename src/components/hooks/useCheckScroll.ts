@@ -4,7 +4,12 @@ const useCheckScroll = () => {
   const [scrollOnFirstScreen, setScrollOnFirstScreen] = useState(false);
 
   const changeBar = () => {
-    window.scrollY >= 500 ? setScrollOnFirstScreen(true) : setScrollOnFirstScreen(false);
+    if (window.scrollY >= 250) {
+      setScrollOnFirstScreen(true)
+    } if (window.scrollY <= 150) {
+      setScrollOnFirstScreen(false)
+    }
+    // window.scrollY >= 150 ? setScrollOnFirstScreen(true) : setScrollOnFirstScreen(false);
   };
 
   useEffect(() => {

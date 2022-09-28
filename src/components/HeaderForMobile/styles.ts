@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
-type IBarProps = {
+type IScrollCheckProps = {
   scrollOnFirstScreen: boolean;
 }
 
-export const StyledHeader = styled.header`
+export const StyledHeader = styled.header<IScrollCheckProps>`
   width: 100%;
-  position: sticky;
+  z-index: 999;
   background-color: ${(props) => props.theme.colors.primaryColor};
   color: ${(props) => props.theme.colors.white};
-  top: 0;
-  z-index: 100;
+  position: ${(props) => (props.scrollOnFirstScreen ? "fixed" : "unset")};
+  
+   top: ${props => (props.scrollOnFirstScreen ? "0" : "-90px")};
+  transition: ${(props) => (props.scrollOnFirstScreen ? "1s top cubic-bezier(.3, .73, .3, .74)" : "1s top cubic-bezier(.3, .73, .3, .74)")};
   
   h1 {
     text-align: center;
@@ -31,7 +33,7 @@ export const TitleContainer = styled.div`
   align-items: center;
 `;
 
-export const LeftTitleLine = styled.div<IBarProps>`
+export const LeftTitleLine = styled.div<IScrollCheckProps>`
   width: ${(props) => (
     props.scrollOnFirstScreen ? "31%" : "25%"
   )};
@@ -42,7 +44,7 @@ export const LeftTitleLine = styled.div<IBarProps>`
   margin-top: 3px;
 `;
 
-export const RightTitleLine = styled.div<IBarProps>`
+export const RightTitleLine = styled.div<IScrollCheckProps>`
   width: ${(props) => (
           props.scrollOnFirstScreen ? "31%" : "10%"
   )};
@@ -53,7 +55,7 @@ export const RightTitleLine = styled.div<IBarProps>`
   margin-top: 3px;
 `;
 
-export const StyledLine = styled.div<IBarProps>`
+export const StyledLine = styled.div<IScrollCheckProps>`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -80,7 +82,7 @@ export const StyledLine = styled.div<IBarProps>`
   }
 `;
 
-export const MiddleBlankLine = styled.div<IBarProps>`
+export const MiddleBlankLine = styled.div<IScrollCheckProps>`
   width: 100%;
   height: ${(props) => (
           props.scrollOnFirstScreen ? "3px" : "5px"

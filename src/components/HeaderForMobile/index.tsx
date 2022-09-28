@@ -15,7 +15,7 @@ const HeaderForMobile = () => {
   const { title } = content.header;
 
   return (
-    <StyledHeader>
+    <StyledHeader scrollOnFirstScreen={scrollOnFirstScreen}>
       <TitleContainer>
         <LeftTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
@@ -38,7 +38,7 @@ const HeaderForMobile = () => {
       <MiddleBlankLine scrollOnFirstScreen={scrollOnFirstScreen}/>
       <StyledLine scrollOnFirstScreen={scrollOnFirstScreen}>
         {
-          scrollOnFirstScreen &&
+          scrollOnFirstScreen ?
              <>
                <div className="left-box"/>
                <span className="phone-number">+48 537 522 788</span>
@@ -48,6 +48,8 @@ const HeaderForMobile = () => {
                  <div />
                </HamburgerMenu>
              </>
+            :
+            null
         }
       </StyledLine>
     </StyledHeader>
