@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import StyledNavbar from "./styles";
 import useDeviceDetect from "../hooks/useDeviceDetect";
 import useCheckScroll from "../hooks/useCheckScroll";
+import StyledNavbar from "./styles";
 
 interface Props {
   navigation: string[];
