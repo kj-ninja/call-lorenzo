@@ -9,10 +9,19 @@ import {
   HamburgerMenu
 } from "./styles";
 import { content } from "../../content";
+import { useState } from "react";
+import Navbar from "../Navbar";
+import useDisableScroll from "../hooks/useDisableScroll";
 
 const HeaderForMobile = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const { scrollOnFirstScreen } = useCheckScroll();
-  const { title } = content.header;
+  const { title, navigation } = content.header;
+  useDisableScroll(isOpen);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <StyledHeader scrollOnFirstScreen={scrollOnFirstScreen}>
@@ -27,7 +36,7 @@ const HeaderForMobile = () => {
         <RightTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
           !scrollOnFirstScreen &&
-            <HamburgerMenu>
+            <HamburgerMenu onClick={toggleMenu}>
               <div />
               <div />
               <div />
@@ -42,7 +51,7 @@ const HeaderForMobile = () => {
              <>
                <div className="left-box"/>
                <span className="phone-number">+48 537 522 788</span>
-               <HamburgerMenu>
+               <HamburgerMenu onClick={toggleMenu}>
                  <div />
                  <div />
                  <div />
@@ -52,6 +61,7 @@ const HeaderForMobile = () => {
             null
         }
       </StyledLine>
+          <Navbar navigation={navigation} setToggleMenu={toggleMenu} toggleMenu={isOpen}/>
     </StyledHeader>
   );
 };
