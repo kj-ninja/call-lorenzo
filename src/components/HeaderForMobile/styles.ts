@@ -10,9 +10,8 @@ export const StyledHeader = styled.header<IScrollCheckProps>`
   background-color: ${(props) => props.theme.colors.primaryColor};
   color: ${(props) => props.theme.colors.white};
   position: ${(props) => (props.scrollOnFirstScreen ? "fixed" : "unset")};
-  
-   top: ${props => (props.scrollOnFirstScreen ? "0" : "-90px")};
-  transition: ${(props) => (props.scrollOnFirstScreen ? "0.5s top cubic-bezier(.3, .73, .3, .74)" : "0.5s top cubic-bezier(.3, .73, .3, .74)")};
+  top: ${props => (props.scrollOnFirstScreen ? "0" : "-90px")};
+  transition: ${(props) => (props.scrollOnFirstScreen && "0.5s top cubic-bezier(.3, .73, .3, .74)")};
   
   h1 {
     text-align: center;
@@ -102,5 +101,4 @@ export const HamburgerMenu = styled.div`
     background-color: white;
     margin: 3px 0;
   }
-  
 `
