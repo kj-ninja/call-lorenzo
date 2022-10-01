@@ -12,7 +12,7 @@ export const StyledHeader = styled.header<IScrollCheckProps>`
   position: ${(props) => (props.scrollOnFirstScreen ? "fixed" : "unset")};
   
    top: ${props => (props.scrollOnFirstScreen ? "0" : "-90px")};
-  transition: ${(props) => (props.scrollOnFirstScreen ? "0.5s top cubic-bezier(.3, .73, .3, .74)" : "1s top cubic-bezier(.3, .73, .3, .74)")};
+  transition: ${(props) => (props.scrollOnFirstScreen ? "0.5s top cubic-bezier(.3, .73, .3, .74)" : "0.5s top cubic-bezier(.3, .73, .3, .74)")};
   
   h1 {
     text-align: center;
