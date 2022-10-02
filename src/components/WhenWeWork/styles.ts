@@ -80,6 +80,10 @@ export const ImageContainer = styled.div`
     background-size: 100%;
     background-position: center;
 
+    @media only screen and ${IDevice.tablet} {
+        background-size: 60%;
+    }
+
     @media only screen and ${IDevice.desktopXS} {
         width: 70%;
         align-self: center;
