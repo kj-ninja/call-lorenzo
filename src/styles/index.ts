@@ -10,12 +10,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     scroll-padding-top: 90px;
 
     @media only screen and ${IDevice.desktopXS} {
-      scroll-behavior: unset;
-      scroll-padding-top: 20px;
+      scroll-behavior: smooth;
+      scroll-padding-top: 0;
     }
   }
 `

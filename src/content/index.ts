@@ -17,6 +17,7 @@ import {
 interface IContent {
   header: {
     title: string;
+    phoneNumber: string;
     navigation: string[];
   };
   howAreWeDoing: {
@@ -55,6 +56,7 @@ interface IContent {
 export const content: IContent = {
   header: {
     title: 'Call Lorenzo',
+    phoneNumber: "+48 537 522 788",
     navigation: [
       'USŁUGI',
       'GODZINY PRACY',

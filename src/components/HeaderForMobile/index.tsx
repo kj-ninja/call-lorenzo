@@ -16,7 +16,7 @@ import { content } from "../../content";
 const HeaderForMobile = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { scrollOnFirstScreen } = useCheckScroll();
-  const { title, navigation } = content.header;
+  const { title, navigation, phoneNumber } = content.header;
 
   useDisableScroll(isOpen);
 
@@ -51,7 +51,7 @@ const HeaderForMobile = () => {
           scrollOnFirstScreen ?
              <>
                <div className="left-box"/>
-               <span className="phone-number">+48 537 522 788</span>
+               <span className="phone-number">{phoneNumber}</span>
                <HamburgerMenu onClick={toggleMenu}>
                  <div />
                  <div />
