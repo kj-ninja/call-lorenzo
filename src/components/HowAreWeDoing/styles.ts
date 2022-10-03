@@ -13,6 +13,10 @@ type ITileProps = {
   tile: ITile;
 }
 
+type IScrollCheckProps = {
+  scrollOnFirstScreen: boolean;
+}
+
 const moveCarParty = keyframes`
   0% {
     transform: translate(160px);
@@ -108,11 +112,13 @@ const shake = keyframes`
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 `;
 
-export const StyledHowAreWeDoing = styled.section`
+export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px 0;
+  margin: ${(props) => (
+          props.scrollOnFirstScreen ? "127px 0 40px 0" : "40px 0"
+  )};
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   h2 {
