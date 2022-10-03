@@ -240,7 +240,7 @@ export const StyledHowAreWeDoing = styled.section`
       background-size: 150%;
       top: 0;
       right: 17px;
-      animation: ${moveGlass} 1s linear;
+      animation: ${moveGlass} 1.9s linear;
       animation-iteration-count: 1;
       animation-delay: 0.4s;
       animation-fill-mode: forwards;
@@ -249,7 +249,7 @@ export const StyledHowAreWeDoing = styled.section`
       @media only screen and ${IDevice.tablet} {
         background-size: 75%;
         right: 19px;
-        animation: ${desktopMoveGlass} 0.7s linear;
+        animation: ${desktopMoveGlass} 1.2s linear;
         animation-delay: 0.5s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
@@ -268,7 +268,7 @@ export const StyledHowAreWeDoing = styled.section`
       right: 8px;
       animation: ${soundAnimation} 1s linear;
       animation-iteration-count: 1;
-      animation-delay: 1s;
+      animation-delay: 1.7s;
       animation-fill-mode: forwards;
       visibility: hidden;
 
@@ -276,7 +276,7 @@ export const StyledHowAreWeDoing = styled.section`
         background-size: 75%;
         animation: ${desktopSoundAnimation} 1s linear;
         animation-iteration-count: 1;
-        animation-delay: 0.9s;
+        animation-delay: 1.3s;
         animation-fill-mode: forwards;
       }
     }
@@ -299,7 +299,7 @@ export const StyledHowAreWeDoing = styled.section`
       background-repeat: no-repeat;
       animation: ${shake} 0.5s;
       animation-iteration-count: 1.5;
-      animation-delay: 1.5s;
+      animation-delay: 1.9s;
 
       @media only screen and ${IDevice.tablet} {
         left: -33px;
@@ -345,7 +345,7 @@ export const StyledHowAreWeDoing = styled.section`
       right: -45px;
       top: -4px;
       animation: ${moveCarHome} 1s ease;
-      animation-delay: 2s;
+      animation-delay: 2.4s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       visibility: hidden;
