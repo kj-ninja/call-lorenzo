@@ -12,7 +12,7 @@ import { content } from "../../content";
 
 const HeaderForMobile = () => {
   const { scrollOnFirstScreen } = useCheckScroll();
-  const { title } = content.header;
+  const { title, phoneNumber } = content.header;
 
   return (
     <StyledHeader scrollOnFirstScreen={scrollOnFirstScreen}>
@@ -41,7 +41,7 @@ const HeaderForMobile = () => {
           scrollOnFirstScreen ?
              <>
                <div className="left-box"/>
-               <span className="phone-number">+48 537 522 788</span>
+               <span className="phone-number">{phoneNumber}</span>
                <HamburgerMenu>
                  <div />
                  <div />
