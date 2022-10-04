@@ -22,10 +22,18 @@ export const Pricing = styled.div`
   }
   .table > div:first-of-type {
    border-radius: 0 20px 0 0;
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: 0;
+    }
   }
   
   .table > div:last-of-type {
     border-radius: 0 0 20px 0;
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: 0;
+    }
   }
   
   .table-row {
@@ -75,10 +83,18 @@ export const AdditionalFees = styled.div`
   
   > div div:first-of-type {
     border-radius: 20px 0 0 0;
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: 0;
+    }
   }
   
   > div div:last-of-type {
     border-radius: 0 0 0 20px;
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: 0;
+    }
   }
   
   .table-row {
