@@ -17,11 +17,11 @@ const HowAreWeDoing: FC<Props> = () => {
         <h2>Jak działamy?</h2>
         <div className='tiles-container'>
           {tiles.map((tile) => (
-            <StyledTile className={tile.icon} tile={tile}>
+            <StyledTile className={`${tile.icon} number-${tile.order}`} tile={tile}>
               {
                 tile.description ?
                 <Fragment>
-                <span className="tile-order">{tile.order}</span>
+                <span className="tile-order">{tile.order}.</span>
                 <span className="tile-description">{tile.description}</span>
                 </Fragment>
                 : null

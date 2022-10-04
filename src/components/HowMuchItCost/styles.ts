@@ -7,7 +7,7 @@ export const StyledHowMuchIsIt = styled.section`
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   h2 {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     text-align: center;
   }
 `
@@ -19,6 +19,13 @@ export const Pricing = styled.div`
 
   @media only screen and ${IDevice.desktopXS} {
     width: 100%;
+  }
+  .table > div:first-of-type {
+   border-radius: 0 20px 0 0;
+  }
+  
+  .table > div:last-of-type {
+    border-radius: 0 0 20px 0;
   }
   
   .table-row {
@@ -64,6 +71,14 @@ export const AdditionalFees = styled.div`
 
   @media only screen and ${IDevice.desktopXS} {
     width: 600px;
+  }
+  
+  > div div:first-of-type {
+    border-radius: 20px 0 0 0;
+  }
+  
+  > div div:last-of-type {
+    border-radius: 0 0 0 20px;
   }
   
   .table-row {
