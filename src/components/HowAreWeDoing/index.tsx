@@ -18,10 +18,10 @@ const HowAreWeDoing: FC<Props> = () => {
             <StyledTile className={tile.icon} tile={tile}>
               {
                 tile.description ?
-                <Fragment>
+                <>
                 <span className="tile-order">{tile.order}</span>
                 <span className="tile-description">{tile.description}</span>
-                </Fragment>
+                </>
                 : null
               }
               {

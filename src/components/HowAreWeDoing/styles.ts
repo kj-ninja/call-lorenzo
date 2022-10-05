@@ -25,7 +25,7 @@ const moveCarParty = keyframes`
 
 const desktopMoveCarParty = keyframes`
   0% {
-    transform: translate(280px);
+    transform: translate(300px);
   }
   100% {
     transform: translate(0);
@@ -55,11 +55,11 @@ const moveGlass = keyframes`
     visibility: visible;
   }
   70% {
-    transform: translate(4px);
+    transform: translate(3px);
     visibility: visible;
   }
   100% {
-    transform: translate(0);
+    transform: translate(-1px);
     visibility: visible;
   }
 `;
@@ -73,7 +73,7 @@ const desktopMoveGlass = keyframes`
     visibility: visible;
   }
   75% {
-    transform: translate(4px);
+    transform: translate(5px);
     visibility: visible;
   }
   100% {
@@ -185,12 +185,14 @@ export const StyledHowAreWeDoing = styled.section`
       position: absolute;
       background-image: url(${leftCar});
       background-repeat: no-repeat;
-      left: 35px;
+      background-position: center;
+      background-size: 220px;
+      left: 25px;
       animation: ${moveCarParty} 1s ease;
       animation-iteration-count: 1;
 
       @media only screen and ${IDevice.desktopXS} {
-        left: 135px;
+        left: 5px;
         animation: ${desktopMoveCarParty} 1s ease;
         animation-iteration-count: 1;
       }
@@ -203,10 +205,13 @@ export const StyledHowAreWeDoing = styled.section`
       position: absolute;
       background-image: url(${party});
       background-repeat: no-repeat;
-      left: -20px;
+      background-size: 260px;
+      background-position: center;
+      left: -50px;
+      bottom: 5px;
 
       @media only screen and ${IDevice.desktopXS} {
-        left: 80px;
+        left: -70px;
       }
     }
   }
@@ -217,15 +222,16 @@ export const StyledHowAreWeDoing = styled.section`
     position: relative;
     background-image: url(${rightGlass});
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 150%;
+    background-position-y: 45%;
+    background-position-x: 50%;
+    background-size: 165%;
     right: -20px;
-    top: 0;
+    top: -13px;
     overflow: hidden;
 
     @media only screen and ${IDevice.tablet} {
       background-size: 75%;
-      right: -40px;
+      right: -20px;
       top: 0;
     }
 
@@ -236,8 +242,9 @@ export const StyledHowAreWeDoing = styled.section`
       position: absolute;
       background-image: url(${leftGlass});
       background-repeat: no-repeat;
-      background-position: center;
-      background-size: 150%;
+      background-position-y: 45%;
+      background-position-x: 50%;
+      background-size: 165%;
       top: 0;
       right: 17px;
       animation: ${moveGlass} 1.9s linear;
@@ -263,9 +270,11 @@ export const StyledHowAreWeDoing = styled.section`
       height: 100%;
       background-image: url(${sound});
       background-repeat: no-repeat;
-      background-position: center;
-      background-size: 150%;
-      right: 8px;
+      background-position-y: 40%;
+      background-position-x: 50%;
+      background-size: 170%;
+      right: 9px;
+      bottom: 12px;
       animation: ${soundAnimation} 1s linear;
       animation-iteration-count: 1;
       animation-delay: 1.7s;
@@ -297,16 +306,23 @@ export const StyledHowAreWeDoing = styled.section`
       position: absolute;
       background-image: url(${calling});
       background-repeat: no-repeat;
+      background-size: 70%;
+      background-position-y: 40%;
+      background-position-x: -50%;
       animation: ${shake} 0.5s;
       animation-iteration-count: 1.5;
       animation-delay: 1.9s;
 
       @media only screen and ${IDevice.tablet} {
         left: -33px;
+        background-size: 30%;
+        background-position-y: 40%;
+        background-position-x: -1%;
       }
 
       @media only screen and ${IDevice.desktopXS} {
         left: 12px;
+        background-position-x: -7%;
       }
     }
   }
@@ -324,14 +340,16 @@ export const StyledHowAreWeDoing = styled.section`
       position: absolute;
       background-image: url(${home});
       background-repeat: no-repeat;
-      right: -70px;
+      background-position: center;
+      background-size: 260px;
+      right: -65px;
 
       @media only screen and ${IDevice.tablet} {
-        right: -225px;
+        right: -65px;
       }
 
       @media only screen and ${IDevice.desktopXS} {
-        right: -200px;
+        right: -40px;
       }
     }
 
@@ -342,8 +360,10 @@ export const StyledHowAreWeDoing = styled.section`
       position: absolute;
       background-image: url(${rightCar});
       background-repeat: no-repeat;
-      right: -45px;
-      top: -4px;
+      background-position: center;
+      background-size: 210px;
+      right: -7px;
+      top: -6px;
       animation: ${moveCarHome} 1s ease;
       animation-delay: 2.4s;
       animation-iteration-count: 1;
@@ -351,11 +371,11 @@ export const StyledHowAreWeDoing = styled.section`
       visibility: hidden;
 
       @media only screen and ${IDevice.tablet} {
-        right: -200px;
+        right: -5px;
       }
 
       @media only screen and ${IDevice.desktopXS} {
-        right: -175px;
+        right: 20px;
       }
     }
   }
@@ -375,9 +395,10 @@ export const StyledTile = styled.div<ITileProps>`
 
   .tile-order {
     display: flex;
-    align-self: flex-start;
+    align-self: center;
     font-weight: bold;
     font-size: 24px;
+    padding-left: 20px;
 
     @media only screen and ${IDevice.desktopXS} {
       align-self: center;
@@ -386,7 +407,7 @@ export const StyledTile = styled.div<ITileProps>`
 
   .tile-description {
     display: flex;
-    align-self: flex-start;
+    align-self: center;
     text-align: left;
     margin-left: 10px;
 
