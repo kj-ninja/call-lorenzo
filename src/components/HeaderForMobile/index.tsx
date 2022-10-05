@@ -24,24 +24,29 @@ const HeaderForMobile = () => {
     setIsOpen(!isOpen);
   }
 
+  const scrollToTop = () => {
+      window.scrollTo({ top: 0, left: 0 });
+  }
+
   return (
     <StyledHeader scrollOnFirstScreen={scrollOnFirstScreen}>
       <TitleContainer>
         <LeftTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
           scrollOnFirstScreen ?
-            <h2>{title}</h2>
+            <h2 onClick={scrollToTop}>{title}</h2>
             :
-            <h1>{title}</h1>
+            <h1 onClick={scrollToTop}>{title}</h1>
         }
         <RightTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
           !scrollOnFirstScreen &&
-            <HamburgerMenu onClick={toggleMenu}>
-              <div />
-              <div />
-              <div />
-            </HamburgerMenu>
+          <HamburgerMenu>
+            <input id="menu-toggle" type="checkbox" onClick={toggleMenu} />
+            <label className='menu-button-container' htmlFor="menu-toggle">
+              <div className='menu-button'></div>
+            </label>
+          </HamburgerMenu>
 
         }
       </TitleContainer>
@@ -52,10 +57,11 @@ const HeaderForMobile = () => {
              <>
                <div className="left-box"/>
                <span className="phone-number">{phoneNumber}</span>
-               <HamburgerMenu onClick={toggleMenu}>
-                 <div />
-                 <div />
-                 <div />
+               <HamburgerMenu>
+               <input id="menu-toggle" type="checkbox" onClick={toggleMenu} />
+               <label className='menu-button-container' htmlFor="menu-toggle">
+                 <div className='menu-button'></div>
+               </label>
                </HamburgerMenu>
              </>
             :
