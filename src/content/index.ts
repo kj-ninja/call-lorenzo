@@ -22,6 +22,8 @@ interface IContent {
   };
   howAreWeDoing: {
     tiles: ITile[];
+    footerText: string;
+    footerBoldText: string;
   },
   howMuchItCost: {
     prices: IPricing[];
@@ -108,6 +110,8 @@ export const content: IContent = {
         order: "4.",
       },
     ],
+    footerText: "Usługa dostępna na terenie ",
+    footerBoldText: "Wrocławia i okolic",
   },
   howMuchItCost: {
     prices: [

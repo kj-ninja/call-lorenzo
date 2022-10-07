@@ -1,14 +1,15 @@
 import {FC, Fragment} from 'react';
-import { StyledHowAreWeDoing, StyledTile } from "./styles";
+import useCheckScroll from "../hooks/useCheckScroll";
 import {content} from "../../content";
 import { Container } from '../../styles/styled/Container';
-import useCheckScroll from "../hooks/useCheckScroll";
+import {
+  StyledHowAreWeDoing,
+  StyledTile,
+  SectionFooter
+} from "./styles";
 
-interface Props {
-}
-
-const HowAreWeDoing: FC<Props> = () => {
-  const { tiles } = content.howAreWeDoing;
+const HowAreWeDoing: FC = () => {
+  const { tiles, footerText, footerBoldText } = content.howAreWeDoing;
   const { scrollOnFirstScreen } = useCheckScroll();
 
   return (
@@ -34,6 +35,11 @@ const HowAreWeDoing: FC<Props> = () => {
             </StyledTile>
           ))}
         </div>
+        <SectionFooter>
+          <div className="horizontal-line" />
+          <span>{footerText}<span className="footer-bold-text">{footerBoldText}</span></span>
+          <div className="horizontal-line" />
+        </SectionFooter>
       </StyledHowAreWeDoing>
     </Container>
   );
