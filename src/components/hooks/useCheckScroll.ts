@@ -11,7 +11,7 @@ const useCheckScroll = () => {
     if (window.scrollY <= 70) {
       setScrollOnFirstScreen(false)
     }
-    if (window.scrollY <= 100) {
+    if (window.scrollY === 0) {
       setScrollBack(true)
     }
     else {

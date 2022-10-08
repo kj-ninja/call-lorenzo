@@ -17,7 +17,7 @@ const StyledNavbar = styled.nav<IIsMobileProps>`
   z-index: 999;
   background-color: ${(props) => props.theme.colors.primaryColor};
   visibility: ${props => (props.toggleMenu ? "show" : "hidden")};
-  opacity: ${props => (props.toggleMenu ? "1" : "0")};;
+  opacity: ${props => (props.toggleMenu ? "1" : "0")};
   transition: visibility 4s linear 0.33s, opacity 0.4s linear;
   transition-delay: 0s;
   

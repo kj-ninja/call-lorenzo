@@ -16,7 +16,7 @@ import { content } from "../../content";
 const HeaderForMobile = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [checked, setChecked] = useState(false);
-  const { scrollOnFirstScreen } = useCheckScroll();
+  const { scrollOnFirstScreen, scrollBack } = useCheckScroll();
   const { title, navigation, phoneNumber } = content.header;
 
   useDisableScroll(isOpen);
@@ -27,12 +27,14 @@ const HeaderForMobile = () => {
   }
 
   const scrollToTop = () => {
+      setChecked(false);
+      setIsOpen(false);
       window.scrollTo({ top: 0, left: 0 });
   }
 
   return (
-    <StyledHeader scrollOnFirstScreen={scrollOnFirstScreen}>
-      <TitleContainer>
+    <StyledHeader  scrollOnFirstScreen={scrollOnFirstScreen}>
+      <TitleContainer scrollBack={scrollBack}>
         <LeftTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
           scrollOnFirstScreen ?
@@ -44,7 +46,9 @@ const HeaderForMobile = () => {
         {
           !scrollOnFirstScreen &&
           <HamburgerMenu>
-            <input id="menu-toggle" type="checkbox" onClick={toggleMenu} />
+            <input id="menu-toggle" type="checkbox" onClick={toggleMenu} checked={checked}
+                   onChange={(e: any) => setChecked(e.target.checked)}
+            />
             <label className='menu-button-container' htmlFor="menu-toggle">
               <div className='menu-button'></div>
             </label>
@@ -53,7 +57,7 @@ const HeaderForMobile = () => {
         }
       </TitleContainer>
       <MiddleBlankLine scrollOnFirstScreen={scrollOnFirstScreen}/>
-      <StyledLine scrollOnFirstScreen={scrollOnFirstScreen}>
+      <StyledLine scrollOnFirstScreen={scrollOnFirstScreen} scrollBack={scrollBack}>
         {
           scrollOnFirstScreen ?
              <>
