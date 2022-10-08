@@ -10,7 +10,7 @@ import useDeviceDetect from "../hooks/useDeviceDetect";
 
 const Footer = () => {
   const { phoneNumber } = content.header;
-  const { isMobile } = useDeviceDetect();
+  const { isMobile } = useDeviceDetect(); // only for version 2.0 condition without sticky desktop header
   const { scrollOnFirstScreen } = useCheckScroll();
 
   return (
