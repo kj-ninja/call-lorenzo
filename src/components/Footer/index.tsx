@@ -6,15 +6,17 @@ import {
   LowerLine,
 } from "./styles";
 import { content } from "../../content";
+import useDeviceDetect from "../hooks/useDeviceDetect";
 
 const Footer = () => {
   const { phoneNumber } = content.header;
+  const { isMobile } = useDeviceDetect();
   const { scrollOnFirstScreen } = useCheckScroll();
 
   return (
     <FooterWrapper className="aa" scrollOnFirstScreen={scrollOnFirstScreen}>
       <UpperLine scrollOnFirstScreen={scrollOnFirstScreen}>
-       <span className="phone-number">{!scrollOnFirstScreen && phoneNumber}</span>
+       <span className="phone-number">{!scrollOnFirstScreen && phoneNumber || !isMobile && phoneNumber}</span>
       </UpperLine>
       <LowerLine>
         <div className="flag-container">

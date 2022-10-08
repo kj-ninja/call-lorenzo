@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import ukFlag from "../../assets/ukFlag.svg";
 import plFlag from "../../assets/plFlag.svg";
+import { IDevice } from "../../settings/media";
 
 type IScrollCheckProps = {
   scrollOnFirstScreen: boolean;
@@ -36,6 +37,10 @@ export const FooterWrapper = styled.div<IScrollCheckProps>`
   bottom: 0;
   animation: ${props => (props.scrollOnFirstScreen && fadeinAndOut)} 0.5s;
   animation-fill-mode: forwards;
+
+  @media only screen and ${IDevice.desktopXS} {
+    justify-content: center;
+  }
 `
 
 export const UpperLine = styled.div<IScrollCheckProps>`
@@ -48,6 +53,11 @@ export const UpperLine = styled.div<IScrollCheckProps>`
   color: white;
   margin-bottom: 5px;
   background-color: ${(props) => props.theme.colors.primaryColor};
+
+  @media only screen and ${IDevice.desktopXS} {
+    //only for version 2.0 without sticky desktop header
+    height: 39px;
+  }
 `;
 
 export const LowerLine = styled.div`
@@ -57,7 +67,12 @@ export const LowerLine = styled.div`
   justify-content: flex-end;
   align-items: center;
   background-color: ${(props) => props.theme.colors.primaryColor};
-  color: white;  
+  color: white;
+
+  @media only screen and ${IDevice.desktopXS} {
+    //only for version 2.0 without sticky desktop header
+    justify-content: center;
+  }
   
   .flag-container {
     display: flex;
@@ -65,6 +80,11 @@ export const LowerLine = styled.div`
     margin-right: 30px;
     width: 70px;
     height: 32px;
+
+    @media only screen and ${IDevice.desktopXS} {
+      width: 900px;
+      justify-content: flex-end;
+    }
   }
   
   .brittany-flag {
@@ -81,5 +101,9 @@ export const LowerLine = styled.div`
     background-image: url(${plFlag});
     background-size: 180%;
     background-position: center 42px;
+
+    @media only screen and ${IDevice.desktopXS} {
+      margin-left: 10px;
+    }
   }
 `;
