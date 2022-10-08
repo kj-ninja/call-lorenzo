@@ -1,24 +1,28 @@
-import { Fragment } from "react";
+import useCheckScroll from "../hooks/useCheckScroll";
+
 import {
+  FooterWrapper,
   UpperLine,
-  LowerLine
+  LowerLine,
 } from "./styles";
 import { content } from "../../content";
 
 const Footer = () => {
-  const { text } = content.Footer;
+  const { phoneNumber } = content.header;
+  const { scrollOnFirstScreen } = useCheckScroll();
 
   return (
-    <Fragment>
-      <UpperLine />
+    <FooterWrapper className="aa" scrollOnFirstScreen={scrollOnFirstScreen}>
+      <UpperLine scrollOnFirstScreen={scrollOnFirstScreen}>
+       <span className="phone-number">{!scrollOnFirstScreen && phoneNumber}</span>
+      </UpperLine>
       <LowerLine>
-        <div className='lower-line-container'>
-          <span>
-          {text}
-        </span>
+        <div className="flag-container">
+          <div className="brittany-flag"/>
+          <div className="poland-flag"/>
         </div>
       </LowerLine>
-    </Fragment>
+    </FooterWrapper>
   )
 }
 
