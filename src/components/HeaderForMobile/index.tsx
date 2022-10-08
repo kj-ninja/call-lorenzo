@@ -15,6 +15,7 @@ import { content } from "../../content";
 
 const HeaderForMobile = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [checked, setChecked] = useState(false);
   const { scrollOnFirstScreen } = useCheckScroll();
   const { title, navigation, phoneNumber } = content.header;
 
@@ -22,6 +23,7 @@ const HeaderForMobile = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    setChecked(!checked)
   }
 
   const scrollToTop = () => {
@@ -58,7 +60,9 @@ const HeaderForMobile = () => {
                <div className="left-box"/>
                <span className="phone-number">{phoneNumber}</span>
                <HamburgerMenu>
-               <input id="menu-toggle" type="checkbox" onClick={toggleMenu} />
+               <input id="menu-toggle" type="checkbox" onClick={toggleMenu} checked={checked}
+                      onChange={(e: any) => setChecked(e.target.checked)}
+               />
                <label className='menu-button-container' htmlFor="menu-toggle">
                  <div className='menu-button'></div>
                </label>
