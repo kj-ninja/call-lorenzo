@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <FooterWrapper className="aa" scrollOnFirstScreen={scrollOnFirstScreen}>
       <UpperLine scrollOnFirstScreen={scrollOnFirstScreen}>
-       <span className="phone-number">{!scrollOnFirstScreen && phoneNumber || !isMobile && phoneNumber}</span>
+       <span className="phone-number">{(!scrollOnFirstScreen && phoneNumber) || (!isMobile && phoneNumber)}</span>
       </UpperLine>
       <LowerLine>
         <div className="flag-container">
