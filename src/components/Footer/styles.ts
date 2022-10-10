@@ -40,6 +40,7 @@ export const FooterWrapper = styled.div<IScrollCheckProps>`
 
   @media only screen and ${IDevice.desktopXS} {
     justify-content: center;
+    position: relative;
   }
 `
 

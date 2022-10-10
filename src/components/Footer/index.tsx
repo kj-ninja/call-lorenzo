@@ -14,7 +14,7 @@ const Footer = () => {
   const { scrollOnFirstScreen } = useCheckScroll();
 
   return (
-    <FooterWrapper className="aa" scrollOnFirstScreen={scrollOnFirstScreen}>
+    <FooterWrapper scrollOnFirstScreen={scrollOnFirstScreen}>
       <UpperLine scrollOnFirstScreen={scrollOnFirstScreen}>
        <span className="phone-number">{(!scrollOnFirstScreen && phoneNumber) || (!isMobile && phoneNumber)}</span>
       </UpperLine>
