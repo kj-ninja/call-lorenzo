@@ -16,8 +16,8 @@ const HowAreWeDoing: FC<Props> = () => {
       <StyledHowAreWeDoing scrollOnFirstScreen={scrollOnFirstScreen}>
         <h2>Jak działamy?</h2>
         <div className='tiles-container'>
-          {tiles.map((tile) => (
-            <StyledTile className={`${tile.icon} number-${tile.order}`} tile={tile}>
+          {tiles.map((tile, key) => (
+            <StyledTile key={key} className={`${tile.icon} number-${tile.order}`} tile={tile}>
               {
                 tile.description ?
                 <Fragment>
