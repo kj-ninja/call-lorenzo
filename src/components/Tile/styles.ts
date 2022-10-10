@@ -24,12 +24,6 @@ const fadeOut = keyframes`
   opacity: 1;
   transform: translateY(0px);
   }
-  20% {
-    opacity: 0.25;
-  }
-  75% {
-    opacity: 0;
-  }
   100% {
     opacity: 0;
     transform: translateY(-100px);
@@ -41,9 +35,15 @@ export const TileWrapper = styled.div`
   display: flex;
   flex-direction: column;
   
-  .animation {
+  .fadeOut {
     opacity: 1;
-    animation: ${fadeOut} 0.4s;
+    animation: ${fadeOut} 0.25s;
+    animation-fill-mode: forwards;
+  }
+
+  .fadeIn {
+    opacity: 0;
+    animation: ${fadeIn} 0.4s;
     animation-fill-mode: forwards;
   }
 
@@ -90,9 +90,11 @@ export const TileWrapper = styled.div`
 
     .tile-toggle {
       padding-left: 3px;
+      
 
       @media only screen and ${IDevice.desktopXS} {
         padding-left: unset;
+        width: fit-content;
       }
     }
   }
@@ -136,21 +138,28 @@ export const StyledTile = styled.div`
   .tile-title {
     width: 85%;
   }
+  
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    width: 100px;
+  }
 
   .tile-toggle {
     cursor: pointer;
-    width: 12%;
     align-self: center;
     font-size: 12px;
+
+    @media only screen and ${IDevice.desktopXS} {
+      padding-left: unset;
+      width: fit-content;
+    }
   }
 `;
 
 export const StyledDescription = styled.div<ITileProps>`
   width: 89%;
   align-self: center;
-  opacity: 0;
-  animation: ${fadeIn} 0.5s;
-  animation-fill-mode: forwards;
   
   @media only screen and ${IDevice.desktopXS} {
     width: 45%;

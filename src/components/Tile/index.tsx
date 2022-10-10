@@ -21,18 +21,20 @@ const Tile: FC<Props> = (tile) => {
     if (show) {
       setFadeOutAnimation(!fadeOutAnimation)
       setTimeout(() => {
-        setShow(!show);
-      }, 300);
+        setShow(false);
+      }, 100);
     } else {
-      setShow(!show);
       setFadeOutAnimation(!fadeOutAnimation)
+      setTimeout(() => {
+        setShow(true);
+      }, 100);
     }
   };
 
   return (
     <Fragment>
       <TileWrapper>
-        <StyledTile className="tile hover-effect" onClick={toggleHandler}>
+        <StyledTile className="tile hover-effect">
           <div className='tile-text-wrapper'>
             <span className='tile-order'>
               {tile.tile.tileOrder}
@@ -41,13 +43,15 @@ const Tile: FC<Props> = (tile) => {
               {tile.tile.tileTitle}
             </span>
           </div>
-          <span className='tile-toggle'>
+          <div className="toggle-container">
+            <span className='tile-toggle' onClick={toggleHandler}>
               {!show ? toggleText.show : toggleText.hide}
             </span>
+          </div>
         </StyledTile>
         {
           show &&
-          <StyledDescription toggler={show} className={`${fadeOutAnimation ? "" : "animation"}`}>
+          <StyledDescription toggler={show} className={`${fadeOutAnimation ? "fadeIn" : "fadeOut"}`}>
             <div className='first-paragraph'>
               {tile.tile.tileText}
             </div>
