@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const useCheckScroll = () => {
   const [scrollOnFirstScreen, setScrollOnFirstScreen] = useState(false);
-  const [scrollBack, setScrollBack] = useState(false)
+  const [scrollBack, setScrollBack] = useState(true)
 
   const changeBar = () => {
     if (window.scrollY >= 120) {
