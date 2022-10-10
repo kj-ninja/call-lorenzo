@@ -1,5 +1,4 @@
 import { content } from "../../content";
-import picture from "../../assets/group-final.jpeg";
 import ford from "../../assets/ford.jpeg";
 import nmk from "../../assets/nmk.jpeg"
 import { Container } from "../../styles/styled/Container";

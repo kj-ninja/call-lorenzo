@@ -24,7 +24,7 @@ export const Pricing = styled.div`
    border-radius: 0 20px 0 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0;
+      border-radius: 20px 20px 0 0;
     }
   }
   
@@ -32,7 +32,7 @@ export const Pricing = styled.div`
     border-radius: 0 0 20px 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0;
+      border-radius: 0 0 20px 20px;
     }
   }
   
@@ -85,7 +85,7 @@ export const AdditionalFees = styled.div`
     border-radius: 20px 0 0 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0;
+      border-radius: 10px 10px 0 0;
     }
   }
   
@@ -93,7 +93,7 @@ export const AdditionalFees = styled.div`
     border-radius: 0 0 0 20px;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0;
+      border-radius: 0 0 10px 10px;
     }
   }
   
