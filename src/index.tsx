@@ -7,16 +7,19 @@ import reportWebVitals from './reportWebVitals';
 
 import GlobalStyle from "./styles";
 import theme from "./styles/theme";
+import { LangContext } from "./context/language-context";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <LangContext>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <App />
+        <App />
     </ThemeProvider>
+  </LangContext>
   </React.StrictMode>
 );
 

@@ -98,3 +98,42 @@ export interface IAdditionalInfo {
 
 // general
 export type KeyString = { [key: string]: string };
+
+export interface IContent {
+  header: {
+    title: string;
+    phoneNumber: string;
+    navigation: string[];
+  };
+  howAreWeDoing: {
+    tiles: ITile[];
+  },
+  howMuchItCost: {
+    prices: IPricing[];
+    additionalFees: IAdditionalFees[];
+    paymentMethods: IPaymentMethod[];
+    texts: ICostText;
+  },
+  whenWeWork: {
+    sectionTexts: IWhenWeWork
+  },
+  HowToContactUs: {
+    texts: IContactUs;
+  }
+  WhatIsOurOffer: {
+    title: string;
+    toggleText: IOurOfferToggle;
+    tileTexts: IOurOfferTile[];
+  },
+  WhoWeAre: {
+    shortTexts: IWhoWeAreShortTexts;
+    firstTextContainer: IWhoWeAreFirstParagraph;
+    secondTextContainer: IWhoWeAreSecondParagraph;
+  },
+  AdditionalInfo: {
+    additionalTexts: IAdditionalInfo;
+  },
+  Footer: {
+    text: string;
+  }
+}

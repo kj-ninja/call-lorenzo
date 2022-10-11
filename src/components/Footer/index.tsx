@@ -1,21 +1,21 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import {
   UpperLine,
   LowerLine
 } from "./styles";
-import { content } from "../../content";
+import { LanguageContext } from "../../context/language-context";
 
 const Footer = () => {
-  const { text } = content.Footer;
+  const { setLanguage, dictionary } = useContext(LanguageContext);
+  console.log("choosed dict: ", dictionary)
 
   return (
     <Fragment>
       <UpperLine />
       <LowerLine>
         <div className='lower-line-container'>
-          <span>
-          {text}
-        </span>
+          <button onClick={() => setLanguage("pl")}>Polski</button>
+          <button onClick={() => setLanguage("en")}>Angielski</button>
         </div>
       </LowerLine>
     </Fragment>
