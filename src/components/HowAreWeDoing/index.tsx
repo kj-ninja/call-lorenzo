@@ -1,6 +1,6 @@
-import {FC, Fragment} from 'react';
+import { FC } from 'react';
 import { StyledHowAreWeDoing, StyledTile } from "./styles";
-import {content} from "../../content";
+import { content } from "../../content";
 import { Container } from '../../styles/styled/Container';
 
 interface Props {
@@ -18,11 +18,11 @@ const HowAreWeDoing: FC<Props> = () => {
             <StyledTile className={tile.icon} tile={tile}>
               {
                 tile.description ?
-                <>
-                <span className="tile-order">{tile.order}</span>
-                <span className="tile-description">{tile.description}</span>
-                </>
-                : null
+                  <>
+                    <span className="tile-order">{tile.order}</span>
+                    <span className="tile-description">{tile.description}</span>
+                  </>
+                  : null
               }
               {
                 !tile.description ?
