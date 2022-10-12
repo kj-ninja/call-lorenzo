@@ -1,11 +1,15 @@
-import { FC, Fragment, useState } from "react";
+import { FC, Fragment, useContext, useState } from "react";
+
+import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
+
 import { IOurOfferTile } from "../../types";
+
 import {
   StyledTile,
   StyledDescription,
   TileWrapper
 } from "./styles";
-import { content } from "../../content";
 
 interface Props {
   tile: IOurOfferTile
@@ -13,8 +17,7 @@ interface Props {
 
 const Tile: FC<Props> = (tile) => {
   const [show, setShow] = useState(false);
-
-  const { toggleText } = content.WhatIsOurOffer;
+  const { language } = useContext(LanguageContext);
 
   const toggleHandler = () => {
     setShow(!show);
@@ -23,7 +26,7 @@ const Tile: FC<Props> = (tile) => {
   return (
     <Fragment>
       <TileWrapper>
-        <StyledTile className="tile hover-effect" onClick={toggleHandler} >
+        <StyledTile className="tile hover-effect" onClick={toggleHandler}>
           <div className='tile-text-wrapper'>
             <span className='tile-order'>
               {tile.tile.tileOrder}
@@ -34,7 +37,10 @@ const Tile: FC<Props> = (tile) => {
 
           </div>
           <span className='tile-toggle'>
-              {!show ? toggleText.show : toggleText.hide}
+              {!show ?
+                dictionaryList[language].WhatIsOurOffer.toggleText.show
+                :
+                dictionaryList[language].WhatIsOurOffer.toggleText.hide}
             </span>
         </StyledTile>
         {

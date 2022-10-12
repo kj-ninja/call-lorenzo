@@ -1,4 +1,8 @@
-import { content } from "../../content";
+import { useContext } from "react";
+
+import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
+
 import { Container } from "../../styles/styled/Container";
 import {
   StyledWhenWeWork,
@@ -6,20 +10,23 @@ import {
 } from "./styles";
 
 const WhenWeWork = () => {
-  const {sectionTexts } = content.whenWeWork;
+  const { language } = useContext(LanguageContext);
 
   return (
     <Container>
       <StyledWhenWeWork>
-        <h2>{sectionTexts.title}</h2>
+        <h2>{dictionaryList[language].whenWeWork.sectionTexts.title}</h2>
         <div className="container">
           <div className="container__first-tile">
-            {sectionTexts.coreHours}
+            {dictionaryList[language].whenWeWork.sectionTexts.coreHours}
           </div>
-          <ImageContainer />
+          <ImageContainer/>
           <div className="container__second-tile">
-            <span className='tile-description'>{sectionTexts.description} </span>
-            <span className='tile-description tile-margin'>{sectionTexts.description2} <span className='tile-hours'>{sectionTexts.additionalHours}</span></span>
+            <span className='tile-description'>{dictionaryList[language].whenWeWork.sectionTexts.description} </span>
+            <span
+              className='tile-description tile-margin'>{dictionaryList[language].whenWeWork.sectionTexts.description2}
+              <span className='tile-hours'>{dictionaryList[language].whenWeWork.sectionTexts.additionalHours}</span>
+            </span>
           </div>
         </div>
       </StyledWhenWeWork>

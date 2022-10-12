@@ -1,7 +1,11 @@
-import { content } from "../../content";
-import picture from "../../assets/group-final.jpeg";
+import { useContext } from "react";
+
+import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
+
 import ford from "../../assets/ford.jpeg";
 import nmk from "../../assets/nmk.jpeg"
+
 import { Container } from "../../styles/styled/Container";
 import {
   StyledWhoWeAre,
@@ -12,47 +16,40 @@ import {
 } from "./styles";
 
 const WhoWeAre = () => {
-  const {
-    title,
-    source
-  } = content.WhoWeAre.shortTexts;
-
-  const {
-    colorTextSentences,
-    standardText
-  } = content.WhoWeAre.firstTextContainer;
-
-  const {
-    colorText,
-    firstStandardText,
-    firstBoldText,
-    secondStandardText,
-    secondBoldText,
-    thirdStandardText,
-    thirdBoldText
-  } = content.WhoWeAre.secondTextContainer;
+  const { language } = useContext(LanguageContext);
 
   return (
     <Container>
       <StyledWhoWeAre>
-        <h2>{title}</h2>
+        <h2>{dictionaryList[language].WhoWeAre.shortTexts.title}</h2>
         <div className='content-container'>
           <div className="first-paragraph">
-            <div className="first-paragraph__coloured">{colorTextSentences}</div>
-            <div>{standardText}</div>
+            <div
+              className="first-paragraph__coloured">{dictionaryList[language].WhoWeAre.firstTextContainer.colorTextSentences}
+            </div>
+            <div>
+              {dictionaryList[language].WhoWeAre.firstTextContainer.standardText}
+            </div>
           </div>
           <div className='second-paragraph'>
-            <span className='second-paragraph__coloured'>{colorText}</span>
-            <span>{firstStandardText}</span>
-            <span className='second-paragraph__bold-text'>{firstBoldText}</span>
-            <span>{secondStandardText}</span>
-            <span className='second-paragraph__bold-text'>{secondBoldText}</span>
-            <span>{thirdStandardText}</span>
-            <span className='second-paragraph__bold-text'>{thirdBoldText}</span>
+            <span className='second-paragraph__coloured'>
+              {dictionaryList[language].WhoWeAre.secondTextContainer.colorText}
+            </span>
+            <span>{dictionaryList[language].WhoWeAre.secondTextContainer.firstStandardText}</span>
+            <span className='second-paragraph__bold-text'>
+              {dictionaryList[language].WhoWeAre.secondTextContainer.firstBoldText}
+            </span>
+            <span>{dictionaryList[language].WhoWeAre.secondTextContainer.secondStandardText}</span>
+            <span className='second-paragraph__bold-text'>
+              {dictionaryList[language].WhoWeAre.secondTextContainer.secondBoldText}
+            </span>
+            <span>{dictionaryList[language].WhoWeAre.secondTextContainer.thirdStandardText}</span>
+            <span className='second-paragraph__bold-text'>{dictionaryList[language].WhoWeAre.secondTextContainer.thirdBoldText}
+            </span>
           </div>
           <ImageContainer>
-            <Image />
-            <span className="source">{source}</span>
+            <Image/>
+            <span className="source">{dictionaryList[language].WhoWeAre.shortTexts.source}</span>
           </ImageContainer>
           <GraphicsContainer>
             <Graphic src={nmk} alt=""/>

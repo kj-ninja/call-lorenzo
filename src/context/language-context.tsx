@@ -1,27 +1,35 @@
-import { createContext, ReactNode, useState } from "react";
-import {dictionaryList} from "../content/dictionaryList";
-import { IContent } from "../types";
+import { createContext, ReactNode, useEffect, useState } from "react";
+import { getDataFromLocalStorage } from "../services/getDataFromLocalStorage";
+// import {dictionaryList} from "../content/dictionaryList";
+// import { IContent } from "../types";
 
 interface IContentContext {
   language: string;
   setLanguage: (language: string) => void;
-  dictionary: IContent;
+  // dictionary: IContent;
 }
-
-export const LanguageContext = createContext<IContentContext>({
-  dictionary: dictionaryList.pl,
-  language: "pl",
-  setLanguage: () => {}
-});
 
 interface Props {
   children: ReactNode
 }
 
-export const LangContext = ({children}: Props) => {
-  const [language, setLanguage] = useState("pl");
+export const LanguageContext = createContext<IContentContext>({
+  // dictionary: dictionaryList.pl,
+  language: "",
+  setLanguage: () => {}
+});
 
-  const value = { language, setLanguage, dictionary: dictionaryList[language]};
+export const LangContext = ({children}: Props) => {
+  const [language, setLanguage] = useState(getDataFromLocalStorage());
+
+  useEffect(() => {
+      localStorage.setItem('lang', JSON.stringify(language));
+  }, [language]);
+
+  const value = {
+    language,
+    setLanguage,
+  };
 
   return (
     <LanguageContext.Provider value={value}>

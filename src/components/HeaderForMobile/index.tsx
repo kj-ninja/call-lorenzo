@@ -1,4 +1,9 @@
+import { useContext } from "react";
 import useCheckScroll from "../hooks/useCheckScroll";
+
+import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
+
 import {
   StyledHeader,
   TitleContainer,
@@ -8,11 +13,10 @@ import {
   StyledLine,
   HamburgerMenu
 } from "./styles";
-import { content } from "../../content";
 
 const HeaderForMobile = () => {
   const { scrollOnFirstScreen } = useCheckScroll();
-  const { title, phoneNumber } = content.header;
+  const { language } = useContext(LanguageContext);
 
   return (
     <StyledHeader scrollOnFirstScreen={scrollOnFirstScreen}>
@@ -20,9 +24,9 @@ const HeaderForMobile = () => {
         <LeftTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
           scrollOnFirstScreen ?
-            <h2>{title}</h2>
+            <h2>{dictionaryList[language].header.title}</h2>
             :
-            <h1>{title}</h1>
+            <h1>{dictionaryList[language].header.title}</h1>
         }
         <RightTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
@@ -41,7 +45,7 @@ const HeaderForMobile = () => {
           scrollOnFirstScreen ?
              <>
                <div className="left-box"/>
-               <span className="phone-number">{phoneNumber}</span>
+               <span className="phone-number">{dictionaryList[language].header.phoneNumber}</span>
                <HamburgerMenu>
                  <div />
                  <div />

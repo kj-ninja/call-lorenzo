@@ -1,14 +1,14 @@
-import {FC, Fragment} from 'react';
-import { StyledHowAreWeDoing, StyledTile } from "./styles";
-import {content} from "../../content";
-import { Container } from '../../styles/styled/Container';
+import { FC, Fragment, useContext } from 'react';
 import useCheckScroll from "../hooks/useCheckScroll";
+import { StyledHowAreWeDoing, StyledTile } from "./styles";
 
-interface Props {
-}
+import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
 
-const HowAreWeDoing: FC<Props> = () => {
-  const { tiles } = content.howAreWeDoing;
+import { Container } from '../../styles/styled/Container';
+
+const HowAreWeDoing: FC = () => {
+  const { language } = useContext(LanguageContext);
   const { scrollOnFirstScreen } = useCheckScroll();
 
   return (
@@ -16,7 +16,7 @@ const HowAreWeDoing: FC<Props> = () => {
       <StyledHowAreWeDoing scrollOnFirstScreen={scrollOnFirstScreen}>
         <h2>Jak działamy?</h2>
         <div className='tiles-container'>
-          {tiles.map((tile) => (
+          {dictionaryList[language].howAreWeDoing.tiles.map((tile) => (
             <StyledTile className={tile.icon} tile={tile}>
               {
                 tile.description ?
