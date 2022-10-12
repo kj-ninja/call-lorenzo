@@ -439,6 +439,14 @@ export const SectionFooter = styled.div`
   justify-content: space-around;
   font-size: 12px;
   color: ${props => (props.theme.colors.additionalTextColor)};
+
+  @media only screen and ${IDevice.tablet} {
+    width: 45%;
+  }
+
+  @media only screen and ${IDevice.desktopXS} {
+    width: 37%;
+  }
   
   .horizontal-line {
     background-color: ${props => (props.theme.colors.additionalTextColor)};

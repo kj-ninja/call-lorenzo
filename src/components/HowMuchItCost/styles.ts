@@ -5,6 +5,11 @@ export const StyledHowMuchIsIt = styled.section`
   display: flex;
   flex-direction: column;
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
+  margin-top: 10px;
+
+  @media only screen and ${IDevice.desktopXS} {
+    margin-top: 20px;
+  }
   
   h2 {
     margin: 0 0 20px 0;
