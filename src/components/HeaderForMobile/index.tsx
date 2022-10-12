@@ -27,13 +27,13 @@ const HeaderForMobile = () => {
   }
 
   const scrollToTop = () => {
-      setChecked(false);
-      setIsOpen(false);
-      window.scrollTo({ top: 0, left: 0 });
+    setChecked(false);
+    setIsOpen(false);
+    window.scrollTo({ top: 0, left: 0 });
   }
 
   return (
-    <StyledHeader  scrollOnFirstScreen={scrollOnFirstScreen}>
+    <StyledHeader scrollOnFirstScreen={scrollOnFirstScreen}>
       <TitleContainer scrollBack={scrollBack}>
         <LeftTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
@@ -60,18 +60,18 @@ const HeaderForMobile = () => {
       <StyledLine scrollOnFirstScreen={scrollOnFirstScreen} scrollBack={scrollBack}>
         {
           scrollOnFirstScreen ?
-             <>
-               <div className="left-box"/>
-               <span className="phone-number">{phoneNumber}</span>
-               <HamburgerMenu>
-               <input id="menu-toggle" type="checkbox" onClick={toggleMenu} checked={checked}
-                      onChange={(e: any) => setChecked(e.target.checked)}
-               />
-               <label className='menu-button-container' htmlFor="menu-toggle">
-                 <div className='menu-button'></div>
-               </label>
-               </HamburgerMenu>
-             </>
+            <>
+              <div className="left-box"/>
+              <span className="phone-number">{phoneNumber}</span>
+              <HamburgerMenu>
+                <input id="menu-toggle" type="checkbox" onClick={toggleMenu} checked={checked}
+                       onChange={(e: any) => setChecked(e.target.checked)}
+                />
+                <label className='menu-button-container' htmlFor="menu-toggle">
+                  <div className='menu-button'></div>
+                </label>
+              </HamburgerMenu>
+            </>
             :
             null
         }
