@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import { StyledHowAreWeDoing, StyledTile } from "./styles";
+import { StyledHowAreWeDoing, StyledTile, SectionFooter } from "./styles";
 import { content } from "../../content";
 import { Container } from '../../styles/styled/Container';
 import useCheckScroll from "../hooks/useCheckScroll";
 
 const HowAreWeDoing: FC = () => {
-  const { tiles } = content.howAreWeDoing;
+  const { tiles,footerText, footerBoldText } = content.howAreWeDoing;
   const { scrollOnFirstScreen } = useCheckScroll();
 
   return (
@@ -31,6 +31,11 @@ const HowAreWeDoing: FC = () => {
             </StyledTile>
           ))}
         </div>
+        <SectionFooter>
+          <div className="horizontal-line" />
+          <span>{footerText}<span className="footer-bold-text">{footerBoldText}</span></span>
+          <div className="horizontal-line" />
+        </SectionFooter>
       </StyledHowAreWeDoing>
     </Container>
   );

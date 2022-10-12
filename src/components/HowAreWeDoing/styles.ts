@@ -431,3 +431,22 @@ export const StyledTile = styled.div<ITileProps>`
     }
   }
 `
+
+export const SectionFooter = styled.div`
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 12px;
+  color: ${props => (props.theme.colors.additionalTextColor)};
+  
+  .horizontal-line {
+    background-color: ${props => (props.theme.colors.additionalTextColor)};
+    height: 2px;
+    width: 40px;
+  }
+  
+  .footer-bold-text {
+    font-weight: bold;
+  }
+`
