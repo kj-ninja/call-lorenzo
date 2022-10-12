@@ -21,18 +21,18 @@ export const Pricing = styled.div`
     width: 100%;
   }
   .table > div:first-of-type {
-   border-radius: 0 20px 0 0;
+   border-radius: 0 10px 0 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 20px 20px 0 0;
+      border-radius: 0 0 0 0;
     }
   }
   
   .table > div:last-of-type {
-    border-radius: 0 0 20px 0;
+    border-radius: 0 0 10px 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0 0 20px 20px;
+      border-radius: 0 0 10px 10px;
     }
   }
   
@@ -40,7 +40,7 @@ export const Pricing = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 5px 0;
+    padding: 8px 0;
     border-bottom: 1px solid black;
     background-color: ${(props) => props.theme.colors.secondaryColor};
 
@@ -82,7 +82,7 @@ export const AdditionalFees = styled.div`
   }
   
   > div div:first-of-type {
-    border-radius: 20px 0 0 0;
+    border-radius: 10px 0 0 0;
 
     @media only screen and ${IDevice.desktopXS} {
       border-radius: 10px 10px 0 0;
@@ -90,7 +90,7 @@ export const AdditionalFees = styled.div`
   }
   
   > div div:last-of-type {
-    border-radius: 0 0 0 20px;
+    border-radius: 0 0 0 10px;
 
     @media only screen and ${IDevice.desktopXS} {
       border-radius: 0 0 10px 10px;
@@ -104,6 +104,10 @@ export const AdditionalFees = styled.div`
     padding: 2px 0;
     border-bottom: 1px solid black;
     background-color: ${(props) => props.theme.colors.secondaryColor};
+
+    @media only screen and ${IDevice.desktopXS} {
+      padding: 8px 0;
+    }
   }
   
   .table-row-text-wrapper {

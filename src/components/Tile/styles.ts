@@ -16,7 +16,7 @@ export const TileWrapper = styled.div`
 
     .tile {
       justify-content: flex-end;
-      border-radius: 0 20px 20px 0;
+      border-radius: 0 10px 10px 0;
       @media only screen and ${IDevice.desktopXS} {
         justify-content: space-around;
       }
@@ -33,7 +33,7 @@ export const TileWrapper = styled.div`
 
     .tile {
       justify-content: center;
-      border-radius: 20px 0 0 20px;
+      border-radius: 10px 0 0 10px;
       @media only screen and ${IDevice.desktopXS} {
         justify-content: space-around;
       }

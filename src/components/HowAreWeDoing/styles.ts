@@ -136,11 +136,11 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
   }
 
   .number-1, .number-3 {
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 10px 10px 0;
   }
   
   .number-2, .number-4 {
-    border-radius: 20px 0 0 20px;
+    border-radius: 10px 0 0 10px;
   }
   
   .auto-party-icon {
