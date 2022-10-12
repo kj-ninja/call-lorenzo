@@ -361,9 +361,9 @@ export const StyledHowAreWeDoing = styled.section`
       background-image: url(${rightCar});
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 210px;
-      right: -7px;
-      top: -6px;
+      background-size: 121px;
+      right: 21px;
+      top: 9px;
       animation: ${moveCarHome} 1s ease;
       animation-delay: 2.4s;
       animation-iteration-count: 1;
@@ -371,11 +371,11 @@ export const StyledHowAreWeDoing = styled.section`
       visibility: hidden;
 
       @media only screen and ${IDevice.tablet} {
-        right: -5px;
+        right: 18px;
       }
 
       @media only screen and ${IDevice.desktopXS} {
-        right: 20px;
+        right: 44px;
       }
     }
   }
