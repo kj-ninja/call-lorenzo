@@ -3,10 +3,7 @@ import { StyledHowAreWeDoing, StyledTile } from "./styles";
 import { content } from "../../content";
 import { Container } from '../../styles/styled/Container';
 
-interface Props {
-}
-
-const HowAreWeDoing: FC<Props> = () => {
+const HowAreWeDoing: FC = () => {
   const { tiles } = content.howAreWeDoing;
 
   return (
