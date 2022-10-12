@@ -7,7 +7,7 @@ export const StyledHowMuchIsIt = styled.section`
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   h2 {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     text-align: center;
   }
 `
@@ -20,12 +20,27 @@ export const Pricing = styled.div`
   @media only screen and ${IDevice.desktopXS} {
     width: 100%;
   }
+  .table > div:first-of-type {
+   border-radius: 0 10px 0 0;
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: 0 0 0 0;
+    }
+  }
+  
+  .table > div:last-of-type {
+    border-radius: 0 0 10px 0;
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: 0 0 10px 10px;
+    }
+  }
   
   .table-row {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 5px 0;
+    padding: 8px 0;
     border-bottom: 1px solid black;
     background-color: ${(props) => props.theme.colors.secondaryColor};
 
@@ -66,6 +81,22 @@ export const AdditionalFees = styled.div`
     width: 600px;
   }
   
+  > div div:first-of-type {
+    border-radius: 10px 0 0 0;
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  
+  > div div:last-of-type {
+    border-radius: 0 0 0 10px;
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: 0 0 10px 10px;
+    }
+  }
+  
   .table-row {
     display: flex;
     justify-content: space-around;
@@ -73,6 +104,10 @@ export const AdditionalFees = styled.div`
     padding: 2px 0;
     border-bottom: 1px solid black;
     background-color: ${(props) => props.theme.colors.secondaryColor};
+
+    @media only screen and ${IDevice.desktopXS} {
+      padding: 8px 0;
+    }
   }
   
   .table-row-text-wrapper {

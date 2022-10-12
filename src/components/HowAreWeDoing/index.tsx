@@ -13,15 +13,15 @@ const HowAreWeDoing: FC = () => {
       <StyledHowAreWeDoing scrollOnFirstScreen={scrollOnFirstScreen}>
         <h2>Jak działamy?</h2>
         <div className='tiles-container'>
-          {tiles.map((tile) => (
-            <StyledTile className={tile.icon} tile={tile}>
+          {tiles.map((tile, key) => (
+            <StyledTile key={key} className={`${tile.icon} number-${tile.order}`} tile={tile}>
               {
                 tile.description ?
-                  <>
-                    <span className="tile-order">{tile.order}</span>
-                    <span className="tile-description">{tile.description}</span>
-                  </>
-                  : null
+                <>
+                <span className="tile-order">{tile.order}.</span>
+                <span className="tile-description">{tile.description}</span>
+                </>
+                : null
               }
               {
                 !tile.description ?

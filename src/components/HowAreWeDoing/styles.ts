@@ -155,7 +155,7 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
   flex-direction: column;
   align-items: center;
   margin: ${(props) => (
-          props.scrollOnFirstScreen ? "127px 0 40px 0" : "40px 0"
+          props.scrollOnFirstScreen ? "127px 0 20px 0" : "20px 0 0 0"
   )};
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
 
@@ -174,6 +174,15 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
     padding: 16px 10px;
   }
 
+
+  .number-1, .number-3 {
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .number-2, .number-4 {
+    border-radius: 10px 0 0 10px;
+  }
+  
   .auto-party-icon {
     width: 100%;
     height: 100%;

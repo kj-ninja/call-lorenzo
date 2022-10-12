@@ -9,14 +9,14 @@ export const TileWrapper = styled.div`
   // frames 1,3,5,7 etc.
   :nth-child(odd) {
     align-items: flex-start;
-
+    
     @media only screen and ${IDevice.desktopXS} {
       align-items: center;
     }
 
     .tile {
       justify-content: flex-end;
-
+      border-radius: 0 10px 10px 0;
       @media only screen and ${IDevice.desktopXS} {
         justify-content: space-around;
       }
@@ -26,14 +26,14 @@ export const TileWrapper = styled.div`
   // frames 2,4,6,8 etc.
   :nth-child(even) {
     align-items: flex-end;
-
+    
     @media only screen and ${IDevice.desktopXS} {
       align-items: center;
     }
 
     .tile {
       justify-content: center;
-
+      border-radius: 10px 0 0 10px;
       @media only screen and ${IDevice.desktopXS} {
         justify-content: space-around;
       }
