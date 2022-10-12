@@ -7,10 +7,11 @@ import {
 
 const WhenWeWork = () => {
   const {sectionTexts } = content.whenWeWork;
+  const { navigation } = content.header;
 
   return (
     <Container>
-      <StyledWhenWeWork>
+      <StyledWhenWeWork id={navigation[1]}>
         <h2>{sectionTexts.title}</h2>
         <div className="container">
           <div className="container__first-tile">

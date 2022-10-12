@@ -9,15 +9,16 @@ import {
 
 const HowMuchItCost = () => {
   const { prices,additionalFees, paymentMethods, texts } = content.howMuchItCost;
+  const { navigation } = content.header;
 
   return (
     <Container>
-      <StyledHowMuchIsIt>
+      <StyledHowMuchIsIt id={navigation[2]}>
         <h2>{texts.title}</h2>
         <Pricing>
           <div className="table">
-            {prices.map((price) => (
-              <div className="table-row">
+            {prices.map((price, key) => (
+              <div key={key} className="table-row">
                 <div className='table-row__price-cell'>{price.price}</div>
                 <div className='table-row__km-cells'>
                   <div className='table-row__km-cells__text'>{price.additionalCharacter}</div>
@@ -34,8 +35,8 @@ const HowMuchItCost = () => {
 
         <AdditionalFees>
           <div>
-            {additionalFees.map((fee) => (
-              <div className="table-row">
+            {additionalFees.map((fee, key) => (
+              <div key={key} className="table-row">
                 <div className="table-row-text-wrapper">
                   <div className="table-row__text-style">{fee.feesText}</div>
                   <div>{fee.feesDescription}</div>
@@ -47,8 +48,8 @@ const HowMuchItCost = () => {
           <ImportantNotes className="important-notes">
             <span className="payments-title">{texts.secondPaymentTitle}</span>
             <div className='payment-methods'>
-              {paymentMethods.map((method) => (
-                <span>-{method.method}</span>
+              {paymentMethods.map((method, key) => (
+                <span key={key}>-{method.method}</span>
               ))}
             </div>
           </ImportantNotes>

@@ -1,12 +1,13 @@
 import styled, { keyframes } from "styled-components";
-import {ITile} from "../../types";
-import party from "../../assets/party-sign.jpeg";
-import home from "../../assets/home-sign.jpeg";
-import leftCar from "../../assets/car-left.jpeg";
-import calling from "../../assets/calling.jpeg";
-import leftGlass from "../../assets/left-glass.jpeg";
-import sound from "../../assets/sound.jpeg";
-import rightGlass from "../../assets/right-glass.jpeg";
+import { ITile } from "../../types";
+import party from "../../assets/party-sign.svg";
+import leftCar from "../../assets/car-left.svg";
+import leftGlass from "../../assets/left-glass.svg";
+import rightGlass from "../../assets/right-glass.svg";
+import sound from "../../assets/sound.svg";
+import calling from "../../assets/calling.svg";
+import rightCar from "../../assets/car-right.svg";
+import home from "../../assets/home-sign.svg";
 import { IDevice } from "../../settings/media";
 
 type ITileProps = {
@@ -19,7 +20,7 @@ type IScrollCheckProps = {
 
 const moveCarParty = keyframes`
   0% {
-    transform: translate(160px);
+    transform: translate(200px);
   }
   100% {
     transform: translate(0);
@@ -28,7 +29,7 @@ const moveCarParty = keyframes`
 
 const desktopMoveCarParty = keyframes`
   0% {
-    transform: translate(320px);
+    transform: translate(300px);
   }
   100% {
     transform: translate(0);
@@ -37,79 +38,116 @@ const desktopMoveCarParty = keyframes`
 
 const moveCarHome = keyframes`
   0% {
-    transform: translate(1800px);
+    transform: translate(-200px);
+    visibility: hidden;
   }
-  60% {
-    transform: translate(1000px);
-  }
-  100% {
-    transform: translate(0);
-  }
-`;
-
-const desktopMoveCarHome = keyframes`
-  0% {
-    transform: translate(2000px);
-  }
-  15% {
-    transform: translate(1500px);
-  }
-  75% {
-    transform: translate(450px);
+  5% {
+    visibility: visible;
   }
   100% {
     transform: translate(0);
+    visibility: visible;
   }
 `;
 
 const moveGlass = keyframes`
   0% {
-    transform: translate(-400px);
+    transform: translate(-240px);
+    visibility: hidden;
   }
-  80% {
+  5% {
+    visibility: visible;
+  }
+  70% {
     transform: translate(3px);
+    visibility: visible;
   }
   100% {
-    transform: translate(0);
+    transform: translate(-1px);
+    visibility: visible;
   }
 `;
 
 const desktopMoveGlass = keyframes`
   0% {
-    transform: translate(-550px);
+    transform: translate(-200px);
+    visibility: hidden;
   }
-  80% {
-    transform: translate(6px);
+  5% {
+    visibility: visible;
+  }
+  75% {
+    transform: translate(5px);
+    visibility: visible;
   }
   100% {
     transform: translate(0);
+    visibility: visible;
   }
 `;
 
 const soundAnimation = keyframes`
   0% {
     opacity: 0;
+    visibility: hidden;
   }
-  88% {
-    opacity: 0;
+  25% {
+    visibility: visible;
   }
   100% {
     opacity: 1;
+    visibility: visible;
+  }
+`;
+
+const desktopSoundAnimation = keyframes`
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  25% {
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
   }
 `;
 
 const shake = keyframes`
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 `;
 
 export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
@@ -117,22 +155,32 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
   flex-direction: column;
   align-items: center;
   margin: ${(props) => (
-          props.scrollOnFirstScreen ? "127px 0 40px 0" : "40px 0"
+          props.scrollOnFirstScreen ? "127px 0 20px 0" : "20px 0 0 0"
   )};
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
-  
+
   h2 {
     text-align: center;
     margin-bottom: 40px;
   }
+
   .tiles-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
-  
+
   .null {
     padding: 16px 10px;
+  }
+
+
+  .number-1, .number-3 {
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .number-2, .number-4 {
+    border-radius: 10px 0 0 10px;
   }
   
   .auto-party-icon {
@@ -144,31 +192,116 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
     @media only screen and ${IDevice.desktopXS} {
       max-width: unset;
     }
-    
+
     &:before {
-      content: url(${leftCar});
+      content: "";
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: 25%;
-      left: 45px;
-      animation: ${moveCarParty} 3s ease;
+      background-image: url(${leftCar});
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 220px;
+      left: 25px;
+      animation: ${moveCarParty} 1s ease;
       animation-iteration-count: 1;
 
       @media only screen and ${IDevice.desktopXS} {
-        left: unset;
-        right: 30%;
-        animation: ${desktopMoveCarParty} 3s ease;
+        left: 5px;
+        animation: ${desktopMoveCarParty} 1s ease;
         animation-iteration-count: 1;
       }
     }
 
     &:after {
-      content: url(${party});
+      content: "";
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: 1%;
-      left: 0;
+      background-image: url(${party});
+      background-repeat: no-repeat;
+      background-size: 260px;
+      background-position: center;
+      left: -50px;
+      bottom: 5px;
 
       @media only screen and ${IDevice.desktopXS} {
-        left: 30%;
+        left: -70px;
+      }
+    }
+  }
+
+  .glass-icon {
+    width: 100%;
+    height: 120%;
+    position: relative;
+    background-image: url(${rightGlass});
+    background-repeat: no-repeat;
+    background-position-y: 45%;
+    background-position-x: 50%;
+    background-size: 165%;
+    right: -20px;
+    top: -13px;
+    overflow: hidden;
+
+    @media only screen and ${IDevice.tablet} {
+      background-size: 75%;
+      right: -20px;
+      top: 0;
+    }
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: url(${leftGlass});
+      background-repeat: no-repeat;
+      background-position-y: 45%;
+      background-position-x: 50%;
+      background-size: 165%;
+      top: 0;
+      right: 17px;
+      animation: ${moveGlass} 1.9s linear;
+      animation-iteration-count: 1;
+      animation-delay: 0.4s;
+      animation-fill-mode: forwards;
+      visibility: hidden;
+
+      @media only screen and ${IDevice.tablet} {
+        background-size: 75%;
+        right: 19px;
+        animation: ${desktopMoveGlass} 1.2s linear;
+        animation-delay: 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url(${sound});
+      background-repeat: no-repeat;
+      background-position-y: 40%;
+      background-position-x: 50%;
+      background-size: 170%;
+      right: 9px;
+      bottom: 12px;
+      animation: ${soundAnimation} 1s linear;
+      animation-iteration-count: 1;
+      animation-delay: 1.7s;
+      animation-fill-mode: forwards;
+      visibility: hidden;
+
+      @media only screen and ${IDevice.tablet} {
+        background-size: 75%;
+        animation: ${desktopSoundAnimation} 1s linear;
+        animation-iteration-count: 1;
+        animation-delay: 1.3s;
+        animation-fill-mode: forwards;
       }
     }
   }
@@ -178,99 +311,86 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
     height: 100%;
     position: relative;
     overflow: hidden;
-    
+
     &:before {
-      content: url(${calling});
+      content: "";
+      width: 300%;
+      height: 330%;
+      bottom: -130px;
+      left: -50px;
       position: absolute;
-      top: 12%;
-      left: 60px;
+      background-image: url(${calling});
+      background-repeat: no-repeat;
+      background-size: 70%;
+      background-position-y: 40%;
+      background-position-x: -50%;
       animation: ${shake} 0.5s;
-      animation-iteration-count: 5;
-      animation-delay: 5.5s;
+      animation-iteration-count: 1.5;
+      animation-delay: 1.9s;
+
+      @media only screen and ${IDevice.tablet} {
+        left: -33px;
+        background-size: 30%;
+        background-position-y: 40%;
+        background-position-x: -1%;
+      }
 
       @media only screen and ${IDevice.desktopXS} {
-        top: 12%;
-        left: unset;
-        right: 52%;
-        animation-iteration-count: 2;
+        left: 12px;
+        background-position-x: -7%;
       }
     }
   }
-  
-  .glass-icon {
-    background-image: url(${rightGlass});
-    position: relative;
-    width: 100%;
-    height: 140%;
-    background-repeat: no-repeat;
-    background-position: right 30px top 11%;
-    overflow: hidden;
 
-    @media only screen and ${IDevice.desktopXS} {
-      background-position: 45% 11%;
-    }
-    
-    &:before {
-      content: url(${leftGlass});
-      position: absolute;
-      top: 0;
-      right: 68px;
-      animation: ${moveGlass} 5s linear;
-      animation-iteration-count: 1;
-
-      @media only screen and ${IDevice.desktopXS} {
-        top: unset;
-        bottom: 36%;
-        right: 53%;
-        animation: ${desktopMoveGlass} 6s linear;
-      }
-    }
-
-    &:after {
-      content: url(${sound});
-      position: absolute;
-      bottom: 73%;
-      right: 61px;
-      animation: ${soundAnimation} 4.5s linear;
-      animation-iteration-count: 1;
-
-      @media only screen and ${IDevice.desktopXS} {
-        animation: ${soundAnimation} 5.5s linear;
-        right: 51%;
-      }
-    }
-  }
-  
   .auto-home-icon {
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
-    
+
     &:after {
-      content: url(${home});
+      content: "";
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: 1%;
-      right: 111px;
-      
-      @media only screen and ${IDevice.desktopXS} {
-        right: 59%;
+      background-image: url(${home});
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 260px;
+      right: -65px;
+
+      @media only screen and ${IDevice.tablet} {
+        right: -65px;
       }
-    }
-    
-    &:before {
-      content: url(${leftCar});
-      position: absolute;
-      top: 30%;
-      right: 10px;
-      animation: ${moveCarHome} 10s ease;
-      animation-iteration-count: 1;
 
       @media only screen and ${IDevice.desktopXS} {
-        top: 30%;
-        right: unset;
-        left: 34%;
-        animation: ${desktopMoveCarHome} 8s ease;
+        right: -40px;
+      }
+    }
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: url(${rightCar});
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 121px;
+      right: 21px;
+      top: 9px;
+      animation: ${moveCarHome} 1s ease;
+      animation-delay: 2.4s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      visibility: hidden;
+
+      @media only screen and ${IDevice.tablet} {
+        right: 18px;
+      }
+
+      @media only screen and ${IDevice.desktopXS} {
+        right: 44px;
       }
     }
   }
@@ -281,27 +401,28 @@ export const StyledTile = styled.div<ITileProps>`
   margin-bottom: 50px;
   width: 50%;
   background-color: ${(props) => (
-    props.tile.description ? 
-            props.theme.colors.secondaryColor :
-            props.theme.colors.white
+          props.tile.description ?
+                  props.theme.colors.secondaryColor :
+                  props.theme.colors.white
   )};
   display: flex;
   align-items: center;
-    
+
   .tile-order {
     display: flex;
-    align-self: flex-start;
+    align-self: center;
     font-weight: bold;
     font-size: 24px;
+    padding-left: 20px;
 
     @media only screen and ${IDevice.desktopXS} {
       align-self: center;
     }
   }
-  
+
   .tile-description {
     display: flex;
-    align-self: flex-start;
+    align-self: center;
     text-align: left;
     margin-left: 10px;
 

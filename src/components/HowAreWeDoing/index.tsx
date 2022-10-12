@@ -1,15 +1,11 @@
-import {FC, Fragment} from 'react';
-import useCheckScroll from "../hooks/useCheckScroll";
-import {content} from "../../content";
+import { FC } from 'react';
+import { StyledHowAreWeDoing, StyledTile, SectionFooter } from "./styles";
+import { content } from "../../content";
 import { Container } from '../../styles/styled/Container';
-import {
-  StyledHowAreWeDoing,
-  StyledTile,
-  SectionFooter
-} from "./styles";
+import useCheckScroll from "../hooks/useCheckScroll";
 
 const HowAreWeDoing: FC = () => {
-  const { tiles, footerText, footerBoldText } = content.howAreWeDoing;
+  const { tiles,footerText, footerBoldText } = content.howAreWeDoing;
   const { scrollOnFirstScreen } = useCheckScroll();
 
   return (
@@ -17,14 +13,14 @@ const HowAreWeDoing: FC = () => {
       <StyledHowAreWeDoing scrollOnFirstScreen={scrollOnFirstScreen}>
         <h2>Jak działamy?</h2>
         <div className='tiles-container'>
-          {tiles.map((tile) => (
-            <StyledTile className={tile.icon} tile={tile}>
+          {tiles.map((tile, key) => (
+            <StyledTile key={key} className={`${tile.icon} number-${tile.order}`} tile={tile}>
               {
                 tile.description ?
-                <Fragment>
-                <span className="tile-order">{tile.order}</span>
+                <>
+                <span className="tile-order">{tile.order}.</span>
                 <span className="tile-description">{tile.description}</span>
-                </Fragment>
+                </>
                 : null
               }
               {
