@@ -1,13 +1,10 @@
-import {FC, Fragment} from 'react';
+import { FC } from 'react';
 import { StyledHowAreWeDoing, StyledTile } from "./styles";
-import {content} from "../../content";
+import { content } from "../../content";
 import { Container } from '../../styles/styled/Container';
 import useCheckScroll from "../hooks/useCheckScroll";
 
-interface Props {
-}
-
-const HowAreWeDoing: FC<Props> = () => {
+const HowAreWeDoing: FC = () => {
   const { tiles } = content.howAreWeDoing;
   const { scrollOnFirstScreen } = useCheckScroll();
 
@@ -20,11 +17,11 @@ const HowAreWeDoing: FC<Props> = () => {
             <StyledTile className={tile.icon} tile={tile}>
               {
                 tile.description ?
-                <Fragment>
-                <span className="tile-order">{tile.order}</span>
-                <span className="tile-description">{tile.description}</span>
-                </Fragment>
-                : null
+                  <>
+                    <span className="tile-order">{tile.order}</span>
+                    <span className="tile-description">{tile.description}</span>
+                  </>
+                  : null
               }
               {
                 !tile.description ?

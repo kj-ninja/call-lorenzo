@@ -111,6 +111,14 @@ export const TelephoneImage = styled.img`
   position: absolute;
   top: -40%;
   left: 8%;
+
+  @media only screen and ${IDevice.tablet} {
+    left: 30%
+  }
+
+  @media only screen and ${IDevice.desktopXS} {
+    left: 8%;
+  }
 `;
 
 export const SmsImage = styled.img`
@@ -119,6 +127,10 @@ export const SmsImage = styled.img`
   position: absolute;
   top: -40%;
   left: 8%;
+
+  @media only screen and ${IDevice.tablet} {
+    left: 30%
+  }
 
   @media only screen and ${IDevice.desktopXS} {
     left: unset;

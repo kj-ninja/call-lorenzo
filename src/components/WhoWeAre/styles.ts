@@ -75,6 +75,10 @@ export const ImageContainer = styled.div`
   align-items: flex-end;
   margin-bottom: 30px;
 
+  @media only screen and ${IDevice.tablet} {
+    height: 500px;
+  }
+
   @media only screen and ${IDevice.desktopXS} {
     height: 600px;
   }
