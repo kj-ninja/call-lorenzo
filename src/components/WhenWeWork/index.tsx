@@ -14,13 +14,13 @@ const WhenWeWork = () => {
 
   return (
     <Container>
-      <StyledWhenWeWork>
+      <StyledWhenWeWork id={dictionaryList[language].header.navigation[1]}>
         <h2>{dictionaryList[language].whenWeWork.sectionTexts.title}</h2>
         <div className="container">
           <div className="container__first-tile">
             {dictionaryList[language].whenWeWork.sectionTexts.coreHours}
           </div>
-          <ImageContainer/>
+          <ImageContainer />
           <div className="container__second-tile">
             <span className='tile-description'>{dictionaryList[language].whenWeWork.sectionTexts.description} </span>
             <span

@@ -1,5 +1,7 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import useCheckScroll from "../hooks/useCheckScroll";
+import useDisableScroll from "../hooks/useDisableScroll";
+import Navbar from "../Navbar";
 
 import { LanguageContext } from "../../context/language-context";
 import { dictionaryList } from "../../content/dictionaryList";
@@ -15,47 +17,69 @@ import {
 } from "./styles";
 
 const HeaderForMobile = () => {
-  const { scrollOnFirstScreen } = useCheckScroll();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [checked, setChecked] = useState(false);
+  const { scrollOnFirstScreen, scrollBack } = useCheckScroll();
   const { language } = useContext(LanguageContext);
+
+  useDisableScroll(isOpen);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    setChecked(!checked)
+  }
+
+  const scrollToTop = () => {
+    setChecked(false);
+    setIsOpen(false);
+    window.scrollTo({ top: 0, left: 0 });
+  }
 
   return (
     <StyledHeader scrollOnFirstScreen={scrollOnFirstScreen}>
-      <TitleContainer>
+      <TitleContainer scrollBack={scrollBack}>
         <LeftTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
           scrollOnFirstScreen ?
-            <h2>{dictionaryList[language].header.title}</h2>
+            <h2 onClick={scrollToTop}>{dictionaryList[language].header.title}</h2>
             :
-            <h1>{dictionaryList[language].header.title}</h1>
+            <h1 onClick={scrollToTop}>{dictionaryList[language].header.title}</h1>
         }
         <RightTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
           !scrollOnFirstScreen &&
-            <HamburgerMenu>
-              <div />
-              <div />
-              <div />
-            </HamburgerMenu>
+          <HamburgerMenu>
+            <input id="menu-toggle" type="checkbox" onClick={toggleMenu} checked={checked}
+                   onChange={(e: any) => setChecked(e.target.checked)}
+            />
+            <label className='menu-button-container' htmlFor="menu-toggle">
+              <div className='menu-button'></div>
+            </label>
+          </HamburgerMenu>
 
         }
       </TitleContainer>
       <MiddleBlankLine scrollOnFirstScreen={scrollOnFirstScreen}/>
-      <StyledLine scrollOnFirstScreen={scrollOnFirstScreen}>
+      <StyledLine scrollOnFirstScreen={scrollOnFirstScreen} scrollBack={scrollBack}>
         {
           scrollOnFirstScreen ?
-             <>
-               <div className="left-box"/>
-               <span className="phone-number">{dictionaryList[language].header.phoneNumber}</span>
-               <HamburgerMenu>
-                 <div />
-                 <div />
-                 <div />
-               </HamburgerMenu>
-             </>
+            <>
+              <div className="left-box"/>
+              <span className="phone-number">{dictionaryList[language].header.phoneNumber}</span>
+              <HamburgerMenu>
+                <input id="menu-toggle" type="checkbox" onClick={toggleMenu} checked={checked}
+                       onChange={(e: any) => setChecked(e.target.checked)}
+                />
+                <label className='menu-button-container' htmlFor="menu-toggle">
+                  <div className='menu-button'></div>
+                </label>
+              </HamburgerMenu>
+            </>
             :
             null
         }
       </StyledLine>
+      <Navbar navigation={dictionaryList[language].header.navigation} setToggleMenu={toggleMenu} toggleMenu={isOpen}/>
     </StyledHeader>
   );
 };

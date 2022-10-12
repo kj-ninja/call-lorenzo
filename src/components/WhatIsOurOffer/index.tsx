@@ -12,7 +12,7 @@ const WhatIsOurOffer = () => {
 
   return (
     <Container>
-      <StyledWhatIsOurOffer>
+      <StyledWhatIsOurOffer id={dictionaryList[language].header.navigation[0]}>
         <h2>{dictionaryList[language].WhatIsOurOffer.title}</h2>
         <div className="tiles-container">
           {dictionaryList[language].WhatIsOurOffer.tileTexts.map((tile) => (

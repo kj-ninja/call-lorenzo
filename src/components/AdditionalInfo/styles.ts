@@ -2,9 +2,13 @@ import styled from "styled-components";
 import { IDevice } from "../../settings/media";
 
 export const StyledAdditionalInfo = styled.section`
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 0 3%;
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
+
+  @media only screen and ${IDevice.desktopXS} {
+    margin-top: 100px;
+  }
   
   .section-container {
     display: flex;

@@ -33,6 +33,7 @@ export const StyledHowToContactUs = styled.section`
     align-self: flex-start;
     justify-content: flex-end;
     align-items: center;
+    border-radius: 0 10px 10px 0;
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
@@ -63,7 +64,7 @@ export const StyledHowToContactUs = styled.section`
     align-items: center;  
     justify-content: center;
     padding: 0 30px;
-    
+    border-radius: 10px 0 0 10px;
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
@@ -111,6 +112,14 @@ export const TelephoneImage = styled.img`
   position: absolute;
   top: -40%;
   left: 8%;
+
+  @media only screen and ${IDevice.tablet} {
+    left: 30%
+  }
+
+  @media only screen and ${IDevice.desktopXS} {
+    left: 4%;
+  }
 `;
 
 export const SmsImage = styled.img`
@@ -118,7 +127,11 @@ export const SmsImage = styled.img`
   height: 300px;
   position: absolute;
   top: -40%;
-  left: 8%;
+  left: 13%;
+
+  @media only screen and ${IDevice.tablet} {
+    left: 30%
+  }
 
   @media only screen and ${IDevice.desktopXS} {
     left: unset;

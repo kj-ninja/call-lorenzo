@@ -22,6 +22,8 @@ interface IContent {
   };
   howAreWeDoing: {
     tiles: ITile[];
+    footerText: string;
+    footerBoldText: string;
   },
   howMuchItCost: {
     prices: IPricing[];
@@ -70,7 +72,7 @@ export const content: IContent = {
       {
         description: 'jedziesz na imprez swoim samochodem',
         icon: "null",
-        order: "1.",
+        order: "1",
       },
       {
         description: null,
@@ -85,12 +87,12 @@ export const content: IContent = {
       {
         description: 'dobrze się bawisz popijając alkohol',
         icon: "null",
-        order: "2.",
+        order: "2",
       },
       {
         description: 'dzwonisz lub piszesz do nas 1h przed wyjściem',
         icon: "null",
-        order: "3.",
+        order: "3",
       },
       {
         description: null,
@@ -105,9 +107,11 @@ export const content: IContent = {
       {
         description: 'bezpiecznie wracasz do domu swoim samochodem',
         icon: "null",
-        order: "4.",
+        order: "4",
       },
     ],
+    footerText: "Usługa dostępna na terenie ",
+    footerBoldText: "Wrocławia i okolic",
   },
   howMuchItCost: {
     prices: [

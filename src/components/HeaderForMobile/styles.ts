@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 type IScrollCheckProps = {
-  scrollOnFirstScreen: boolean;
+  scrollOnFirstScreen?: boolean;
+  scrollBack?: boolean;
 }
 
 export const StyledHeader = styled.header<IScrollCheckProps>`
@@ -12,7 +13,7 @@ export const StyledHeader = styled.header<IScrollCheckProps>`
   position: ${(props) => (props.scrollOnFirstScreen ? "fixed" : "unset")};
   top: ${props => (props.scrollOnFirstScreen ? "0" : "-90px")};
   transition: ${(props) => (props.scrollOnFirstScreen && "0.5s top cubic-bezier(.3, .73, .3, .74)")};
-  
+
   h1 {
     text-align: center;
     padding: 15px 0;
@@ -26,10 +27,12 @@ export const StyledHeader = styled.header<IScrollCheckProps>`
   }
 `;
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled.div<IScrollCheckProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: ${props => (props.scrollBack ? "67px" : "37px")};
+  transition: height 0.1s linear;
 `;
 
 export const LeftTitleLine = styled.div<IScrollCheckProps>`
@@ -90,15 +93,57 @@ export const MiddleBlankLine = styled.div<IScrollCheckProps>`
 `
 
 export const HamburgerMenu = styled.div`
-  padding: 2px;
   width: 30px;
   height: 30px;
   margin: 0 15px 0 10px;
   
-  div {
-    width: 25px;
-    height: 5px;
-    background-color: white;
-    margin: 3px 0;
+  .menu-button-container {
+    display: flex;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0;
+    transform: rotate(405deg);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0;
+    transform: rotate(-405deg);
   }
 `

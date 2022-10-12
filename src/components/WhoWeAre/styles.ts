@@ -3,11 +3,12 @@ import picture from "../../assets/group-final.jpeg";
 import { IDevice } from "../../settings/media";
 
 export const StyledWhoWeAre = styled.section`
-  margin-top: 60px;
+  margin-top: 20px;
   padding: 0 3%;
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   @media only screen and ${IDevice.desktopXS} {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,6 +75,10 @@ export const ImageContainer = styled.div`
   flex-direction: column;
   align-items: flex-end;
   margin-bottom: 30px;
+
+  @media only screen and ${IDevice.tablet} {
+    height: 500px;
+  }
 
   @media only screen and ${IDevice.desktopXS} {
     height: 600px;

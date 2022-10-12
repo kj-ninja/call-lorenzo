@@ -2,8 +2,12 @@ import styled from "styled-components";
 import { IDevice } from "../../settings/media";
 
 export const StyledWhatIsOurOffer = styled.section`
-  margin-top: 60px;
+  margin-top: 30px;
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
+
+  @media only screen and ${IDevice.desktopXS} {
+    margin-top: 60px;
+  }
   
   h2 {
     text-align: center;

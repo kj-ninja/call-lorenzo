@@ -12,16 +12,17 @@ import {
 } from "./styles";
 
 const HowMuchItCost = () => {
+  const { prices,additionalFees, paymentMethods, texts } = content.howMuchItCost;
   const { language } = useContext(LanguageContext);
 
   return (
     <Container>
-      <StyledHowMuchIsIt>
+      <StyledHowMuchIsIt id={dictionaryList[language].header.navigation[2]}>
         <h2>{dictionaryList[language].howMuchItCost.texts.title}</h2>
         <Pricing>
           <div className="table">
-            {dictionaryList[language].howMuchItCost.prices.map((price) => (
-              <div className="table-row">
+            {dictionaryList[language].howMuchItCost.prices.map((price, key) => (
+              <div key={key} className="table-row">
                 <div className='table-row__price-cell'>{price.price}</div>
                 <div className='table-row__km-cells'>
                   <div className='table-row__km-cells__text'>{price.additionalCharacter}</div>
@@ -38,8 +39,8 @@ const HowMuchItCost = () => {
 
         <AdditionalFees>
           <div>
-            {dictionaryList[language].howMuchItCost.additionalFees.map((fee) => (
-              <div className="table-row">
+            {dictionaryList[language].howMuchItCost.additionalFees.map((fee, key) => (
+              <div key={key} className="table-row">
                 <div className="table-row-text-wrapper">
                   <div className="table-row__text-style">{fee.feesText}</div>
                   <div>{fee.feesDescription}</div>
@@ -51,8 +52,8 @@ const HowMuchItCost = () => {
           <ImportantNotes className="important-notes">
             <span className="payments-title">{dictionaryList[language].howMuchItCost.texts.secondPaymentTitle}</span>
             <div className='payment-methods'>
-              {dictionaryList[language].howMuchItCost.paymentMethods.map((method) => (
-                <span>-{method.method}</span>
+              {dictionaryList[language].howMuchItCost.paymentMethods.map((method, key) => (
+                <span key={key}>-{method.method}</span>
               ))}
             </div>
           </ImportantNotes>

@@ -1,23 +1,32 @@
-import { Fragment, useContext } from "react";
+import { useContext } from "react";
+import useCheckScroll from "../hooks/useCheckScroll";
+
 import {
+  FooterWrapper,
   UpperLine,
-  LowerLine
+  LowerLine,
 } from "./styles";
+import useDeviceDetect from "../hooks/useDeviceDetect";
 import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
 
 const Footer = () => {
-  const { setLanguage } = useContext(LanguageContext);
+  const { isMobile } = useDeviceDetect(); // only for version 2.0 condition without sticky desktop header
+  const { scrollOnFirstScreen } = useCheckScroll();
+  const { language, setLanguage } = useContext(LanguageContext);
 
   return (
-    <Fragment>
-      <UpperLine />
+    <FooterWrapper scrollOnFirstScreen={scrollOnFirstScreen}>
+      <UpperLine scrollOnFirstScreen={scrollOnFirstScreen}>
+       <span className="phone-number">{(!scrollOnFirstScreen && dictionaryList[language].header.phoneNumber) || (!isMobile && dictionaryList[language].header.phoneNumber)}</span>
+      </UpperLine>
       <LowerLine>
-        <div className='lower-line-container'>
-          <button onClick={() => setLanguage("pl")}>Polski</button>
-          <button onClick={() => setLanguage("en")}>Angielski</button>
+        <div className="flag-container">
+          <div className="brittany-flag" onClick={() => setLanguage("pl")} />
+          <div className="poland-flag" onClick={() => setLanguage("en")} />
         </div>
       </LowerLine>
-    </Fragment>
+    </FooterWrapper>
   )
 }
 

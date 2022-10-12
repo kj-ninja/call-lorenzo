@@ -20,7 +20,7 @@ const HowToContactUs = () => {
 
   return (
     <Container>
-      <StyledHowToContactUs>
+      <StyledHowToContactUs id={dictionaryList[language].header.navigation[3]}>
         <h2>{dictionaryList[language].HowToContactUs.texts.title}</h2>
         <div className="container">
           <div className="container__first-tile">
