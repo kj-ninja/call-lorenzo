@@ -5,10 +5,11 @@ import { content } from "../../content";
 
 const WhatIsOurOffer = () => {
   const {title, tileTexts} = content.WhatIsOurOffer;
+  const { navigation } = content.header;
 
   return (
     <Container>
-      <StyledWhatIsOurOffer>
+      <StyledWhatIsOurOffer id={navigation[0]}>
         <h2>{title}</h2>
         <div className="tiles-container">
           {tileTexts.map((tile) => (

@@ -30,10 +30,11 @@ const WhoWeAre = () => {
     thirdStandardText,
     thirdBoldText
   } = content.WhoWeAre.secondTextContainer;
+  const { navigation } = content.header;
 
   return (
     <Container>
-      <StyledWhoWeAre>
+      <StyledWhoWeAre id={navigation[4]}>
         <h2>{title}</h2>
         <div className='content-container'>
           <div className="first-paragraph">

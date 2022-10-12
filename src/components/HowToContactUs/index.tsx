@@ -13,10 +13,11 @@ import message from "../../assets/message.svg";
 
 const HowToContactUs = () => {
   const { texts } = content.HowToContactUs;
+  const { navigation } = content.header;
 
   return (
     <Container>
-      <StyledHowToContactUs>
+      <StyledHowToContactUs id={navigation[3]}>
         <h2>{texts.title}</h2>
         <div className="container">
           <div className="container__first-tile">
