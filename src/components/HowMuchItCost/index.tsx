@@ -9,10 +9,11 @@ import {
 
 const HowMuchItCost = () => {
   const { prices,additionalFees, paymentMethods, texts } = content.howMuchItCost;
+  const { navigation } = content.header;
 
   return (
     <Container>
-      <StyledHowMuchIsIt>
+      <StyledHowMuchIsIt id={navigation[2]}>
         <h2>{texts.title}</h2>
         <Pricing>
           <div className="table">
