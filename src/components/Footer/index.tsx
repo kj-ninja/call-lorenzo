@@ -7,7 +7,6 @@ import { LanguageContext } from "../../context/language-context";
 
 const Footer = () => {
   const { setLanguage, dictionary } = useContext(LanguageContext);
-  console.log("choosed dict: ", dictionary)
 
   return (
     <Fragment>

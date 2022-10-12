@@ -21,7 +21,6 @@ interface Props {
 export const LangContext = ({children}: Props) => {
   const [language, setLanguage] = useState("pl");
 
-
   const value = { language, setLanguage, dictionary: dictionaryList[language]};
 
   return (
