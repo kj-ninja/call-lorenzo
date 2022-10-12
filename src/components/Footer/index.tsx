@@ -15,6 +15,14 @@ const Footer = () => {
   const { scrollOnFirstScreen } = useCheckScroll();
   const { language, setLanguage } = useContext(LanguageContext);
 
+  const handleLanguage = () => {
+    if (language !== "pl") {
+      setLanguage("pl")
+    } else {
+      setLanguage("en")
+    }
+  }
+
   return (
     <FooterWrapper scrollOnFirstScreen={scrollOnFirstScreen}>
       <UpperLine scrollOnFirstScreen={scrollOnFirstScreen}>
@@ -22,8 +30,8 @@ const Footer = () => {
       </UpperLine>
       <LowerLine>
         <div className="flag-container">
-          <div className="brittany-flag" onClick={() => setLanguage("pl")} />
-          <div className="poland-flag" onClick={() => setLanguage("en")} />
+          <div className="brittany-flag" onClick={handleLanguage} ></div>
+          <div className="poland-flag" onClick={handleLanguage} ></div>
         </div>
       </LowerLine>
     </FooterWrapper>

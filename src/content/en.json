@@ -52,7 +52,9 @@
         "icon": "null",
         "order": "4."
       }
-    ]
+    ],
+    "footerText": "Usługa dostępna na terenie ",
+    "footerBoldText": "Wrocławia i okolic"
   },
   "howMuchItCost": {
     "prices": [

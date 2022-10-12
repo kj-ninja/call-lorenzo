@@ -12,7 +12,6 @@ import {
 } from "./styles";
 
 const HowMuchItCost = () => {
-  const { prices,additionalFees, paymentMethods, texts } = content.howMuchItCost;
   const { language } = useContext(LanguageContext);
 
   return (
