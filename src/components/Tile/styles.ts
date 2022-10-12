@@ -1,10 +1,51 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { IDevice } from "../../settings/media";
+
+type ITileProps = {
+  toggler: boolean;
+}
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+`;
+
+const fadeOut = keyframes`
+  0% {
+  opacity: 1;
+  transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+`
 
 export const TileWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  
+  .fadeOut {
+    opacity: 1;
+    animation: ${fadeOut} 0.25s;
+    animation-fill-mode: forwards;
+  }
+
+  .fadeIn {
+    opacity: 0;
+    animation: ${fadeIn} 0.4s;
+    animation-fill-mode: forwards;
+  }
 
   // frames 1,3,5,7 etc.
   :nth-child(odd) {
@@ -49,9 +90,11 @@ export const TileWrapper = styled.div`
 
     .tile-toggle {
       padding-left: 3px;
+      
 
       @media only screen and ${IDevice.desktopXS} {
         padding-left: unset;
+        width: fit-content;
       }
     }
   }
@@ -95,24 +138,34 @@ export const StyledTile = styled.div`
   .tile-title {
     width: 85%;
   }
+  
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    width: 100px;
+  }
 
   .tile-toggle {
     cursor: pointer;
-    width: 12%;
     align-self: center;
     font-size: 12px;
+
+    @media only screen and ${IDevice.desktopXS} {
+      padding-left: unset;
+      width: fit-content;
+    }
   }
 `;
 
-export const StyledDescription = styled.div`
+export const StyledDescription = styled.div<ITileProps>`
   width: 89%;
   align-self: center;
-
+  
   @media only screen and ${IDevice.desktopXS} {
     width: 45%;
     text-align: center;
   }
-
+  
   .first-paragraph {
     color: ${(props) => (props.theme.colors.additionalTextColor)};
     text-align: center;
