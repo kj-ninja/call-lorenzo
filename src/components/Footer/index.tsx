@@ -15,12 +15,12 @@ const Footer = () => {
   const { scrollOnFirstScreen } = useCheckScroll();
   const { language, setLanguage } = useContext(LanguageContext);
 
-  const handleLanguage = () => {
-    if (language !== "pl") {
-      setLanguage("pl")
-    } else {
-      setLanguage("en")
-    }
+  const toggleToEng = () => {
+    setLanguage("en")
+  }
+
+  const toggleToPl = () => {
+    setLanguage("pl")
   }
 
   return (
@@ -29,9 +29,13 @@ const Footer = () => {
        <span className="phone-number">{(!scrollOnFirstScreen && dictionaryList[language].header.phoneNumber) || (!isMobile && dictionaryList[language].header.phoneNumber)}</span>
       </UpperLine>
       <LowerLine>
+        <div className="author-wrapper">
+          <span>Created by:</span>
+          <a href="https://github.com/JaCoWymowny" rel="noreferrer"  target="_blank" className="github-link">Jacek Mickiewicz</a>
+        </div>
         <div className="flag-container">
-          <div className="brittany-flag" onClick={handleLanguage} ></div>
-          <div className="poland-flag" onClick={handleLanguage} ></div>
+          <div className="brittany-flag" onClick={toggleToEng} ></div>
+          <div className="poland-flag" onClick={toggleToPl} ></div>
         </div>
       </LowerLine>
     </FooterWrapper>

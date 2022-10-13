@@ -18,7 +18,7 @@ const HowMuchItCost = () => {
     <Container>
       <StyledHowMuchIsIt id={dictionaryList[language].header.navigation[2]}>
         <h2>{dictionaryList[language].howMuchItCost.texts.title}</h2>
-        <Pricing>
+        <Pricing language={language}>
           <div className="table">
             {dictionaryList[language].howMuchItCost.prices.map((price, key) => (
               <div key={key} className="table-row">

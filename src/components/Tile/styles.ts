@@ -3,6 +3,7 @@ import { IDevice } from "../../settings/media";
 
 type ITileProps = {
   toggler: boolean;
+  language: string;
 }
 
 const fadeIn = keyframes`
@@ -10,7 +11,7 @@ const fadeIn = keyframes`
     opacity: 0;
     transform: translateY(-100px);
   }
-  75% {
+  85% {
     opacity: 0.25;
   }
   100% {
@@ -23,6 +24,9 @@ const fadeOut = keyframes`
   0% {
   opacity: 1;
   transform: translateY(0px);
+  }
+  50% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
@@ -55,9 +59,22 @@ export const TileWrapper = styled.div`
       align-items: center;
     }
 
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      width: 100px;
+      justify-content: center;
+
+      @media only screen and ${IDevice.tablet} {
+        align-items: center;
+        justify-content: unset;
+      }
+    }
+
     .tile {
       justify-content: flex-end;
       border-radius: 0 10px 10px 0;
+      
       @media only screen and ${IDevice.desktopXS} {
         justify-content: space-around;
       }
@@ -70,6 +87,12 @@ export const TileWrapper = styled.div`
     
     @media only screen and ${IDevice.desktopXS} {
       align-items: center;
+    }
+
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      width: 100px;
     }
 
     .tile {
@@ -89,10 +112,10 @@ export const TileWrapper = styled.div`
     }
 
     .tile-toggle {
-      padding-left: 3px;
+      padding-left: 15px;
       
 
-      @media only screen and ${IDevice.desktopXS} {
+      @media only screen and ${IDevice.tablet} {
         padding-left: unset;
         width: fit-content;
       }
@@ -113,7 +136,7 @@ export const TileWrapper = styled.div`
 
 export const StyledTile = styled.div`
   width: 95%;
-  height: 50px;
+  height: 55px;
   display: flex;
   font-weight: bolder;
   background-color: ${(props) => (props.theme.colors.secondaryColor)};
@@ -136,13 +159,7 @@ export const StyledTile = styled.div`
   }
 
   .tile-title {
-    width: 85%;
-  }
-  
-  .toggle-container {
-    display: flex;
-    align-items: center;
-    width: 100px;
+    width: 100%;
   }
 
   .tile-toggle {
@@ -158,10 +175,10 @@ export const StyledTile = styled.div`
 `;
 
 export const StyledDescription = styled.div<ITileProps>`
-  width: 89%;
+  width: ${props => (props.language === "en") ? "85%" : "89%"};
   align-self: center;
   
-  @media only screen and ${IDevice.desktopXS} {
+  @media only screen and ${IDevice.tablet} {
     width: 45%;
     text-align: center;
   }
@@ -170,9 +187,15 @@ export const StyledDescription = styled.div<ITileProps>`
     color: ${(props) => (props.theme.colors.additionalTextColor)};
     text-align: center;
     margin-bottom: 15px;
+
+    @media only screen and ${IDevice.tablet} {
+      text-align: center;
+    }
   }
 
   .second-paragraph {
+    padding-left: 1px;
+    
     @media only screen and ${IDevice.desktopXS} {
       margin-bottom: 10px;
     }

@@ -2,7 +2,11 @@ import styled from "styled-components";
 import driver from "../../assets/driver.svg"
 import { IDevice } from "../../settings/media";
 
-export const StyledWhenWeWork = styled.section`
+type ILanguageProps = {
+    language: string
+}
+
+export const StyledWhenWeWork = styled.section<ILanguageProps>`
     margin: 25px 0;
     line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
 
@@ -46,7 +50,7 @@ export const StyledWhenWeWork = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 30px;
+    padding: ${props => (props.language === "pl") ? "0 30px" : "0 20px"};
     border-radius: 10px 0 0 10px;
     background-color: ${(props) => (
             props.theme.colors.secondaryColor
@@ -59,7 +63,7 @@ export const StyledWhenWeWork = styled.section`
   }
   
   .tile-description {
-    width: 85%;
+    width: ${props => (props.language === "pl") ? "85%" : "90%"};
       @media only screen and ${IDevice.desktopXS} {
           text-align: center;
       }

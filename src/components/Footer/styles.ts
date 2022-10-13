@@ -31,9 +31,9 @@ export const FooterWrapper = styled.div<IScrollCheckProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background-color: white;
   width: 100%;
   max-height: 80px;
-  height: 100%;
   bottom: 0;
   animation: ${props => (props.scrollOnFirstScreen && fadeinAndOut)} 0.5s;
   animation-fill-mode: forwards;
@@ -65,7 +65,7 @@ export const LowerLine = styled.div`
   position: relative;
   height: 35px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   background-color: ${(props) => props.theme.colors.primaryColor};
   color: white;
@@ -73,6 +73,27 @@ export const LowerLine = styled.div`
   @media only screen and ${IDevice.desktopXS} {
     //only for version 2.0 without sticky desktop header
     justify-content: center;
+  }
+  
+  .author-wrapper {
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 12px;
+  }
+  
+  .github-link {
+    width: 100px;
+    margin-left: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .github-link:hover {
+    color: red;
   }
   
   .flag-container {
@@ -94,6 +115,7 @@ export const LowerLine = styled.div`
     background-image: url(${ukFlag});
     background-size: 180%;
     background-position: center;
+    cursor: pointer;
   }
   
   .poland-flag {
@@ -102,6 +124,7 @@ export const LowerLine = styled.div`
     background-image: url(${plFlag});
     background-size: 180%;
     background-position: center 42px;
+    cursor: pointer;
 
     @media only screen and ${IDevice.desktopXS} {
       margin-left: 10px;

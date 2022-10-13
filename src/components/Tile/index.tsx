@@ -57,7 +57,7 @@ const Tile: FC<Props> = (tile) => {
         </StyledTile>
         {
           show &&
-          <StyledDescription toggler={show} className={`${fadeOutAnimation ? "fadeIn" : "fadeOut"}`}>
+          <StyledDescription language={language} toggler={show} className={`${fadeOutAnimation ? "fadeIn" : "fadeOut"}`}>
             <div className='first-paragraph'>
               {tile.tile.tileText}
             </div>

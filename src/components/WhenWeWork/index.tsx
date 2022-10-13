@@ -14,7 +14,7 @@ const WhenWeWork = () => {
 
   return (
     <Container>
-      <StyledWhenWeWork id={dictionaryList[language].header.navigation[1]}>
+      <StyledWhenWeWork language={language} id={dictionaryList[language].header.navigation[1]}>
         <h2>{dictionaryList[language].whenWeWork.sectionTexts.title}</h2>
         <div className="container">
           <div className="container__first-tile">
@@ -25,7 +25,7 @@ const WhenWeWork = () => {
             <span className='tile-description'>{dictionaryList[language].whenWeWork.sectionTexts.description} </span>
             <span
               className='tile-description tile-margin'>{dictionaryList[language].whenWeWork.sectionTexts.description2}
-              <span className='tile-hours'>{dictionaryList[language].whenWeWork.sectionTexts.additionalHours}</span>
+              <span className='tile-hours'> {dictionaryList[language].whenWeWork.sectionTexts.additionalHours}</span>
             </span>
           </div>
         </div>

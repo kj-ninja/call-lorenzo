@@ -3,14 +3,15 @@
     "title": "Call Lorenzo",
     "phoneNumber": "+48 537 522 788",
     "navigation": [
-      "USŁUGI",
-      "GODZINY PRACY",
-      "CENNIK",
-      "KONTAKT",
-      "O NAS"
+      "Usługi",
+      "Godziny pracy",
+      "Cennik",
+      "Kontakt",
+      "O nas"
     ]
   },
   "howAreWeDoing": {
+    "title": "Jak działamy?",
     "tiles": [
       {
         "description": "jedziesz na imprez swoim samochodem",
@@ -216,7 +217,7 @@
       "thirdLineText": "NIEZAWODNOŚĆ",
       "fourthLineText": "KOMFORT",
       "colouredSentence": "Jako firma, stawiamy na:",
-      "colouredParagraph": "Staramy się zapewnić Państwu usługi na najwyższym możliwym poziomie"
+      "colouredParagraph": "Staramy się zapewnić Państwu usługi na najwyższym możliwym poziomie."
     }
   },
   "Footer": {
