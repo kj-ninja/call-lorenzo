@@ -112,7 +112,7 @@ export const TileWrapper = styled.div`
     }
 
     .tile-toggle {
-      padding-left: 15px;
+      padding-left: 12px;
       
 
       @media only screen and ${IDevice.tablet} {
@@ -137,15 +137,22 @@ export const TileWrapper = styled.div`
 export const StyledTile = styled.div`
   width: 95%;
   height: 55px;
-  display: flex;
   font-weight: bolder;
+    //display: flex;
+    //padding: 10px;
   background-color: ${(props) => (props.theme.colors.secondaryColor)};
-  padding: 10px;
   margin: 20px 0;
 
   @media only screen and ${IDevice.desktopXS} {
     width: 100%;
     margin: 30px 0;
+  }
+  
+  .clickable {
+    height: 55px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
   }
 
   .tile-text-wrapper {
