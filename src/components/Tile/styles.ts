@@ -65,7 +65,7 @@ export const TileWrapper = styled.div`
       width: 100px;
       justify-content: center;
 
-      @media only screen and ${IDevice.tablet} {
+      @media only screen and ${IDevice.desktopXS} {
         align-items: center;
         justify-content: unset;
       }
@@ -75,7 +75,7 @@ export const TileWrapper = styled.div`
       justify-content: flex-end;
       border-radius: 0 10px 10px 0;
       
-      @media only screen and ${IDevice.desktopXS} {
+      @media only screen and ${IDevice.tablet} {
         justify-content: space-around;
       }
     }
@@ -98,7 +98,8 @@ export const TileWrapper = styled.div`
     .tile {
       justify-content: center;
       border-radius: 10px 0 0 10px;
-      @media only screen and ${IDevice.desktopXS} {
+      
+      @media only screen and ${IDevice.tablet} {
         justify-content: space-around;
       }
     }
@@ -112,7 +113,7 @@ export const TileWrapper = styled.div`
     }
 
     .tile-toggle {
-      padding-left: 12px;
+      padding-left: 15px;
       
 
       @media only screen and ${IDevice.tablet} {
@@ -138,8 +139,6 @@ export const StyledTile = styled.div`
   width: 95%;
   height: 55px;
   font-weight: bolder;
-    //display: flex;
-    //padding: 10px;
   background-color: ${(props) => (props.theme.colors.secondaryColor)};
   margin: 20px 0;
 
