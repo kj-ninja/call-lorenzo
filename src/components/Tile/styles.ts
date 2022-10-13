@@ -150,9 +150,10 @@ export const StyledTile = styled.div`
   
   .clickable {
     height: 55px;
-  display: flex;
-  padding: 10px;
-  justify-content: center;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    cursor: pointer;
   }
 
   .tile-text-wrapper {
