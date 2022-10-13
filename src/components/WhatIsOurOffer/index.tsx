@@ -1,24 +1,26 @@
+import { useContext } from "react";
 import Tile from "../Tile";
+
+import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
+
 import { Container } from "../../styles/styled/Container";
 import { StyledWhatIsOurOffer } from "./styles";
-import { content } from "../../content";
 
 const WhatIsOurOffer = () => {
-  const {title, tileTexts} = content.WhatIsOurOffer;
-  const { navigation } = content.header;
+  const { language } = useContext(LanguageContext);
 
   return (
     <Container>
-      <StyledWhatIsOurOffer id={navigation[0]}>
-        <h2>{title}</h2>
+      <StyledWhatIsOurOffer id={dictionaryList[language].header.navigation[0]}>
+        <h2>{dictionaryList[language].WhatIsOurOffer.title}</h2>
         <div className="tiles-container">
-          {tileTexts.map((tile) => (
+          {dictionaryList[language].WhatIsOurOffer.tileTexts.map((tile) => (
             <Tile tile={tile} key={tile.tileOrder}/>
           ))}
         </div>
       </StyledWhatIsOurOffer>
     </Container>
-
   )
 }
 

@@ -1,4 +1,8 @@
-import { content } from "../../content";
+import { useContext } from "react";
+
+import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
+
 import { Container } from "../../styles/styled/Container";
 import {
   AdditionalFees,
@@ -8,16 +12,15 @@ import {
 } from "./styles";
 
 const HowMuchItCost = () => {
-  const { prices,additionalFees, paymentMethods, texts } = content.howMuchItCost;
-  const { navigation } = content.header;
+  const { language } = useContext(LanguageContext);
 
   return (
     <Container>
-      <StyledHowMuchIsIt id={navigation[2]}>
-        <h2>{texts.title}</h2>
-        <Pricing>
+      <StyledHowMuchIsIt id={dictionaryList[language].header.navigation[2]}>
+        <h2>{dictionaryList[language].howMuchItCost.texts.title}</h2>
+        <Pricing language={language}>
           <div className="table">
-            {prices.map((price, key) => (
+            {dictionaryList[language].howMuchItCost.prices.map((price, key) => (
               <div key={key} className="table-row">
                 <div className='table-row__price-cell'>{price.price}</div>
                 <div className='table-row__km-cells'>
@@ -28,14 +31,14 @@ const HowMuchItCost = () => {
             ))}
           </div>
           <ImportantNotes>
-            <span className="payments-title">{texts.firstPaymentTitle}</span>
-            <span>{texts.paymentNoteText}</span>
+            <span className="payments-title">{dictionaryList[language].howMuchItCost.texts.firstPaymentTitle}</span>
+            <span>{dictionaryList[language].howMuchItCost.texts.paymentNoteText}</span>
           </ImportantNotes>
         </Pricing>
 
         <AdditionalFees>
           <div>
-            {additionalFees.map((fee, key) => (
+            {dictionaryList[language].howMuchItCost.additionalFees.map((fee, key) => (
               <div key={key} className="table-row">
                 <div className="table-row-text-wrapper">
                   <div className="table-row__text-style">{fee.feesText}</div>
@@ -46,9 +49,9 @@ const HowMuchItCost = () => {
             ))}
           </div>
           <ImportantNotes className="important-notes">
-            <span className="payments-title">{texts.secondPaymentTitle}</span>
+            <span className="payments-title">{dictionaryList[language].howMuchItCost.texts.secondPaymentTitle}</span>
             <div className='payment-methods'>
-              {paymentMethods.map((method, key) => (
+              {dictionaryList[language].howMuchItCost.paymentMethods.map((method, key) => (
                 <span key={key}>-{method.method}</span>
               ))}
             </div>

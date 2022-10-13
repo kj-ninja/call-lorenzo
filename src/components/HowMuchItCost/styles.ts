@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { IDevice } from "../../settings/media";
 
+type IPriceProps = {
+  language: string;
+}
+
 export const StyledHowMuchIsIt = styled.section`
   display: flex;
   flex-direction: column;
@@ -17,7 +21,7 @@ export const StyledHowMuchIsIt = styled.section`
   }
 `
 
-export const Pricing = styled.div`
+export const Pricing = styled.div<IPriceProps>`
   width: 80%;
   align-self: flex-start;
   margin-top: 14px;
@@ -64,7 +68,7 @@ export const Pricing = styled.div`
   .table-row__km-cells {
     display: flex;
     justify-content: space-between;
-    width: 75px;
+    width: ${props => (props.language === "pl") ? "75px" : "100px"}
   }
   
   .table-row__km-cells__text {
@@ -128,6 +132,7 @@ export const AdditionalFees = styled.div`
   }
 
   .table-row__text-style {
+    width: 155px;
     font-weight: bold;
     margin-right: 4px;
   }

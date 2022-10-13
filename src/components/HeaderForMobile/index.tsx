@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import useCheckScroll from "../hooks/useCheckScroll";
 import useDisableScroll from "../hooks/useDisableScroll";
 import Navbar from "../Navbar";
+
+import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
+
 import {
   StyledHeader,
   TitleContainer,
@@ -11,13 +15,12 @@ import {
   StyledLine,
   HamburgerMenu
 } from "./styles";
-import { content } from "../../content";
 
 const HeaderForMobile = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [checked, setChecked] = useState(false);
   const { scrollOnFirstScreen, scrollBack } = useCheckScroll();
-  const { title, navigation, phoneNumber } = content.header;
+  const { language } = useContext(LanguageContext);
 
   useDisableScroll(isOpen);
 
@@ -38,9 +41,9 @@ const HeaderForMobile = () => {
         <LeftTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
           scrollOnFirstScreen ?
-            <h2 onClick={scrollToTop}>{title}</h2>
+            <h2 onClick={scrollToTop}>{dictionaryList[language].header.title}</h2>
             :
-            <h1 onClick={scrollToTop}>{title}</h1>
+            <h1 onClick={scrollToTop}>{dictionaryList[language].header.title}</h1>
         }
         <RightTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
@@ -62,7 +65,7 @@ const HeaderForMobile = () => {
           scrollOnFirstScreen ?
             <>
               <div className="left-box"/>
-              <span className="phone-number">{phoneNumber}</span>
+              <span className="phone-number">{dictionaryList[language].header.phoneNumber}</span>
               <HamburgerMenu>
                 <input id="menu-toggle" type="checkbox" onClick={toggleMenu} checked={checked}
                        onChange={(e: any) => setChecked(e.target.checked)}
@@ -76,7 +79,7 @@ const HeaderForMobile = () => {
             null
         }
       </StyledLine>
-      <Navbar navigation={navigation} setToggleMenu={toggleMenu} toggleMenu={isOpen}/>
+      <Navbar navigation={dictionaryList[language].header.navigation} setToggleMenu={toggleMenu} toggleMenu={isOpen}/>
     </StyledHeader>
   );
 };

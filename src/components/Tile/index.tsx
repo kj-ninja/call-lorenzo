@@ -1,11 +1,15 @@
-import { FC, Fragment, useState } from "react";
+import { FC, Fragment, useContext, useState } from "react";
+
+import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
+
 import { IOurOfferTile } from "../../types";
+
 import {
   StyledTile,
   StyledDescription,
   TileWrapper
 } from "./styles";
-import { content } from "../../content";
 
 interface Props {
   tile: IOurOfferTile
@@ -13,9 +17,8 @@ interface Props {
 
 const Tile: FC<Props> = (tile) => {
   const [show, setShow] = useState(false);
+  const { language } = useContext(LanguageContext);
   const [fadeOutAnimation, setFadeOutAnimation] = useState(false);
-
-  const { toggleText } = content.WhatIsOurOffer;
 
   const toggleHandler = () => {
     if (show) {
@@ -45,13 +48,16 @@ const Tile: FC<Props> = (tile) => {
           </div>
           <div className="toggle-container">
             <span className='tile-toggle' onClick={toggleHandler}>
-              {!show ? toggleText.show : toggleText.hide}
+              {!show ?
+                dictionaryList[language].WhatIsOurOffer.toggleText.show
+                :
+                dictionaryList[language].WhatIsOurOffer.toggleText.hide}
             </span>
           </div>
         </StyledTile>
         {
           show &&
-          <StyledDescription toggler={show} className={`${fadeOutAnimation ? "fadeIn" : "fadeOut"}`}>
+          <StyledDescription language={language} toggler={show} className={`${fadeOutAnimation ? "fadeIn" : "fadeOut"}`}>
             <div className='first-paragraph'>
               {tile.tile.tileText}
             </div>

@@ -1,4 +1,11 @@
-import { content } from "../../content";
+import { useContext } from "react";
+
+import { LanguageContext } from "../../context/language-context";
+import { dictionaryList } from "../../content/dictionaryList";
+
+import phone from "../../assets/phone.svg";
+import message from "../../assets/message.svg";
+
 import { Container } from "../../styles/styled/Container";
 import {
   StyledHowToContactUs,
@@ -7,39 +14,35 @@ import {
   SmsImage,
   ImportantNotes
 } from "./styles";
-import phone from "../../assets/phone.svg";
-import message from "../../assets/message.svg";
-
 
 const HowToContactUs = () => {
-  const { texts } = content.HowToContactUs;
-  const { navigation } = content.header;
+  const { language } = useContext(LanguageContext);
 
   return (
     <Container>
-      <StyledHowToContactUs id={navigation[3]}>
-        <h2>{texts.title}</h2>
+      <StyledHowToContactUs id={dictionaryList[language].header.navigation[3]}>
+        <h2>{dictionaryList[language].HowToContactUs.texts.title}</h2>
         <div className="container">
           <div className="container__first-tile">
-            <span className="first-tile__text">{texts.firstContactUsTile}</span>
+            <span className="first-tile__text">{dictionaryList[language].HowToContactUs.texts.firstContactUsTile}</span>
           </div>
           <ImageWrapper>
             <TelephoneImage src={phone} alt=""/>
             <SmsImage src={message} alt=""/>
           </ImageWrapper>
           <div className="container__second-tile">
-            {texts.secondContactUsTile}
+            {dictionaryList[language].HowToContactUs.texts.secondContactUsTile}
           </div>
           <ImportantNotes>
           <span>
-            {texts.firstImportantText}
+            {dictionaryList[language].HowToContactUs.texts.firstImportantText}
             <span className="notes-text-style">
-              {texts.firstBoldText}
+              {dictionaryList[language].HowToContactUs.texts.firstBoldText}
             </span>
             <span>
-              {texts.secondImportantText}
+              {dictionaryList[language].HowToContactUs.texts.secondImportantText}
             </span>
-            <span className="notes-text-style">{texts.secondBoldText}</span>
+            <span className="notes-text-style">{dictionaryList[language].HowToContactUs.texts.secondBoldText}</span>
           </span>
           </ImportantNotes>
         </div>

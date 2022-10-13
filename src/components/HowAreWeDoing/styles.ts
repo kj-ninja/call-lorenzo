@@ -14,6 +14,10 @@ type ITileProps = {
   tile: ITile;
 }
 
+type ILanguageProps = {
+  language: string;
+}
+
 type IScrollCheckProps = {
   scrollOnFirstScreen: boolean;
 }
@@ -413,7 +417,7 @@ export const StyledTile = styled.div<ITileProps>`
     align-self: center;
     font-weight: bold;
     font-size: 24px;
-    padding-left: 20px;
+    padding-left: 16px;
 
     @media only screen and ${IDevice.desktopXS} {
       align-self: center;
@@ -424,7 +428,12 @@ export const StyledTile = styled.div<ITileProps>`
     display: flex;
     align-self: center;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 8px;
+    font-size: 15px;
+    
+    @media only screen and ${IDevice.desktopXS} {
+      font-size: 16px;
+    }
 
     @media only screen and ${IDevice.desktopXS} {
       align-self: center;
@@ -432,7 +441,7 @@ export const StyledTile = styled.div<ITileProps>`
   }
 `
 
-export const SectionFooter = styled.div`
+export const SectionFooter = styled.div<ILanguageProps>`
   width: 90%;
   display: flex;
   align-items: center;
@@ -452,6 +461,12 @@ export const SectionFooter = styled.div`
     background-color: ${props => (props.theme.colors.additionalTextColor)};
     height: 2px;
     width: 40px;
+  }
+  
+  .footer-texts {
+    display:${props => (props.language === "en") ? "flex" : "block"};
+    flex-direction:${props => (props.language === "en") ? "column" : "unset"} ;
+    align-items:${props => (props.language === "en") ? "center" : "unset"};
   }
   
   .footer-bold-text {
