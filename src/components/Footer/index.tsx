@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <FooterWrapper scrollOnFirstScreen={scrollOnFirstScreen}>
       <UpperLine scrollOnFirstScreen={scrollOnFirstScreen}>
-       <span className="phone-number">{(!scrollOnFirstScreen && dictionaryList[language].header.phoneNumber) || (!isMobile && dictionaryList[language].header.phoneNumber)}</span>
+       <span className="phone-number">{(!scrollOnFirstScreen && dictionaryList[language as keyof typeof dictionaryList].header.phoneNumber) || (!isMobile && dictionaryList[language as keyof typeof dictionaryList].header.phoneNumber)}</span>
       </UpperLine>
       <LowerLine>
         <div className="author-wrapper">

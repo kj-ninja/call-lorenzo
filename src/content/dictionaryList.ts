@@ -1,4 +1,5 @@
-import pl from "./pl.json";
-import en from  "./en.json";
+import {pl} from "./pl";
+import {en} from "./en";
 
-export const dictionaryList = { pl, en };
+
+export const dictionaryList = {pl, en};

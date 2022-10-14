@@ -16,11 +16,11 @@ const HowMuchItCost = () => {
 
   return (
     <Container>
-      <StyledHowMuchIsIt id={dictionaryList[language].header.navigation[2]}>
-        <h2>{dictionaryList[language].howMuchItCost.texts.title}</h2>
+      <StyledHowMuchIsIt id={dictionaryList[language as keyof typeof dictionaryList].header.navigation[2]}>
+        <h2>{dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.texts.title}</h2>
         <Pricing language={language}>
           <div className="table">
-            {dictionaryList[language].howMuchItCost.prices.map((price, key) => (
+            {dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.prices.map((price, key) => (
               <div key={key} className="table-row">
                 <div className='table-row__price-cell'>{price.price}</div>
                 <div className='table-row__km-cells'>
@@ -31,14 +31,14 @@ const HowMuchItCost = () => {
             ))}
           </div>
           <ImportantNotes>
-            <span className="payments-title">{dictionaryList[language].howMuchItCost.texts.firstPaymentTitle}</span>
-            <span>{dictionaryList[language].howMuchItCost.texts.paymentNoteText}</span>
+            <span className="payments-title">{dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.texts.firstPaymentTitle}</span>
+            <span>{dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.texts.paymentNoteText}</span>
           </ImportantNotes>
         </Pricing>
 
         <AdditionalFees>
           <div>
-            {dictionaryList[language].howMuchItCost.additionalFees.map((fee, key) => (
+            {dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.additionalFees.map((fee, key) => (
               <div key={key} className="table-row">
                 <div className="table-row-text-wrapper">
                   <div className="table-row__text-style">{fee.feesText}</div>
@@ -49,9 +49,9 @@ const HowMuchItCost = () => {
             ))}
           </div>
           <ImportantNotes className="important-notes">
-            <span className="payments-title">{dictionaryList[language].howMuchItCost.texts.secondPaymentTitle}</span>
+            <span className="payments-title">{dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.texts.secondPaymentTitle}</span>
             <div className='payment-methods'>
-              {dictionaryList[language].howMuchItCost.paymentMethods.map((method, key) => (
+              {dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.paymentMethods.map((method, key) => (
                 <span key={key}>-{method.method}</span>
               ))}
             </div>

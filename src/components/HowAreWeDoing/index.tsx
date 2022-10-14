@@ -15,9 +15,9 @@ const HowAreWeDoing: FC = () => {
   return (
     <Container>
       <StyledHowAreWeDoing scrollOnFirstScreen={scrollOnFirstScreen}>
-        <h2>{dictionaryList[language].howAreWeDoing.title}</h2>
+        <h2>{dictionaryList[language as keyof typeof dictionaryList].howAreWeDoing.title}</h2>
         <div className='tiles-container'>
-          {dictionaryList[language].howAreWeDoing.tiles.map((tile, key) => (
+          {dictionaryList[language as keyof typeof dictionaryList].howAreWeDoing.tiles.map((tile, key) => (
             <StyledTile key={key} className={`${tile.icon} number-${tile.order}`} tile={tile}>
               {
                 tile.description ?
@@ -37,7 +37,7 @@ const HowAreWeDoing: FC = () => {
         </div>
         <SectionFooter language={language}>
           <div className="horizontal-line" />
-          <span className="footer-texts">{dictionaryList[language].howAreWeDoing.footerText}<span className="footer-bold-text">{dictionaryList[language].howAreWeDoing.footerBoldText}</span></span>
+          <span className="footer-texts">{dictionaryList[language as keyof typeof dictionaryList].howAreWeDoing.footerText}<span className="footer-bold-text">{dictionaryList[language as keyof typeof dictionaryList].howAreWeDoing.footerBoldText}</span></span>
           <div className="horizontal-line" />
         </SectionFooter>
       </StyledHowAreWeDoing>
