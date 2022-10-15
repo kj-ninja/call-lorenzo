@@ -159,13 +159,14 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
   flex-direction: column;
   align-items: center;
   margin: ${(props) => (
-          props.scrollOnFirstScreen ? "127px 0 20px 0" : "20px 0 0 0"
+          props.scrollOnFirstScreen ? "100px 0 20px 0" : "100px 0 0 0"
   )};
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
 
   h2 {
     text-align: center;
     margin-bottom: 40px;
+    
   }
 
   .tiles-container {

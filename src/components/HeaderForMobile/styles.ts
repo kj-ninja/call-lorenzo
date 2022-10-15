@@ -1,19 +1,37 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 type IScrollCheckProps = {
   scrollOnFirstScreen?: boolean;
   scrollBack?: boolean;
 }
 
+const fade = keyframes`
+0% {
+  top: -90px;
+}
+  
+100% {
+  top: 0;
+}  
+`
+
+export const HeaderWrapper = styled.div<IScrollCheckProps>`
+  .sticky {
+    position: fixed;
+    top: -90px;
+    animation: ${fade} .33s;
+    animation-fill-mode: forwards;
+  }
+`
+
 export const StyledHeader = styled.header<IScrollCheckProps>`
   width: 100%;
   z-index: 999;
   background-color: ${(props) => props.theme.colors.primaryColor};
   color: ${(props) => props.theme.colors.white};
-  position: ${(props) => (props.scrollOnFirstScreen ? "fixed" : "unset")};
-  top: ${props => (props.scrollOnFirstScreen ? "0" : "-90px")};
-  transition: ${(props) => (props.scrollOnFirstScreen && "0.5s top cubic-bezier(.3, .73, .3, .74)")};
-
+  position: absolute;
+  top: 0;
+  
   h1 {
     text-align: center;
     padding: 15px 0;
@@ -37,18 +55,14 @@ export const TitleContainer = styled.div<IScrollCheckProps>`
 
 export const LeftTitleLine = styled.div<IScrollCheckProps>`
   width: 31%;
-  height: ${(props) => (
-          props.scrollOnFirstScreen ? "8px" : "13px"
-  )};
+  height: 8px;
   background: white;
   margin-top: 3px;
 `;
 
 export const RightTitleLine = styled.div<IScrollCheckProps>`
   width: 31%;
-  height: ${(props) => (
-          props.scrollOnFirstScreen ? "8px" : "13px"
-  )};
+  height: 8px;
   background: white;
   margin-top: 3px;
 `;
