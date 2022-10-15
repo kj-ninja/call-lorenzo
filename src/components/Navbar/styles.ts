@@ -13,13 +13,14 @@ const StyledNavbar = styled.nav<IIsMobileProps>`
   justify-content: center;
   position: fixed;
   width: 100%;
-  height: ${(props) => (props.scrollOnFirstScreen ? "calc(100vh - 78px)" : "calc(100vh - 87px)")};
-  z-index: 999;
+  z-index: 100;
+  height: calc(100vh - 127px);
   background-color: ${(props) => props.theme.colors.primaryColor};
   visibility: ${props => (props.toggleMenu ? "show" : "hidden")};
   opacity: ${props => (props.toggleMenu ? "1" : "0")};
   transition: visibility 4s linear 0.33s, opacity 0.4s linear;
   transition-delay: 0s;
+  pointer-events: ${props => (props.toggleMenu ? "initial" : "none")};
   
   ul {
     display: flex;

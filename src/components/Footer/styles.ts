@@ -31,6 +31,7 @@ export const FooterWrapper = styled.div<IScrollCheckProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  z-index: 1;
   background-color: white;
   width: 100%;
   max-height: 80px;
