@@ -1,12 +1,9 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import { getDataFromLocalStorage } from "../services/getDataFromLocalStorage";
-// import {dictionaryList} from "../content/dictionaryList";
-// import { IContent } from "../types";
 
 interface IContentContext {
   language: string;
   setLanguage: (language: string) => void;
-  // dictionary: IContent;
 }
 
 interface Props {
@@ -14,7 +11,6 @@ interface Props {
 }
 
 export const LanguageContext = createContext<IContentContext>({
-  // dictionary: dictionaryList.pl,
   language: "",
   setLanguage: () => {}
 });
