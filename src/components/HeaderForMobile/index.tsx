@@ -39,30 +39,11 @@ const HeaderForMobile = () => {
     <StyledHeader scrollOnFirstScreen={scrollOnFirstScreen}>
       <TitleContainer scrollBack={scrollBack}>
         <LeftTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
-        {
-          scrollOnFirstScreen ?
             <h2 onClick={scrollToTop}>{dictionaryList[language as keyof typeof dictionaryList].header.title}</h2>
-            :
-            <h1 onClick={scrollToTop}>{dictionaryList[language as keyof typeof dictionaryList].header.title}</h1>
-        }
         <RightTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
-        {
-          !scrollOnFirstScreen &&
-          <HamburgerMenu>
-            <input id="menu-toggle" type="checkbox" onClick={toggleMenu} checked={checked}
-                   onChange={(e: any) => setChecked(e.target.checked)}
-            />
-            <label className='menu-button-container' htmlFor="menu-toggle">
-              <div className='menu-button'></div>
-            </label>
-          </HamburgerMenu>
-
-        }
       </TitleContainer>
       <MiddleBlankLine scrollOnFirstScreen={scrollOnFirstScreen}/>
       <StyledLine scrollOnFirstScreen={scrollOnFirstScreen} scrollBack={scrollBack}>
-        {
-          scrollOnFirstScreen ?
             <>
               <div className="left-box"/>
               <span className="phone-number">{dictionaryList[language as keyof typeof dictionaryList].header.phoneNumber}</span>
@@ -75,9 +56,6 @@ const HeaderForMobile = () => {
                 </label>
               </HamburgerMenu>
             </>
-            :
-            null
-        }
       </StyledLine>
       <Navbar navigation={dictionaryList[language as keyof typeof dictionaryList].header.navigation} setToggleMenu={toggleMenu} toggleMenu={isOpen}/>
     </StyledHeader>

@@ -13,7 +13,7 @@ const StyledNavbar = styled.nav<IIsMobileProps>`
   justify-content: center;
   position: fixed;
   width: 100%;
-  height: ${(props) => (props.scrollOnFirstScreen ? "calc(100vh - 78px)" : "calc(100vh - 87px)")};
+  height: calc(100vh - 127px);
   z-index: 999;
   background-color: ${(props) => props.theme.colors.primaryColor};
   visibility: ${props => (props.toggleMenu ? "show" : "hidden")};

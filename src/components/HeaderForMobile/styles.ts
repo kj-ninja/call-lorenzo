@@ -31,14 +31,12 @@ export const TitleContainer = styled.div<IScrollCheckProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: ${props => (props.scrollBack ? "67px" : "37px")};
+  height: 37px;
   transition: height 0.1s linear;
 `;
 
 export const LeftTitleLine = styled.div<IScrollCheckProps>`
-  width: ${(props) => (
-    props.scrollOnFirstScreen ? "31%" : "25%"
-  )};
+  width: 31%;
   height: ${(props) => (
           props.scrollOnFirstScreen ? "8px" : "13px"
   )};
@@ -47,9 +45,7 @@ export const LeftTitleLine = styled.div<IScrollCheckProps>`
 `;
 
 export const RightTitleLine = styled.div<IScrollCheckProps>`
-  width: ${(props) => (
-          props.scrollOnFirstScreen ? "31%" : "10%"
-  )};
+  width: 31%;
   height: ${(props) => (
           props.scrollOnFirstScreen ? "8px" : "13px"
   )};
@@ -62,9 +58,7 @@ export const StyledLine = styled.div<IScrollCheckProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: ${(props) => (
-          props.scrollOnFirstScreen ? "38px" : "15px"
-  )};
+  height: 38px;
   
   .left-box {
     width: 30px;
@@ -86,9 +80,7 @@ export const StyledLine = styled.div<IScrollCheckProps>`
 
 export const MiddleBlankLine = styled.div<IScrollCheckProps>`
   width: 100%;
-  height: ${(props) => (
-          props.scrollOnFirstScreen ? "3px" : "5px"
-  )};
+  height: 3px;
   background-color: white;
 `
 
