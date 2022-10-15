@@ -41,9 +41,9 @@ const HeaderForMobile = () => {
         <LeftTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
           scrollOnFirstScreen ?
-            <h2 onClick={scrollToTop}>{dictionaryList[language].header.title}</h2>
+            <h2 onClick={scrollToTop}>{dictionaryList[language as keyof typeof dictionaryList].header.title}</h2>
             :
-            <h1 onClick={scrollToTop}>{dictionaryList[language].header.title}</h1>
+            <h1 onClick={scrollToTop}>{dictionaryList[language as keyof typeof dictionaryList].header.title}</h1>
         }
         <RightTitleLine scrollOnFirstScreen={scrollOnFirstScreen}/>
         {
@@ -65,7 +65,7 @@ const HeaderForMobile = () => {
           scrollOnFirstScreen ?
             <>
               <div className="left-box"/>
-              <span className="phone-number">{dictionaryList[language].header.phoneNumber}</span>
+              <span className="phone-number">{dictionaryList[language as keyof typeof dictionaryList].header.phoneNumber}</span>
               <HamburgerMenu>
                 <input id="menu-toggle" type="checkbox" onClick={toggleMenu} checked={checked}
                        onChange={(e: any) => setChecked(e.target.checked)}
@@ -79,7 +79,7 @@ const HeaderForMobile = () => {
             null
         }
       </StyledLine>
-      <Navbar navigation={dictionaryList[language].header.navigation} setToggleMenu={toggleMenu} toggleMenu={isOpen}/>
+      <Navbar navigation={dictionaryList[language as keyof typeof dictionaryList].header.navigation} setToggleMenu={toggleMenu} toggleMenu={isOpen}/>
     </StyledHeader>
   );
 };

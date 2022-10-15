@@ -50,9 +50,9 @@ const Tile: FC<Props> = (tile) => {
           <div className="toggle-container">
             <span className='tile-toggle' onClick={toggleHandler}>
               {!show ?
-                dictionaryList[language].WhatIsOurOffer.toggleText.show
+                dictionaryList[language as keyof typeof dictionaryList].WhatIsOurOffer.toggleText.show
                 :
-                dictionaryList[language].WhatIsOurOffer.toggleText.hide}
+                dictionaryList[language as keyof typeof dictionaryList].WhatIsOurOffer.toggleText.hide}
             </span>
           </div>
           </div>

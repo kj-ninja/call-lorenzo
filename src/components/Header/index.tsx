@@ -11,8 +11,8 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <h1>{dictionaryList[language].header.title}</h1>
-      <Navbar navigation={dictionaryList[language].header.navigation} />
+      <h1>{dictionaryList[language as keyof typeof dictionaryList].header.title}</h1>
+      <Navbar navigation={dictionaryList[language as keyof typeof dictionaryList].header.navigation} />
     </StyledHeader>
   );
 };

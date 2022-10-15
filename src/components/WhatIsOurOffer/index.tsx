@@ -12,10 +12,10 @@ const WhatIsOurOffer = () => {
 
   return (
     <Container>
-      <StyledWhatIsOurOffer id={dictionaryList[language].header.navigation[0]}>
-        <h2>{dictionaryList[language].WhatIsOurOffer.title}</h2>
+      <StyledWhatIsOurOffer id={dictionaryList[language as keyof typeof dictionaryList].header.navigation[0]}>
+        <h2>{dictionaryList[language as keyof typeof dictionaryList].WhatIsOurOffer.title}</h2>
         <div className="tiles-container">
-          {dictionaryList[language].WhatIsOurOffer.tileTexts.map((tile) => (
+          {dictionaryList[language as keyof typeof dictionaryList].WhatIsOurOffer.tileTexts.map((tile) => (
             <Tile tile={tile} key={tile.tileOrder}/>
           ))}
         </div>

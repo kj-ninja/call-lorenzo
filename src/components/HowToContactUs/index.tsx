@@ -20,29 +20,29 @@ const HowToContactUs = () => {
 
   return (
     <Container>
-      <StyledHowToContactUs id={dictionaryList[language].header.navigation[3]}>
-        <h2>{dictionaryList[language].HowToContactUs.texts.title}</h2>
+      <StyledHowToContactUs id={dictionaryList[language as keyof typeof dictionaryList].header.navigation[3]}>
+        <h2>{dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.title}</h2>
         <div className="container">
           <div className="container__first-tile">
-            <span className="first-tile__text">{dictionaryList[language].HowToContactUs.texts.firstContactUsTile}</span>
+            <span className="first-tile__text">{dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.firstContactUsTile}</span>
           </div>
           <ImageWrapper>
             <TelephoneImage src={phone} alt=""/>
             <SmsImage src={message} alt=""/>
           </ImageWrapper>
           <div className="container__second-tile">
-            {dictionaryList[language].HowToContactUs.texts.secondContactUsTile}
+            {dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.secondContactUsTile}
           </div>
           <ImportantNotes>
           <span>
-            {dictionaryList[language].HowToContactUs.texts.firstImportantText}
+            {dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.firstImportantText}
             <span className="notes-text-style">
-              {dictionaryList[language].HowToContactUs.texts.firstBoldText}
+              {dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.firstBoldText}
             </span>
             <span>
-              {dictionaryList[language].HowToContactUs.texts.secondImportantText}
+              {dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.secondImportantText}
             </span>
-            <span className="notes-text-style">{dictionaryList[language].HowToContactUs.texts.secondBoldText}</span>
+            <span className="notes-text-style">{dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.secondBoldText}</span>
           </span>
           </ImportantNotes>
         </div>

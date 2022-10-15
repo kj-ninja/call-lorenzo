@@ -1,117 +1,60 @@
-import {
-  ITile,
-  IPricing,
-  IAdditionalFees,
-  IPaymentMethod,
-  ICostText,
-  IWhenWeWork,
-  IContactUs,
-  IOurOfferTile,
-  IOurOfferToggle,
-  IWhoWeAreFirstParagraph,
-  IWhoWeAreSecondParagraph,
-  IWhoWeAreShortTexts,
-  IAdditionalInfo
-} from "../types";
-
-interface IContent {
+export const pl = {
   header: {
-    title: string;
-    phoneNumber: string;
-    navigation: string[];
-  };
-  howAreWeDoing: {
-    tiles: ITile[];
-    footerText: string;
-    footerBoldText: string;
-  },
-  howMuchItCost: {
-    prices: IPricing[];
-    additionalFees: IAdditionalFees[];
-    paymentMethods: IPaymentMethod[];
-    texts: ICostText;
-  },
-  whenWeWork: {
-    sectionTexts: IWhenWeWork
-  },
-  HowToContactUs: {
-    texts: IContactUs;
-  }
-  WhatIsOurOffer: {
-    title: string;
-    toggleText: IOurOfferToggle;
-    tileTexts: IOurOfferTile[];
-  },
-  WhoWeAre: {
-    shortTexts: IWhoWeAreShortTexts;
-    firstTextContainer: IWhoWeAreFirstParagraph;
-    secondTextContainer: IWhoWeAreSecondParagraph;
-  },
-  AdditionalInfo: {
-    additionalTexts: IAdditionalInfo;
-  },
-  Footer: {
-    text: string;
-  }
-}
-
-export const content: IContent = {
-  header: {
-    title: 'Call Lorenzo',
+    title: "Call Lorenzo",
     phoneNumber: "+48 537 522 788",
     navigation: [
-      'USŁUGI',
-      'GODZINY PRACY',
-      'CENNIK',
-      'KONTAKT',
-      'O NAS'
+      "Usługi",
+      "Godziny pracy",
+      "Cennik",
+      "Kontakt",
+      "O nas"
     ]
   },
   howAreWeDoing: {
+    title: "Jak działamy?",
     tiles: [
       {
-        description: 'jedziesz na imprez swoim samochodem',
+        description: "jedziesz na imprez swoim samochodem",
         icon: "null",
-        order: "1",
+        order: "1."
       },
       {
         description: null,
-        icon: 'auto-party',
-        order: "",
+        icon: "auto-party",
+        order: ""
       },
       {
         description: null,
-        icon: 'glass',
-        order: "",
+        icon: "glass",
+        order: ""
       },
       {
-        description: 'dobrze się bawisz popijając alkohol',
+        description: "dobrze się bawisz popijając alkohol",
         icon: "null",
-        order: "2",
+        order: "2."
       },
       {
-        description: 'dzwonisz lub piszesz do nas 1h przed wyjściem',
+        description: "dzwonisz lub piszesz do nas 1h przed wyjściem",
         icon: "null",
-        order: "3",
+        order: "3."
+      },
+      {description: null,
+        icon: "telefon",
+        order: ""
       },
       {
         description: null,
-        icon: 'telefon',
-        order: "",
+        icon: "auto-home",
+        order: ""
       },
       {
-        description: null,
-        icon: 'auto-home',
-        order: "",
-      },
-      {
-        description: 'bezpiecznie wracasz do domu swoim samochodem',
+        description: "bezpiecznie wracasz do domu swoim samochodem",
         icon: "null",
-        order: "4",
-      },
+        order: "4."
+      }
     ],
     footerText: "Usługa dostępna na terenie ",
-    footerBoldText: "Wrocławia i okolic",
+    footerBoldText: "Wrocławia i okolic"
   },
   howMuchItCost: {
     prices: [
@@ -136,7 +79,7 @@ export const content: IContent = {
         km: "30 km"
       },
       {
-        price: "200 zł",
+        pric: "200 zł",
         additionalCharacter: "do",
         km: "40 km"
       },
@@ -149,7 +92,7 @@ export const content: IContent = {
         price: "wycena indywidualna",
         additionalCharacter: ">",
         km: "50 km"
-      },
+      }
     ],
     additionalFees: [
       {
@@ -189,8 +132,7 @@ export const content: IContent = {
       description2: "jesteśmy do dyspozycji",
       additionalHours: "24/7"
     }
-  },
-  HowToContactUs: {
+  }, HowToContactUs: {
     texts: {
       title: "Jak się z nami skontaktować?",
       firstContactUsTile: "+48 799 269 844",
@@ -211,54 +153,38 @@ export const content: IContent = {
       {
         tileTitle: "KIEROWCA ZASTĘPCZY",
         tileOrder: "1.",
-        tileText: "Przyjechałeś swoim samochodem na imprezę, ale ze względu na spożyty alkohol nie możesz " +
-          "wrócić do domu?",
-        tileDescription: "Bezpiecznie odwieziemy Cię do domu twoim samochodem,\n" +
-          "tak żebyś spokojnie zaczął kolejny dzień." ,
+        tileText: "Przyjechałeś swoim samochodem na imprezę, ale ze względu na spożyty alkohol nie możesz wrócić do domu?",
+        tileDescription: "Bezpiecznie odwieziemy Cię do domu twoim samochodem, tak żebyś spokojnie zaczął kolejny dzień.",
         tileBoldText: "Zamów surrogate driver na terenie Wrocławia i okolic."
       },
       {
         tileTitle: "PRYWATNY KIEROWCA",
         tileOrder: "2.",
-        tileText: "Potrzebujesz kierowcy, który bezpiecznie\n" +
-          "poprowadzi Twój samochód?",
-        tileDescription: "Jesteśmy gotowi na wszelkie zlecenia. Podróże nie muszą\n" +
-          "wymagać zatrudnienia osobnego kierowcy, zlecenia mogą\n" +
-          "być realizowane przez nas doraźnie.",
+        tileText: "Potrzebujesz kierowcy, który bezpiecznie poprowadzi Twój samochód?",
+        tileDescription: "Jesteśmy gotowi na wszelkie zlecenia. Podróże nie muszą wymagać zatrudnienia osobnego kierowcy, zlecenia mogą być realizowane przez nas doraźnie.",
         tileBoldText: ""
       },
       {
         tileTitle: "ODWOŻENIE SAMOCHODU NA SERWIS/MYJNIĘ",
         tileOrder: "3.",
-        tileText: "Posiadasz kilka samochodów i nie masz czasu na ich\n" +
-          "obsługę oraz potrzebujesz kogoś, kto zadba\n" +
-          "o firmową flotę?",
-        tileDescription: "Oferujemy usługi outsourcingowe w zakresie obsługi\n" +
-          "samochodów, skupiające się na odprowadzeniu pojazdu\n" +
-          "na serwis,myjnię oraz w inne miejsce, w które tylko\n" +
-          "potrzebujesz.",
+        tileText: "Posiadasz kilka samochodów i nie masz czasu na ich obsługę oraz potrzebujesz kogoś, kto zadba o firmową flotę?",
+        tileDescription: "Oferujemy usługi outsourcingowe w zakresie obsługi samochodów, skupiające się na odprowadzeniu pojazdu na serwis,myjnię oraz w inne miejsce, w które tylko potrzebujesz.",
         tileBoldText: ""
       },
       {
         tileTitle: "RELOKACJA SAMOCHODÓW",
         tileOrder: "4.",
-        tileText: "Potrzebujesz przetransportować samochód między\n" +
-          "dwiema lokalizacjami?",
-        tileDescription: "Realizujemy zlecenia w zakresie relokacji pojazdów\n" +
-          "między umówionymi miejscami.",
+        tileText: "Potrzebujesz przetransportować samochód między dwiema lokalizacjami?",
+        tileDescription: "Realizujemy zlecenia w zakresie relokacji pojazdów między umówionymi miejscami.",
         tileBoldText: ""
       },
       {
         tileTitle: "KURIER EKSPRESOWY",
         tileOrder: "5.",
-        tileText: "Potrzebujesz kierowcy, który niezwłocznie wsiądzie\n" +
-          "do samochodu i dostarczy twoją przesyłkę we wskazane\n" +
-          "miejsce?",
-        tileDescription: "Oferujemy kierowcę „na już” który z Wrocławia i okolic\n" +
-          "dojedzie gdzie tylko potrzebujesz w jak najszybszym\n" +
-          "czasie.",
+        tileText: "Potrzebujesz kierowcy, który niezwłocznie wsiądzie do samochodu i dostarczy twoją przesyłkę we wskazane miejsce?",
+        tileDescription: "Oferujemy kierowcę „na już” który z Wrocławia i okolic dojedzie gdzie tylko potrzebujesz w jak najszybszym czasie.",
         tileBoldText: ""
-      },
+      }
     ]
   },
   WhoWeAre: {
@@ -268,8 +194,7 @@ export const content: IContent = {
     },
     firstTextContainer: {
       colorTextSentences: "Jesteśmy młodym zespołem kierowców, którzy posiadają duże doświadczenie, za kierownicą.",
-      standardText: "Prowadziliśmy szeroką gamę samochodów, co przekłada się na zapewnieniu Państwu jak najlepiej " +
-        "wykonywanych przez nas usług."
+      standardText: "Prowadziliśmy szeroką gamę samochodów, co przekłada się na zapewnieniu Państwu jak najlepiej wykonywanych przez nas usług."
     },
     secondTextContainer: {
       colorText: "Nasze umiejętności poparte są ",
@@ -278,23 +203,22 @@ export const content: IContent = {
       secondStandardText: "Jednocześnie jesteśmy finalistami konkursu ",
       secondBoldText: "„Najbezpieczniejszy Młody Kierowca” ",
       thirdStandardText: "w roku 2020 oraz 2021, organizowanego przez ",
-      thirdBoldText: "Polski Związek Motorowy.",
+      thirdBoldText: "Polski Związek Motorowy."
     }
   },
   AdditionalInfo: {
     additionalTexts: {
       colouredWords: "Odznaczamy się ",
-      firstParagraph: "wysoką kulturą osobistą, poufnością,odpowiedzialną i bezpieczną jazdą, a także wiedzą z zakresu" +
-        " udzielania pierwszej pomocy.",
+      firstParagraph: "wysoką kulturą osobistą, poufnością,odpowiedzialną i bezpieczną jazdą, a także wiedzą z zakresu udzielania pierwszej pomocy.",
       firstLineText: "BEZPIECZEŃSTWO",
       secondLineText: "PROFESJONALIZM",
       thirdLineText: "NIEZAWODNOŚĆ",
       fourthLineText: "KOMFORT",
       colouredSentence: "Jako firma, stawiamy na:",
-      colouredParagraph: "Staramy się zapewnić Państwu usługi na najwyższym możliwym poziomie"
+      colouredParagraph: "Staramy się zapewnić Państwu usługi na najwyższym możliwym poziomie."
     }
   },
   Footer: {
-    text: "Regulamin",
-  },
+    text: "Regulamin"
+  }
 };

@@ -14,18 +14,18 @@ const WhenWeWork = () => {
 
   return (
     <Container>
-      <StyledWhenWeWork language={language} id={dictionaryList[language].header.navigation[1]}>
-        <h2>{dictionaryList[language].whenWeWork.sectionTexts.title}</h2>
+      <StyledWhenWeWork language={language} id={dictionaryList[language as keyof typeof dictionaryList].header.navigation[1]}>
+        <h2>{dictionaryList[language as keyof typeof dictionaryList].whenWeWork.sectionTexts.title}</h2>
         <div className="container">
           <div className="container__first-tile">
-            {dictionaryList[language].whenWeWork.sectionTexts.coreHours}
+            {dictionaryList[language as keyof typeof dictionaryList].whenWeWork.sectionTexts.coreHours}
           </div>
           <ImageContainer />
           <div className="container__second-tile">
-            <span className='tile-description'>{dictionaryList[language].whenWeWork.sectionTexts.description} </span>
+            <span className='tile-description'>{dictionaryList[language as keyof typeof dictionaryList].whenWeWork.sectionTexts.description} </span>
             <span
-              className='tile-description tile-margin'>{dictionaryList[language].whenWeWork.sectionTexts.description2}
-              <span className='tile-hours'> {dictionaryList[language].whenWeWork.sectionTexts.additionalHours}</span>
+              className='tile-description tile-margin'>{dictionaryList[language as keyof typeof dictionaryList].whenWeWork.sectionTexts.description2}
+              <span className='tile-hours'> {dictionaryList[language as keyof typeof dictionaryList].whenWeWork.sectionTexts.additionalHours}</span>
             </span>
           </div>
         </div>
