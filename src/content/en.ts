@@ -3,18 +3,18 @@ export const en = {
     title: "Call Lorenzo",
     phoneNumber: "+48 537 522 788",
     navigation: [
-      "Usługi",
-      "Godziny pracy",
-      "Cennik",
-      "Kontakt",
-      "O nas"
+      "Services",
+      "Working hours",
+      "Pricelist",
+      "Contact",
+      "About us"
     ]
   },
   howAreWeDoing: {
-    title: "Jak działamy?",
+    title: "How we operate?",
     tiles: [
       {
-        description: "jedziesz na imprez swoim samochodem",
+        description: "Come to the party with your own car",
         icon: "null",
         order: "1."
       },
@@ -29,12 +29,12 @@ export const en = {
         order: ""
       },
       {
-        description: "dobrze się bawisz popijając alkohol",
+        description: "Have fun and don't worry about way back home",
         icon: "null",
         order: "2."
       },
       {
-        description: "dzwonisz lub piszesz do nas 1h przed wyjściem",
+        description: "Call Lorenzo or send us the message 1h before leaving",
         icon: "null",
         order: "3."
       },
@@ -48,61 +48,61 @@ export const en = {
         order: ""
       },
       {
-        description: "bezpiecznie wracasz do domu swoim samochodem",
+        description: "Surrogate driver safely drives you and your car home",
         icon: "null",
         order: "4."
       }
     ],
-    footerText: "Usługa dostępna na terenie ",
-    footerBoldText: "Wrocławia i okolic"
+    footerText: "The service is available in ",
+    footerBoldText: "Wrocław and the surrounding area"
   },
   howMuchItCost: {
     prices: [
       {
         price: "80 zł",
-        additionalCharacter: "do",
+        additionalCharacter: "up to",
         km: "5 km"
       },
       {
         price: "100 zł",
-        additionalCharacter: "do",
+        additionalCharacter: "up to",
         km: "10 km"
       },
       {
         price: "120 zł",
-        additionalCharacter: "do",
+        additionalCharacter: "up to",
         km: "20 km"
       },
       {
         price: "160 zł",
-        additionalCharacter: "do",
+        additionalCharacter: "up to",
         km: "30 km"
       },
       {
         pric: "200 zł",
-        additionalCharacter: "do",
+        additionalCharacter: "up to",
         km: "40 km"
       },
       {
         price: "240 zł",
-        additionalCharacter: "do",
+        additionalCharacter: "up to",
         km: "50 km"
       },
       {
-        price: "wycena indywidualna",
+        price: "individual pricing",
         additionalCharacter: ">",
         km: "50 km"
       }
     ],
     additionalFees: [
       {
-        feesText: "pierwsze 10 min",
-        feesDescription: "oczekiwania na klienta",
+        feesText: "first 10 minutes",
+        feesDescription: "wating for the client",
         feesValue: "0 zł"
       },
       {
-        feesText: "każde kolejne 10 min",
-        feesDescription: "oczekiwania",
+        feesText: "every next 10 minutes",
+        feesDescription: "of waiting",
         feesValue: "+ 10 zł"
       }
     ],
@@ -111,114 +111,114 @@ export const en = {
         method: "BLIK"
       },
       {
-        method: "gotówka"
+        method: "cash"
       },
       {
-        method: "przelew bankowy"
+        method: "bank transfer"
       }
     ],
     texts: {
-      title: "Ile to kosztuje?",
-      paymentNoteText: "W przypadku gdy, trasa kursu zaczyna się i kończy poza granicami miasta, cena może ulec zmianie.",
-      firstPaymentTitle: "! WAŻNE !",
-      secondPaymentTitle: "DOSTĘPNE FORMY PŁATNOŚCI"
+      title: "How much it costs?",
+      paymentNoteText: "Where the course route begins and ends outside the city area, the price may change.",
+      firstPaymentTitle: "! ATTENTION !",
+      secondPaymentTitle: "AVAILABLE FORMS OF PAYMENT"
     }
   },
   whenWeWork: {
     sectionTexts: {
-      title: "Kiedy Pracujemy?",
-      coreHours: "Codziennie 18:00 - 1:00*",
-      description: "*po wcześniejszym umówieniu,",
-      description2: "jesteśmy do dyspozycji",
+      title: "When do we work??",
+      coreHours: "Everyday 18:00 - 1:00*",
+      description: "*you can order our service in advance,",
+      description2: "and we will be at your disposal",
       additionalHours: "24/7"
     }
   }, HowToContactUs: {
     texts: {
-      title: "Jak się z nami skontaktować?",
+      title: "How to get contact with us?",
       firstContactUsTile: "+48 799 269 844",
-      secondContactUsTile: "zadzwoń lub napisz",
-      firstImportantText: "W przypadku usług we Wrocławiu lub okolic prosimy o kontakt",
-      firstBoldText: " min. 1h przed,",
-      secondImportantText: " w przypadku innych usług",
-      secondBoldText: " min. 1 dzień."
+      secondContactUsTile: "call or write",
+      firstImportantText: "For services in Wrocław or the surrounding area, please contact us",
+      firstBoldText: " min. 1h before,",
+      secondImportantText: " for other services",
+      secondBoldText: " min. 1 Day."
     }
   },
   WhatIsOurOffer: {
-    title: "Jaka jest nasza oferta?",
+    title: "What is our offer?",
     toggleText: {
-      show: "rozwiń",
-      hide: "zwiń"
+      show: "show",
+      hide: "hide"
     },
     tileTexts: [
       {
-        tileTitle: "KIEROWCA ZASTĘPCZY",
+        tileTitle: "SURROGATE DRIVER",
         tileOrder: "1.",
-        tileText: "Przyjechałeś swoim samochodem na imprezę, ale ze względu na spożyty alkohol nie możesz wrócić do domu?",
-        tileDescription: "Bezpiecznie odwieziemy Cię do domu twoim samochodem, tak żebyś spokojnie zaczął kolejny dzień.",
-        tileBoldText: "Zamów surrogate driver na terenie Wrocławia i okolic."
+        tileText: "You came to a party in your car, but you can't go home because of the alcohol you have consumed?",
+        tileDescription: "We will safely drive you home in your car, so that you can easily start the next day.",
+        tileBoldText: "Order a surrogate driver in Wrocław and the surrounding area."
       },
       {
-        tileTitle: "PRYWATNY KIEROWCA",
+        tileTitle: "PRIVATE DRIVER",
         tileOrder: "2.",
-        tileText: "Potrzebujesz kierowcy, który bezpiecznie poprowadzi Twój samochód?",
-        tileDescription: "Jesteśmy gotowi na wszelkie zlecenia. Podróże nie muszą wymagać zatrudnienia osobnego kierowcy, zlecenia mogą być realizowane przez nas doraźnie.",
+        tileText: "Do you need a driver who will drive your car safely?",
+        tileDescription: "We are ready for any orders. Travel doesn't have to be require the employment of a separate driver, orders maybe implemented by us on an ad hoc basis.",
         tileBoldText: ""
       },
       {
-        tileTitle: "ODWOŻENIE SAMOCHODU NA SERWIS/MYJNIĘ",
+        tileTitle: "TAKING THE CAR FOR THE SERVICE/CAR WASH",
         tileOrder: "3.",
-        tileText: "Posiadasz kilka samochodów i nie masz czasu na ich obsługę oraz potrzebujesz kogoś, kto zadba o firmową flotę?",
-        tileDescription: "Oferujemy usługi outsourcingowe w zakresie obsługi samochodów, skupiające się na odprowadzeniu pojazdu na serwis,myjnię oraz w inne miejsce, w które tylko potrzebujesz.",
+        tileText: "Do you have several cars and you don't have time to service them, and do you need someone to take care of your company's fleet?",
+        tileDescription: "We offer outsourcing services in the field of car service, focusing on delivering the vehicle to a service, car wash and other place where you need it.",
         tileBoldText: ""
       },
       {
-        tileTitle: "RELOKACJA SAMOCHODÓW",
+        tileTitle: "CAR RELOCATION",
         tileOrder: "4.",
-        tileText: "Potrzebujesz przetransportować samochód między dwiema lokalizacjami?",
-        tileDescription: "Realizujemy zlecenia w zakresie relokacji pojazdów między umówionymi miejscami.",
+        tileText: "Need to transport a car between two locations?",
+        tileDescription: "We carry out orders for the relocation of vehicles between agreed places.",
         tileBoldText: ""
       },
       {
-        tileTitle: "KURIER EKSPRESOWY",
+        tileTitle: "EXPRESS COURIER/QUICK SERVICE",
         tileOrder: "5.",
-        tileText: "Potrzebujesz kierowcy, który niezwłocznie wsiądzie do samochodu i dostarczy twoją przesyłkę we wskazane miejsce?",
-        tileDescription: "Oferujemy kierowcę „na już” który z Wrocławia i okolic dojedzie gdzie tylko potrzebujesz w jak najszybszym czasie.",
+        tileText: "Do you need a driver who will get into the car immediately and deliver your parcel to the indicated place?",
+        tileDescription: "We offer a driver who will get to wherever you need from Wrocław and the surrounding area as soon as possible.",
         tileBoldText: ""
       }
     ]
   },
   WhoWeAre: {
     shortTexts: {
-      title: "Kim jesteśmy?",
+      title: "Who we are?",
       source: "Żródło: www.pzm.pl"
     },
     firstTextContainer: {
-      colorTextSentences: "Jesteśmy młodym zespołem kierowców, którzy posiadają duże doświadczenie, za kierownicą.",
-      standardText: "Prowadziliśmy szeroką gamę samochodów, co przekłada się na zapewnieniu Państwu jak najlepiej wykonywanych przez nas usług."
+      colorTextSentences: "We are a young team of drivers who have extensive experience behind the wheel.",
+      standardText: "We drove a wide range of cars, which translated it is possible to provide you with the best services we provide. "
     },
     secondTextContainer: {
-      colorText: "Nasze umiejętności poparte są ",
-      firstStandardText: "kursami doskonalenia techniki jazdy takimi jak ",
+      colorText: "Our skills are supported by ",
+      firstStandardText: "courses perfectly driving techniques such as ",
       firstBoldText: "Ford Driving Skills for Life. ",
-      secondStandardText: "Jednocześnie jesteśmy finalistami konkursu ",
-      secondBoldText: "„Najbezpieczniejszy Młody Kierowca” ",
-      thirdStandardText: "w roku 2020 oraz 2021, organizowanego przez ",
-      thirdBoldText: "Polski Związek Motorowy."
+      secondStandardText: "At the same time, we are the finalists of the competition ",
+      secondBoldText: "„The safest Young Driver” ",
+      thirdStandardText: "in 2020 - 2022, organized by the ",
+      thirdBoldText: "Polish Motor Association."
     }
   },
   AdditionalInfo: {
     additionalTexts: {
-      colouredWords: "Odznaczamy się ",
-      firstParagraph: "wysoką kulturą osobistą, poufnością,odpowiedzialną i bezpieczną jazdą, a także wiedzą z zakresu udzielania pierwszej pomocy.",
-      firstLineText: "BEZPIECZEŃSTWO",
-      secondLineText: "PROFESJONALIZM",
-      thirdLineText: "NIEZAWODNOŚĆ",
-      fourthLineText: "KOMFORT",
-      colouredSentence: "Jako firma, stawiamy na:",
-      colouredParagraph: "Staramy się zapewnić Państwu usługi na najwyższym możliwym poziomie."
+      colouredWords: "We are characterized by ",
+      firstParagraph: "high personal culture, confidentiality, responsible and safe driving and knowledge in the field of first aid.",
+      firstLineText: "SECURITY",
+      secondLineText: "PROFESSIONALISM",
+      thirdLineText: "RELIABILITY",
+      fourthLineText: "COMFORT",
+      colouredSentence: "As a company, we focus on:",
+      colouredParagraph: "We strive to provide you with the highest possible level of service."
     }
   },
   Footer: {
-    text: "Regulamin"
+    text: "Statute"
   }
 };
