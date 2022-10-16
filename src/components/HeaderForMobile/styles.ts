@@ -77,6 +77,8 @@ export const StyledLine = styled.div<IScrollCheckProps>`
   .phone-number {
     font-weight: bold;
     padding-left: 5px;
+    text-decoration: none;
+    color: white;
   }
     
   .styled-line-wrapper {

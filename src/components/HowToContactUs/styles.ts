@@ -49,6 +49,8 @@ export const StyledHowToContactUs = styled.section`
     text-align: right;
     font-weight: bold;
     font-size: 24px;
+    text-decoration: none;
+    color: black;
 
     @media only screen and ${IDevice.desktopXS} {
       width: 100%;
@@ -116,6 +118,7 @@ export const TelephoneImage = styled.img`
   position: absolute;
   top: -40%;
   left: 8%;
+  z-index: -1;
 
   @media only screen and ${IDevice.tablet} {
     left: 30%
@@ -132,6 +135,7 @@ export const SmsImage = styled.img`
   position: absolute;
   top: -40%;
   left: 13%;
+  z-index: -1;
 
   @media only screen and ${IDevice.tablet} {
     left: 30%
