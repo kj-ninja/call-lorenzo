@@ -4,7 +4,6 @@ import { IDevice } from "../../settings/media";
 
 export const StyledWhoWeAre = styled.section`
   margin-top: 20px;
-  padding: 0 3%;
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   @media only screen and ${IDevice.desktopXS} {
@@ -15,11 +14,22 @@ export const StyledWhoWeAre = styled.section`
     padding: 0;
   }
   
-  h2 {
-    margin-bottom: 35px;
-    text-align: center;
+  .section-wrapper {
+    padding: 0 3%;
   }
-
+  
+  h2 {
+    width: 100%;
+    z-index: 999;
+    height: ${props => props.theme.additionalStyles.heightTitle};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: ${props => props.theme.additionalStyles.borderTitle};
+    border-top: ${props => props.theme.additionalStyles.borderTitle};
+    margin-bottom: 35px;
+  }
+  
   .content-container {
     display: flex;
     flex-wrap: wrap;

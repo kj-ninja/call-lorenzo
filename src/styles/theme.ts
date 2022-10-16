@@ -12,6 +12,8 @@ const theme = {
   additionalStyles: {
     desktop: "900px",
     lineHeight: "1.2",
+    borderTitle: "2px solid black",
+    heightTitle: "50px",
   }
 };
 

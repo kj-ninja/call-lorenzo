@@ -22,6 +22,7 @@ const WhoWeAre = () => {
     <Container>
       <StyledWhoWeAre id={dictionaryList[language as keyof typeof dictionaryList].header.navigation[4]}>
         <h2>{dictionaryList[language as keyof typeof dictionaryList].WhoWeAre.shortTexts.title}</h2>
+        <div className="section-wrapper">
         <div className='content-container'>
           <div className="first-paragraph">
             <div className="first-paragraph__coloured">{dictionaryList[language as keyof typeof dictionaryList].WhoWeAre.firstTextContainer.colorTextSentences}</div>
@@ -44,6 +45,7 @@ const WhoWeAre = () => {
             <Graphic src={nmk} alt=""/>
             <Graphic src={ford} alt=""/>
           </GraphicsContainer>
+        </div>
         </div>
       </StyledWhoWeAre>
     </Container>

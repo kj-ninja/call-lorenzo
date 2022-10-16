@@ -15,7 +15,12 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
     }
     
   h2 {
-    text-align: center;
+      height: ${props => props.theme.additionalStyles.heightTitle};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: ${props => props.theme.additionalStyles.borderTitle};
+      border-top: ${props => props.theme.additionalStyles.borderTitle};
   }
   
   .container {

@@ -9,10 +9,16 @@ export const StyledHowToContactUs = styled.section`
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   h2 {
+    width: 100%;
     margin-top: 40px;
     margin-bottom: 20px;
-    width: 70%;
-    text-align: center;
+    height: ${props => props.theme.additionalStyles.heightTitle};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: ${props => props.theme.additionalStyles.borderTitle};
+    border-top: ${props => props.theme.additionalStyles.borderTitle};
+
     @media only screen and ${IDevice.desktopXS} {
       margin: 50px 0;
     }

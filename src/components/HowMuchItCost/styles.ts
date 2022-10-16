@@ -17,10 +17,14 @@ export const StyledHowMuchIsIt = styled.section`
   
   h2 {
     margin: 0 0 20px 0;
-    text-align: center;
+    height: ${props => props.theme.additionalStyles.heightTitle};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: ${props => props.theme.additionalStyles.borderTitle};
+    border-top: ${props => props.theme.additionalStyles.borderTitle};
   }
 `
-
 export const Pricing = styled.div<IPriceProps>`
   width: 80%;
   align-self: flex-start;
