@@ -470,6 +470,10 @@ export const SectionFooter = styled.div<ILanguageProps>`
     flex-direction:${props => (props.language === "en") ? "column" : "unset"} ;
     align-items:${props => (props.language === "en") ? "center" : "unset"};
     font-weight: 400;
+
+    @media only screen and ${IDevice.desktopXS} {
+      width: 270px;
+    }
   }
   
   .footer-bold-text {
