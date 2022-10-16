@@ -26,7 +26,7 @@ export const HeaderWrapper = styled.div<IScrollCheckProps>`
 
 export const StyledHeader = styled.header<IScrollCheckProps>`
   width: 100%;
-  z-index: 999;
+  z-index: 1;
   background-color: ${(props) => props.theme.colors.primaryColor};
   color: ${(props) => props.theme.colors.white};
   position: absolute;
