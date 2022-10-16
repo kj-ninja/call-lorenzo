@@ -192,6 +192,7 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
     width: 100%;
     height: 100%;
     position: relative;
+    top: 15%;
     overflow: hidden;
 
     @media only screen and ${IDevice.desktopXS} {
@@ -199,74 +200,68 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
     }
 
     &:before {
-      content: "";
-      width: 100%;
-      height: 100%;
+      content: url(${leftCar});
+      width: 120px;
+      height: 50px;
       position: absolute;
-      background-image: url(${leftCar});
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 220px;
-      left: 25px;
+      top: 13%;
+      left: 40px;
+      right: 0;
       animation: ${moveCarParty} 1s ease;
       animation-iteration-count: 1;
-
-      @media only screen and ${IDevice.desktopXS} {
-        left: 5px;
-        animation: ${desktopMoveCarParty} 1s ease;
-        animation-iteration-count: 1;
-      }
-    }
-
+      margin-left: auto;
+      margin-right: auto;
+    
     &:after {
-      content: "";
-      width: 100%;
-      height: 100%;
+      content: url(${party});
+      width: 60px;
+      height: 65px;
       position: absolute;
-      background-image: url(${party});
-      background-repeat: no-repeat;
-      background-size: 260px;
-      background-position: center;
-      left: -50px;
-      bottom: 5px;
-
-      @media only screen and ${IDevice.desktopXS} {
-        left: -70px;
-      }
+      left: 0;
+      right: 120px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .right-glass-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+    &:before {
+      content: url(${rightGlass});
+      position: absolute;
+      width: 40px;
+      height: 55px;
+      right: 0;
+      left: 75px;
+      top: 20px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
   .glass-icon {
     width: 100%;
-    height: 120%;
+    height: 100%;
     position: relative;
-    background-image: url(${rightGlass});
-    background-repeat: no-repeat;
-    background-position-y: 45%;
-    background-position-x: 50%;
-    background-size: 165%;
-    right: -20px;
-    top: -13px;
+    display: flex;
     overflow: hidden;
-
-    @media only screen and ${IDevice.tablet} {
-      background-size: 75%;
-      right: -20px;
-      top: 0;
-    }
+    margin-bottom: 40px;
 
     &:before {
-      content: "";
-      width: 100%;
-      height: 100%;
+      content: url(${leftGlass});
+      width: 42px;
+      height: 55px;
+      top: 10px;
+      right: 0;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
       position: absolute;
-      background-image: url(${leftGlass});
-      background-repeat: no-repeat;
-      background-position-y: 45%;
-      background-position-x: 50%;
-      background-size: 165%;
-      top: 0;
-      right: 17px;
       animation: ${moveGlass} 1.9s linear;
       animation-iteration-count: 1;
       animation-delay: 0.4s;
@@ -274,8 +269,6 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
       visibility: hidden;
 
       @media only screen and ${IDevice.tablet} {
-        background-size: 75%;
-        right: 19px;
         animation: ${desktopMoveGlass} 1.2s linear;
         animation-delay: 0.5s;
         animation-iteration-count: 1;
@@ -284,17 +277,14 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
     }
 
     &:after {
-      content: "";
+      content: url(${sound});
       position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: url(${sound});
-      background-repeat: no-repeat;
-      background-position-y: 40%;
-      background-position-x: 50%;
-      background-size: 170%;
-      right: 9px;
-      bottom: 12px;
+      width: 20px;
+      height: 20px;
+      right: 0;
+      left: 45px;
+      margin-left: auto;
+      margin-right: auto;
       animation: ${soundAnimation} 1s linear;
       animation-iteration-count: 1;
       animation-delay: 1.7s;
@@ -302,7 +292,6 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
       visibility: hidden;
 
       @media only screen and ${IDevice.tablet} {
-        background-size: 75%;
         animation: ${desktopSoundAnimation} 1s linear;
         animation-iteration-count: 1;
         animation-delay: 1.3s;
@@ -350,53 +339,36 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
   .auto-home-icon {
     width: 100%;
     height: 100%;
+    top: 20%;
     position: relative;
     overflow: hidden;
 
     &:after {
-      content: "";
-      width: 100%;
-      height: 100%;
+      content: url(${home});
+      width: 60px;
+      height: 65px;
       position: absolute;
-      background-image: url(${home});
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 260px;
-      right: -65px;
-
-      @media only screen and ${IDevice.tablet} {
-        right: -65px;
-      }
-
-      @media only screen and ${IDevice.desktopXS} {
-        right: -40px;
-      }
+      right: 0;
+      left: 120px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &:before {
-      content: "";
-      width: 100%;
-      height: 100%;
+      content: url(${rightCar});
+      width: 120px;
+      height: 50px;
       position: absolute;
-      background-image: url(${rightCar});
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 121px;
-      right: 21px;
-      top: 9px;
+      top: 15px;
+      right: 40px;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
       animation: ${moveCarHome} 1s ease;
       animation-delay: 2.4s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       visibility: hidden;
-
-      @media only screen and ${IDevice.tablet} {
-        right: 18px;
-      }
-
-      @media only screen and ${IDevice.desktopXS} {
-        right: 44px;
-      }
     }
   }
 `;

@@ -83,21 +83,20 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
 `
 
 export const ImageContainer = styled.div`
-    width: 100%;
+    width: 200px;
     height: 220px;
-    background-image: url(${driver});
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-
-    @media only screen and ${IDevice.tablet} {
-        background-size: 60%;
-    }
-
-    @media only screen and ${IDevice.desktopXS} {
-        width: 70%;
-        align-self: center;
-        height: 300px;
-        background-size: 70%;
+    align-self: center;
+    position: relative;
+    
+    &:before {
+        content: url(${driver});
+        position: absolute;
+        width: 183px;
+        height: 150px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
     }
 `;
