@@ -31,17 +31,12 @@ export const StyledHeader = styled.header<IScrollCheckProps>`
   color: ${(props) => props.theme.colors.white};
   position: absolute;
   top: 0;
-  
-  h1 {
-    text-align: center;
-    padding: 15px 0;
-    letter-spacing: -1px;
-  }
 
   h2 {
     text-align: center;
     padding: 5px 0;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
+    font-family: ${props => props.theme.fontFamily.logoFont};
   }
 `;
 

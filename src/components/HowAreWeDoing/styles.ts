@@ -166,7 +166,7 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
   h2 {
     text-align: center;
     margin-bottom: 40px;
-    
+    font-weight: bold;
   }
 
   .tiles-container {
@@ -431,6 +431,7 @@ export const StyledTile = styled.div<ITileProps>`
     text-align: left;
     margin-left: 8px;
     font-size: 15px;
+    font-weight: bold;
     
     @media only screen and ${IDevice.desktopXS} {
       font-size: 16px;
@@ -468,6 +469,7 @@ export const SectionFooter = styled.div<ILanguageProps>`
     display:${props => (props.language === "en") ? "flex" : "block"};
     flex-direction:${props => (props.language === "en") ? "column" : "unset"} ;
     align-items:${props => (props.language === "en") ? "center" : "unset"};
+    font-weight: 400;
   }
   
   .footer-bold-text {
