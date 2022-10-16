@@ -31,15 +31,6 @@ const moveCarParty = keyframes`
   }
 `;
 
-const desktopMoveCarParty = keyframes`
-  0% {
-    transform: translate(300px);
-  }
-  100% {
-    transform: translate(0);
-  }
-`;
-
 const moveCarHome = keyframes`
   0% {
     transform: translate(-200px);
