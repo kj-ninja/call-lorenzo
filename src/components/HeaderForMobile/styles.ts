@@ -1,19 +1,37 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 type IScrollCheckProps = {
   scrollOnFirstScreen?: boolean;
   scrollBack?: boolean;
 }
 
+const fade = keyframes`
+0% {
+  top: -90px;
+}
+  
+100% {
+  top: 0;
+}  
+`
+
+export const HeaderWrapper = styled.div<IScrollCheckProps>`
+  .sticky {
+    position: fixed;
+    top: -90px;
+    animation: ${fade} .33s;
+    animation-fill-mode: forwards;
+  }
+`
+
 export const StyledHeader = styled.header<IScrollCheckProps>`
   width: 100%;
   z-index: 1;
   background-color: ${(props) => props.theme.colors.primaryColor};
   color: ${(props) => props.theme.colors.white};
-  position: ${(props) => (props.scrollOnFirstScreen ? "fixed" : "unset")};
-  top: ${props => (props.scrollOnFirstScreen ? "0" : "-90px")};
-  transition: ${(props) => (props.scrollOnFirstScreen && "0.5s top cubic-bezier(.3, .73, .3, .74)")};
-
+  position: absolute;
+  top: 0;
+  
   h1 {
     text-align: center;
     padding: 15px 0;
@@ -31,28 +49,20 @@ export const TitleContainer = styled.div<IScrollCheckProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: ${props => (props.scrollBack ? "67px" : "37px")};
+  height: 37px;
   transition: height 0.1s linear;
 `;
 
 export const LeftTitleLine = styled.div<IScrollCheckProps>`
-  width: ${(props) => (
-    props.scrollOnFirstScreen ? "31%" : "25%"
-  )};
-  height: ${(props) => (
-          props.scrollOnFirstScreen ? "8px" : "13px"
-  )};
+  width: 31%;
+  height: 8px;
   background: white;
   margin-top: 3px;
 `;
 
 export const RightTitleLine = styled.div<IScrollCheckProps>`
-  width: ${(props) => (
-          props.scrollOnFirstScreen ? "31%" : "10%"
-  )};
-  height: ${(props) => (
-          props.scrollOnFirstScreen ? "8px" : "13px"
-  )};
+  width: 31%;
+  height: 8px;
   background: white;
   margin-top: 3px;
 `;
@@ -62,9 +72,7 @@ export const StyledLine = styled.div<IScrollCheckProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: ${(props) => (
-          props.scrollOnFirstScreen ? "38px" : "15px"
-  )};
+  height: 38px;
   
   .left-box {
     width: 30px;
@@ -86,9 +94,7 @@ export const StyledLine = styled.div<IScrollCheckProps>`
 
 export const MiddleBlankLine = styled.div<IScrollCheckProps>`
   width: 100%;
-  height: ${(props) => (
-          props.scrollOnFirstScreen ? "3px" : "5px"
-  )};
+  height: 3px;
   background-color: white;
 `
 
