@@ -29,7 +29,9 @@ const HowAreWeDoing: FC = () => {
               }
               {
                 !tile.description ?
-                  <div className={`${tile.icon}-icon`}></div>
+                  <div className={`${tile.icon}-icon`}>
+                    {tile.icon === "glass" && <div className="right-glass-container"/>}
+                  </div>
                   : null
               }
             </StyledTile>

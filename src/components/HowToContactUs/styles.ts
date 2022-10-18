@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import phone from "../../assets/phone.svg";
+import message from "../../assets/message.svg";
 import { IDevice } from "../../settings/media";
 
 export const StyledHowToContactUs = styled.section`
@@ -101,49 +103,35 @@ export const StyledHowToContactUs = styled.section`
 `;
 
 export const ImageWrapper = styled.div`
-  display: flex;
-  width: 100%;
+  width: 300px;
   height: 150px;
+  align-self: center;
   position: relative;
-
-  @media only screen and ${IDevice.desktopXS} {
-    width: 400px;
-    align-self: center;
+  
+  &:before {
+    content: url(${phone});
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 30%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
   }
-`;
-
-export const TelephoneImage = styled.img`
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: -40%;
-  left: 8%;
-  z-index: -1;
-
-  @media only screen and ${IDevice.tablet} {
-    left: 30%
-  }
-
-  @media only screen and ${IDevice.desktopXS} {
-    left: 4%;
-  }
-`;
-
-export const SmsImage = styled.img`
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: -40%;
-  left: 13%;
-  z-index: -1;
-
-  @media only screen and ${IDevice.tablet} {
-    left: 30%
-  }
-
-  @media only screen and ${IDevice.desktopXS} {
-    left: unset;
-    right: 8%;
+  
+  &:after {
+    content: url(${message});
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    left: 30%;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 5px;
   }
 `;
 

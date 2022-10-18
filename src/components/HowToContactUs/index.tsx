@@ -5,15 +5,10 @@ import useDeviceDetect from "../hooks/useDeviceDetect";
 import { LanguageContext } from "../../context/language-context";
 import { dictionaryList } from "../../content/dictionaryList";
 
-import phone from "../../assets/phone.svg";
-import message from "../../assets/message.svg";
-
 import { Container } from "../../styles/styled/Container";
 import {
   StyledHowToContactUs,
   ImageWrapper,
-  TelephoneImage,
-  SmsImage,
   ImportantNotes
 } from "./styles";
 
@@ -36,10 +31,7 @@ const HowToContactUs = () => {
               :
               <span className="first-tile__text">{dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.firstContactUsTile}</span>}
           </div>
-          <ImageWrapper>
-            <TelephoneImage src={phone} alt=""/>
-            <SmsImage src={message} alt=""/>
-          </ImageWrapper>
+          <ImageWrapper />
           <div className="container__second-tile">
             {dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.secondContactUsTile}
           </div>
