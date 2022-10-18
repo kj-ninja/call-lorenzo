@@ -9,6 +9,7 @@ const StyledHeader = styled.header`
     text-align: center;
     border-bottom: 5px solid ${(props) => props.theme.colors.white};
     padding: 15px 0;
+    font-family: ${props => props.theme.fontFamily.logoFont};
   }
 `;
 

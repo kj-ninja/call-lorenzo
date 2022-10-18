@@ -79,7 +79,7 @@ export const en = {
         km: "30 km"
       },
       {
-        pric: "200 zł",
+        price: "200 zł",
         additionalCharacter: "up to",
         km: "40 km"
       },
@@ -126,7 +126,7 @@ export const en = {
   },
   whenWeWork: {
     sectionTexts: {
-      title: "When do we work??",
+      title: "When do we work?",
       coreHours: "Everyday 18:00 - 1:00*",
       description: "*you can order our service in advance,",
       description2: "and we will be at your disposal",

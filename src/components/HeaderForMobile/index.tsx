@@ -1,6 +1,8 @@
 import { useState, useContext } from "react";
+
 import useCheckScroll from "../hooks/useCheckScroll";
 import useDisableScroll from "../hooks/useDisableScroll";
+
 import Navbar from "../Navbar";
 
 import { LanguageContext } from "../../context/language-context";
@@ -16,6 +18,7 @@ import {
   StyledLine,
   HamburgerMenu
 } from "./styles";
+
 
 const HeaderForMobile = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -48,8 +51,12 @@ const HeaderForMobile = () => {
         <StyledLine scrollOnFirstScreen={scrollOnFirstScreen} scrollBack={scrollBack}>
           <>
             <div className="left-box"/>
-            <span
-              className="phone-number">{dictionaryList[language as keyof typeof dictionaryList].header.phoneNumber}</span>
+              <a
+              className="phone-number"
+              href={`tel:${dictionaryList[language as keyof typeof dictionaryList].header.phoneNumber}`}
+              >
+                {dictionaryList[language as keyof typeof dictionaryList].header.phoneNumber}
+            </a>
             <HamburgerMenu>
               <input id="menu-toggle" type="checkbox" onClick={toggleMenu} checked={checked}
                      onChange={(e: any) => setChecked(e.target.checked)}
