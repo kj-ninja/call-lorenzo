@@ -96,6 +96,7 @@ export const ImageContainer = styled.div`
   
   .source {
     font-size: 6px;
+    font-weight: bold;
     margin: 8px 10px;
 
     @media only screen and ${IDevice.desktopXS} {

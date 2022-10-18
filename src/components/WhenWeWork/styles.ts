@@ -30,13 +30,16 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
   }
   
   .container__first-tile {
-    width: 85%;
+    width: 88%;
     min-height: 65px;
+    height: 100%;
     display: flex;
     align-self: flex-start;
     justify-content: center;
     align-items: center;
-    border-radius: 0 10px 10px 0;  
+    border-radius: ${props => props.theme.tileBorder.rightBorders};
+    font-weight: bold;
+    font-size: 24px;
     background-color: ${(props) => (
             props.theme.colors.secondaryColor
     )};
@@ -48,7 +51,7 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
   }
   
   .container__second-tile {
-    width: 85%;
+    width: 88%;
     min-height: 75px;
     display: flex;
     align-self: flex-end;
@@ -56,7 +59,7 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
     align-items: center;
     justify-content: center;
     padding: ${props => (props.language === "pl") ? "0 30px" : "0 20px"};
-    border-radius: 10px 0 0 10px;
+    border-radius: ${props => props.theme.tileBorder.leftBorders};
     background-color: ${(props) => (
             props.theme.colors.secondaryColor
     )};
@@ -68,7 +71,7 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
   }
   
   .tile-description {
-    width: ${props => (props.language === "pl") ? "85%" : "90%"};
+    width: ${props => (props.language === "pl") ? "85%" : "95%"};
       @media only screen and ${IDevice.desktopXS} {
           text-align: center;
       }
@@ -88,21 +91,20 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
 `
 
 export const ImageContainer = styled.div`
-    width: 100%;
+    width: 200px;
     height: 220px;
-    background-image: url(${driver});
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-
-    @media only screen and ${IDevice.tablet} {
-        background-size: 60%;
-    }
-
-    @media only screen and ${IDevice.desktopXS} {
-        width: 70%;
-        align-self: center;
-        height: 300px;
-        background-size: 70%;
+    align-self: center;
+    position: relative;
+    
+    &:before {
+        content: url(${driver});
+        position: absolute;
+        width: 183px;
+        height: 150px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
     }
 `;

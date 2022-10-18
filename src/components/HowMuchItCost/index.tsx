@@ -30,7 +30,7 @@ const HowMuchItCost = () => {
               </div>
             ))}
           </div>
-          <ImportantNotes>
+          <ImportantNotes className="first-important-notes">
             <span className="payments-title">{dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.texts.firstPaymentTitle}</span>
             <span>{dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.texts.paymentNoteText}</span>
           </ImportantNotes>
@@ -42,13 +42,13 @@ const HowMuchItCost = () => {
               <div key={key} className="table-row">
                 <div className="table-row-text-wrapper">
                   <div className="table-row__text-style">{fee.feesText}</div>
-                  <div>{fee.feesDescription}</div>
+                  <div className="table-row__additional_text">{fee.feesDescription}</div>
                 </div>
                 <div className="table-row-fees-style">{fee.feesValue}</div>
               </div>
             ))}
           </div>
-          <ImportantNotes className="important-notes">
+          <ImportantNotes className="second-important-notes">
             <span className="payments-title">{dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.texts.secondPaymentTitle}</span>
             <div className='payment-methods'>
               {dictionaryList[language as keyof typeof dictionaryList].howMuchItCost.paymentMethods.map((method, key) => (
