@@ -181,11 +181,11 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
 
 
   .number-1, .number-3 {
-    border-radius: 0 10px 10px 0;
+    border-radius: ${props => props.theme.tileBorder.rightBorders};
   }
   
   .number-2, .number-4 {
-    border-radius: 10px 0 0 10px;
+    border-radius: ${props => props.theme.tileBorder.leftBorders};
   }
   
   .auto-party-icon {

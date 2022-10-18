@@ -32,9 +32,9 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
     align-self: flex-start;
     justify-content: center;
     align-items: center;
-    border-radius: 0 10px 10px 0;
-      font-weight: bold;
-      font-size: 24px;
+    border-radius: ${props => props.theme.tileBorder.rightBorders};
+    font-weight: bold;
+    font-size: 24px;
     background-color: ${(props) => (
             props.theme.colors.secondaryColor
     )};
@@ -54,7 +54,7 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
     align-items: center;
     justify-content: center;
     padding: ${props => (props.language === "pl") ? "0 30px" : "0 20px"};
-    border-radius: 10px 0 0 10px;
+    border-radius: ${props => props.theme.tileBorder.leftBorders};
     background-color: ${(props) => (
             props.theme.colors.secondaryColor
     )};

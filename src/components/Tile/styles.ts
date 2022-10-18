@@ -73,7 +73,7 @@ export const TileWrapper = styled.div`
 
     .tile {
       justify-content: flex-end;
-      border-radius: 0 10px 10px 0;
+      border-radius: ${props => props.theme.tileBorder.rightBorders};
       
       @media only screen and ${IDevice.tablet} {
         justify-content: space-around;
@@ -97,7 +97,7 @@ export const TileWrapper = styled.div`
 
     .tile {
       justify-content: center;
-      border-radius: 10px 0 0 10px;
+      border-radius: ${props => props.theme.tileBorder.leftBorders};
       
       @media only screen and ${IDevice.tablet} {
         justify-content: space-around;

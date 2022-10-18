@@ -33,7 +33,7 @@ export const StyledHowToContactUs = styled.section`
     align-self: flex-start;
     justify-content: flex-end;
     align-items: center;
-    border-radius: 0 10px 10px 0;
+    border-radius: ${props => props.theme.tileBorder.rightBorders};
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
@@ -68,7 +68,7 @@ export const StyledHowToContactUs = styled.section`
     align-items: flex-start;  
     justify-content: center;
     padding: 0 30px;
-    border-radius: 10px 0 0 10px;
+    border-radius: ${props => props.theme.tileBorder.leftBorders};
     font-weight: bold;
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
@@ -149,12 +149,14 @@ export const SmsImage = styled.img`
 
 export const ImportantNotes = styled.div`
   width: 85%;
-  height: 80px;
+  height: 85px;
   display: flex;
   align-self: flex-end;
+  align-items: center;
   margin: 45px 0 15px 0;
   padding: 10px;
   border: 3px solid ${(props) => props.theme.colors.secondaryColor};
+  border-radius: ${props => props.theme.tileBorder.leftBorders};
 
   .notes-text-style {
     font-weight: bolder;
@@ -163,6 +165,7 @@ export const ImportantNotes = styled.div`
   @media only screen and ${IDevice.desktopXS} {
    width: 45%;
    align-self: center;
-   margin: 80px 0 15px 0;
+   margin: 80px 0 15px 0;  
+   border-radius: ${props => props.theme.tileBorder.borderRadiusValue};
   }
 `;

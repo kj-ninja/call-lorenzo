@@ -19,6 +19,21 @@ export const StyledHowMuchIsIt = styled.section`
     margin: 0 0 20px 0;
     text-align: center;
   }
+  
+  .first-important-notes {
+    border-radius: ${props => props.theme.tileBorder.rightBorders};
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: ${props => props.theme.tileBorder.borderRadiusValue};
+    }
+  }
+  .second-important-notes {
+    border-radius: ${props => props.theme.tileBorder.leftBorders};
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: ${props => props.theme.tileBorder.borderRadiusValue};
+    }
+  }
 `
 
 export const Pricing = styled.div<IPriceProps>`
@@ -30,18 +45,18 @@ export const Pricing = styled.div<IPriceProps>`
     width: 100%;
   }
   .table > div:first-of-type {
-   border-radius: 0 10px 0 0;
+   border-radius: 0 ${props => props.theme.tileBorder.borderRadiusValue} 0 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0 0 0 0;
+      border-radius: 0;
     }
   }
   
   .table > div:last-of-type {
-    border-radius: 0 0 10px 0;
+    border-radius: 0 0 ${props => props.theme.tileBorder.borderRadiusValue} 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0 0 10px 10px;
+      border-radius: ${props => props.theme.tileBorder.bottomBorders};
     }
   }
   
@@ -91,10 +106,10 @@ export const AdditionalFees = styled.div`
   }
   
   > div div:first-of-type {
-    border-radius: 10px 0 0 0;
+    border-radius: ${props => props.theme.tileBorder.borderRadiusValue} 0 0 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 10px 10px 0 0;
+      border-radius: ${props => props.theme.tileBorder.topBorders};
     }
   }
   
@@ -102,7 +117,7 @@ export const AdditionalFees = styled.div`
     border-radius: 0 0 0 10px;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0 0 10px 10px;
+      border-radius: ${props => props.theme.tileBorder.bottomBorders};
     }
   }
   

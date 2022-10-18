@@ -16,7 +16,7 @@ export const en = {
       {
         description: "Come to the party with your own car",
         icon: "null",
-        order: "1."
+        order: "1"
       },
       {
         description: null,
@@ -31,12 +31,12 @@ export const en = {
       {
         description: "Have fun and don't worry about way back home",
         icon: "null",
-        order: "2."
+        order: "2"
       },
       {
         description: "Call Lorenzo or send us the message 1h before leaving",
         icon: "null",
-        order: "3."
+        order: "3"
       },
       {description: null,
         icon: "telefon",
@@ -50,7 +50,7 @@ export const en = {
       {
         description: "Surrogate driver safely drives you and your car home",
         icon: "null",
-        order: "4."
+        order: "4"
       }
     ],
     footerText: "The service is available in ",
