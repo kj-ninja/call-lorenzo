@@ -17,10 +17,29 @@ export const StyledHowMuchIsIt = styled.section`
   
   h2 {
     margin: 0 0 20px 0;
-    text-align: center;
+    height: ${props => props.theme.additionalStyles.heightTitle};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: ${props => props.theme.additionalStyles.borderTitle};
+    border-top: ${props => props.theme.additionalStyles.borderTitle};
+  }
+  
+  .first-important-notes {
+    border-radius: ${props => props.theme.tileBorder.rightBorders};
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: ${props => props.theme.tileBorder.borderRadiusValue};
+    }
+  }
+  .second-important-notes {
+    border-radius: ${props => props.theme.tileBorder.leftBorders};
+
+    @media only screen and ${IDevice.desktopXS} {
+      border-radius: ${props => props.theme.tileBorder.borderRadiusValue};
+    }
   }
 `
-
 export const Pricing = styled.div<IPriceProps>`
   width: 80%;
   align-self: flex-start;
@@ -30,18 +49,18 @@ export const Pricing = styled.div<IPriceProps>`
     width: 100%;
   }
   .table > div:first-of-type {
-   border-radius: 0 10px 0 0;
+   border-radius: 0 ${props => props.theme.tileBorder.borderRadiusValue} 0 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0 0 0 0;
+      border-radius: 0;
     }
   }
   
   .table > div:last-of-type {
-    border-radius: 0 0 10px 0;
+    border-radius: 0 0 ${props => props.theme.tileBorder.borderRadiusValue} 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0 0 10px 10px;
+      border-radius: ${props => props.theme.tileBorder.bottomBorders};
     }
   }
   
@@ -91,10 +110,10 @@ export const AdditionalFees = styled.div`
   }
   
   > div div:first-of-type {
-    border-radius: 10px 0 0 0;
+    border-radius: ${props => props.theme.tileBorder.borderRadiusValue} 0 0 0;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 10px 10px 0 0;
+      border-radius: ${props => props.theme.tileBorder.topBorders};
     }
   }
   
@@ -102,7 +121,7 @@ export const AdditionalFees = styled.div`
     border-radius: 0 0 0 10px;
 
     @media only screen and ${IDevice.desktopXS} {
-      border-radius: 0 0 10px 10px;
+      border-radius: ${props => props.theme.tileBorder.bottomBorders};
     }
   }
   
@@ -122,7 +141,7 @@ export const AdditionalFees = styled.div`
   .table-row-text-wrapper {
 
     @media only screen and ${IDevice.desktopXS} {
-      width: 50%;
+      width: 75%;
       display: flex;
     }
   }
@@ -132,7 +151,7 @@ export const AdditionalFees = styled.div`
   }
 
   .table-row__text-style {
-    width: 155px;
+    width: 175px;
     font-weight: bold;
     margin-right: 4px;
   }
@@ -140,6 +159,15 @@ export const AdditionalFees = styled.div`
   .table-row-fees-style {
     width: 60px;
     text-align: right;
+  }
+  
+  .table-row__additional_text {
+    @media only screen and ${IDevice.tablet} {
+      width: 170px;
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+    }
   }
 
   @media only screen and ${IDevice.desktopXS} {

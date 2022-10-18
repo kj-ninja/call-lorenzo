@@ -14,7 +14,7 @@ export const pl = {
     title: "Jak działamy?",
     tiles: [
       {
-        description: "jedziesz na imprez swoim samochodem",
+        description: "jedziesz na impreze swoim samochodem",
         icon: "null",
         order: "1."
       },
@@ -79,7 +79,7 @@ export const pl = {
         km: "30 km"
       },
       {
-        pric: "200 zł",
+        price: "200 zł",
         additionalCharacter: "do",
         km: "40 km"
       },

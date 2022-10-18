@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import phone from "../../assets/phone.svg";
+import message from "../../assets/message.svg";
 import { IDevice } from "../../settings/media";
 
 export const StyledHowToContactUs = styled.section`
@@ -9,10 +11,16 @@ export const StyledHowToContactUs = styled.section`
   line-height: ${(props) => (props.theme.additionalStyles.lineHeight)};
   
   h2 {
+    width: 100%;
     margin-top: 40px;
     margin-bottom: 20px;
-    width: 70%;
-    text-align: center;
+    height: ${props => props.theme.additionalStyles.heightTitle};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: ${props => props.theme.additionalStyles.borderTitle};
+    border-top: ${props => props.theme.additionalStyles.borderTitle};
+
     @media only screen and ${IDevice.desktopXS} {
       margin: 50px 0;
     }
@@ -33,7 +41,7 @@ export const StyledHowToContactUs = styled.section`
     align-self: flex-start;
     justify-content: flex-end;
     align-items: center;
-    border-radius: 0 10px 10px 0;
+    border-radius: ${props => props.theme.tileBorder.rightBorders};
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
@@ -44,9 +52,13 @@ export const StyledHowToContactUs = styled.section`
   }
 
   .first-tile__text {
-    width: 60%;
+    width: 80%;
     margin-right: 50px;
     text-align: right;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
 
     @media only screen and ${IDevice.desktopXS} {
       width: 100%;
@@ -61,14 +73,16 @@ export const StyledHowToContactUs = styled.section`
     display: flex;
     align-self: flex-end;
     flex-direction: column;
-    align-items: center;  
+    align-items: flex-start;  
     justify-content: center;
     padding: 0 30px;
-    border-radius: 10px 0 0 10px;
+    border-radius: ${props => props.theme.tileBorder.leftBorders};
+    font-weight: bold;
     background-color: ${(props) => (props.theme.colors.secondaryColor)};
 
       @media only screen and ${IDevice.desktopXS} {
         width: 600px;
+        align-items: center;
         align-self: center;
         margin-top: 20px;
       }
@@ -95,58 +109,48 @@ export const StyledHowToContactUs = styled.section`
 `;
 
 export const ImageWrapper = styled.div`
-  display: flex;
-  width: 100%;
+  width: 300px;
   height: 150px;
+  align-self: center;
   position: relative;
-
-  @media only screen and ${IDevice.desktopXS} {
-    width: 400px;
-    align-self: center;
+  
+  &:before {
+    content: url(${phone});
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 30%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
   }
-`;
-
-export const TelephoneImage = styled.img`
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: -40%;
-  left: 8%;
-
-  @media only screen and ${IDevice.tablet} {
-    left: 30%
-  }
-
-  @media only screen and ${IDevice.desktopXS} {
-    left: 4%;
-  }
-`;
-
-export const SmsImage = styled.img`
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: -40%;
-  left: 13%;
-
-  @media only screen and ${IDevice.tablet} {
-    left: 30%
-  }
-
-  @media only screen and ${IDevice.desktopXS} {
-    left: unset;
-    right: 8%;
+  
+  &:after {
+    content: url(${message});
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    left: 30%;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 5px;
   }
 `;
 
 export const ImportantNotes = styled.div`
   width: 85%;
-  height: 80px;
+  height: 85px;
   display: flex;
   align-self: flex-end;
+  align-items: center;
   margin: 45px 0 15px 0;
   padding: 10px;
   border: 3px solid ${(props) => props.theme.colors.secondaryColor};
+  border-radius: ${props => props.theme.tileBorder.leftBorders};
 
   .notes-text-style {
     font-weight: bolder;
@@ -155,6 +159,7 @@ export const ImportantNotes = styled.div`
   @media only screen and ${IDevice.desktopXS} {
    width: 45%;
    align-self: center;
-   margin: 80px 0 15px 0;
+   margin: 80px 0 15px 0;  
+   border-radius: ${props => props.theme.tileBorder.borderRadiusValue};
   }
 `;

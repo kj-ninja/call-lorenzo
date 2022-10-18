@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 877.28 920.07" style="enable-background:new 0 0 877.28 920.07;" xml:space="preserve">
+	 viewBox="0 0 176.76 187.15" style="enable-background:new 0 0 176.76 187.15;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
 	.st1{fill:#172A42;}
@@ -32,16 +32,24 @@
 	.st26{fill:#242E47;}
 	.st27{fill:#FFFFFF;stroke:#222221;stroke-width:6;stroke-miterlimit:10;}
 	.st28{fill:none;stroke:#222221;stroke-width:5.7894;stroke-miterlimit:10;}
-	.st29{fill:#222221;stroke:#222221;stroke-width:1.8006;stroke-miterlimit:10;}
-	.st30{fill:#222221;stroke:#222221;stroke-width:2;stroke-miterlimit:10;}
-	.st31{fill:none;stroke:#ABC0E4;stroke-width:8;stroke-miterlimit:10;}
-	.st32{fill:none;stroke:#ABC0E4;stroke-width:8.7432;stroke-miterlimit:10;}
+	.st29{fill:#FFFFFF;stroke:#222221;stroke-width:2.8346;stroke-miterlimit:10;}
+	.st30{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:0.2835;stroke-miterlimit:10;}
+	.st31{fill:#222221;stroke:#222221;stroke-width:1.8006;stroke-miterlimit:10;}
+	.st32{fill:#222221;stroke:#222221;stroke-width:2;stroke-miterlimit:10;}
+	.st33{fill:none;stroke:#ABC0E4;stroke-width:8;stroke-miterlimit:10;}
+	.st34{fill:none;stroke:#ABC0E4;stroke-width:8.7432;stroke-miterlimit:10;}
+	.st35{fill:#1D1D1B;}
+	.st36{fill:none;stroke:#FFFFFF;stroke-width:4.5277;stroke-miterlimit:10;}
+	.st37{fill:#C7102E;}
+	.st38{fill:#FEFEFE;}
+	.st39{fill:#012169;}
+	.st40{fill:#FDFDFD;}
+	.st41{fill:#D8143A;}
 </style>
 <g>
-	<path class="st6" d="M600.44,499.68H512c-19.23,0-34.82-15.59-34.82-34.82v-88.44c0-19.23,15.59-34.82,34.82-34.82h88.44
-		c19.23,0,34.82,15.59,34.82,34.82v88.44C635.26,484.09,619.67,499.68,600.44,499.68z"/>
-	<path class="st6" d="M557.15,382.84c-22.86,0-41.38,15.69-41.38,35.04c0,5.37,1.47,10.45,4.03,15l-2.32,9.65l-2.63,10.93
-		l12.91-2.23l11.16-1.93c5.51,2.3,11.69,3.63,18.25,3.63c22.86,0,41.39-15.69,41.39-35.04
-		C598.54,398.52,580.01,382.84,557.15,382.84z"/>
+	<path class="st6" d="M133.92,177.96H45.48c-19.23,0-34.82-15.59-34.82-34.82V54.7c0-19.23,15.59-34.82,34.82-34.82h88.44
+		c19.23,0,34.82,15.59,34.82,34.82v88.44C168.74,162.37,153.15,177.96,133.92,177.96z"/>
+	<path class="st6" d="M90.63,61.11c-22.86,0-41.38,15.69-41.38,35.04c0,5.37,1.47,10.45,4.03,15l-2.32,9.65l-2.63,10.93l12.91-2.23
+		l11.16-1.93c5.51,2.3,11.69,3.63,18.25,3.63c22.86,0,41.39-15.69,41.39-35.04C132.02,76.8,113.49,61.11,90.63,61.11z"/>
 </g>
 </svg>
