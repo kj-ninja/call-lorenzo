@@ -16,7 +16,7 @@ export const pl = {
       {
         description: "jedziesz na impreze swoim samochodem",
         icon: "null",
-        order: "1."
+        order: "1"
       },
       {
         description: null,
@@ -31,12 +31,12 @@ export const pl = {
       {
         description: "Dobrze się bawisz i nie martwisz się o powrót",
         icon: "null",
-        order: "2."
+        order: "2"
       },
       {
         description: "dzwonisz lub piszesz do nas 1h przed wyjściem",
         icon: "null",
-        order: "3."
+        order: "3"
       },
       {description: null,
         icon: "telefon",
@@ -50,7 +50,7 @@ export const pl = {
       {
         description: "bezpiecznie wracasz do domu swoim samochodem",
         icon: "null",
-        order: "4."
+        order: "4"
       }
     ],
     footerText: "Usługa dostępna na terenie ",
