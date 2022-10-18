@@ -56,7 +56,7 @@ export const StyledAdditionalInfo = styled.section`
   
   .third-paragraph {
     width: 81%;
-    margin: 150px 0;
+    margin: 35px 0 80px 0;
     text-align: center;
 
     @media only screen and ${IDevice.desktopXS} {
