@@ -22,7 +22,7 @@ const HowAreWeDoing: FC = () => {
               {
                 tile.description ?
                 <>
-                <span className="tile-order">{tile.order}</span>
+                <span className="tile-order">{tile.order}.</span>
                 <span className="tile-description">{tile.description}</span>
                 </>
                 : null

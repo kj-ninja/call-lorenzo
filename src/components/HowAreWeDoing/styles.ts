@@ -157,7 +157,7 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
   h2 {
     text-align: center;
     margin-bottom: 40px;
-    
+    font-weight: bold;
   }
 
   .tiles-container {
@@ -172,11 +172,11 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
 
 
   .number-1, .number-3 {
-    border-radius: 0 10px 10px 0;
+    border-radius: ${props => props.theme.tileBorder.rightBorders};
   }
   
   .number-2, .number-4 {
-    border-radius: 10px 0 0 10px;
+    border-radius: ${props => props.theme.tileBorder.leftBorders};
   }
   
   .auto-party-icon {
@@ -388,6 +388,7 @@ export const StyledTile = styled.div<ITileProps>`
     text-align: left;
     margin-left: 8px;
     font-size: 15px;
+    font-weight: bold;
     
     @media only screen and ${IDevice.desktopXS} {
       font-size: 16px;
@@ -425,6 +426,11 @@ export const SectionFooter = styled.div<ILanguageProps>`
     display:${props => (props.language === "en") ? "flex" : "block"};
     flex-direction:${props => (props.language === "en") ? "column" : "unset"} ;
     align-items:${props => (props.language === "en") ? "center" : "unset"};
+    font-weight: 400;
+
+    @media only screen and ${IDevice.desktopXS} {
+      width: 270px;
+    }
   }
   
   .footer-bold-text {

@@ -1,5 +1,7 @@
 import { useContext } from "react";
 
+import useDeviceDetect from "../hooks/useDeviceDetect";
+
 import { LanguageContext } from "../../context/language-context";
 import { dictionaryList } from "../../content/dictionaryList";
 
@@ -11,6 +13,7 @@ import {
 } from "./styles";
 
 const HowToContactUs = () => {
+  const { isMobile } = useDeviceDetect();
   const { language } = useContext(LanguageContext);
 
   return (
@@ -19,7 +22,14 @@ const HowToContactUs = () => {
         <h2>{dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.title}</h2>
         <div className="container">
           <div className="container__first-tile">
-            <span className="first-tile__text">{dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.firstContactUsTile}</span>
+            { isMobile ?
+              <a
+                className="first-tile__text"
+                href={`tel:${dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.firstContactUsTile}`}>
+                {dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.firstContactUsTile}
+              </a>
+              :
+              <span className="first-tile__text">{dictionaryList[language as keyof typeof dictionaryList].HowToContactUs.texts.firstContactUsTile}</span>}
           </div>
           <ImageWrapper />
           <div className="container__second-tile">

@@ -60,6 +60,11 @@ export const UpperLine = styled.div<IScrollCheckProps>`
     //only for version 2.0 without sticky desktop header
     height: 39px;
   }
+  
+  .phone-number {
+    text-decoration: none;
+    color: white;
+  }
 `;
 
 export const LowerLine = styled.div`
