@@ -137,7 +137,7 @@ export const AdditionalFees = styled.div`
   .table-row-text-wrapper {
 
     @media only screen and ${IDevice.desktopXS} {
-      width: 50%;
+      width: 75%;
       display: flex;
     }
   }
@@ -147,7 +147,7 @@ export const AdditionalFees = styled.div`
   }
 
   .table-row__text-style {
-    width: 155px;
+    width: 175px;
     font-weight: bold;
     margin-right: 4px;
   }
@@ -155,6 +155,15 @@ export const AdditionalFees = styled.div`
   .table-row-fees-style {
     width: 60px;
     text-align: right;
+  }
+  
+  .table-row__additional_text {
+    @media only screen and ${IDevice.tablet} {
+      width: 170px;
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+    }
   }
 
   @media only screen and ${IDevice.desktopXS} {

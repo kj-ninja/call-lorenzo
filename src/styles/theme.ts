@@ -7,7 +7,8 @@ const theme = {
     white: "#ffffff",
   },
   fontFamily: {
-    primaryFont: '"Roboto", "sans-serif"',
+    logoFont: '"Lobster", cursive',
+    primaryFont: '"Nunito Sans", sans-serif'
   },
   additionalStyles: {
     desktop: "900px",

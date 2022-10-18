@@ -138,7 +138,7 @@ export const TileWrapper = styled.div`
 export const StyledTile = styled.div`
   width: 95%;
   height: 55px;
-  font-weight: bolder;
+  font-weight: bold;
   background-color: ${(props) => (props.theme.colors.secondaryColor)};
   margin: 20px 0;
 

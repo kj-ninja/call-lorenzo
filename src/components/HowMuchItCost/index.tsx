@@ -42,7 +42,7 @@ const HowMuchItCost = () => {
               <div key={key} className="table-row">
                 <div className="table-row-text-wrapper">
                   <div className="table-row__text-style">{fee.feesText}</div>
-                  <div>{fee.feesDescription}</div>
+                  <div className="table-row__additional_text">{fee.feesDescription}</div>
                 </div>
                 <div className="table-row-fees-style">{fee.feesValue}</div>
               </div>
