@@ -25,13 +25,16 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
   }
   
   .container__first-tile {
-    width: 85%;
+    width: 88%;
     min-height: 65px;
+    height: 100%;
     display: flex;
     align-self: flex-start;
     justify-content: center;
     align-items: center;
-    border-radius: 0 10px 10px 0;  
+    border-radius: 0 10px 10px 0;
+      font-weight: bold;
+      font-size: 24px;
     background-color: ${(props) => (
             props.theme.colors.secondaryColor
     )};
@@ -43,7 +46,7 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
   }
   
   .container__second-tile {
-    width: 85%;
+    width: 88%;
     min-height: 75px;
     display: flex;
     align-self: flex-end;
@@ -63,7 +66,7 @@ export const StyledWhenWeWork = styled.section<ILanguageProps>`
   }
   
   .tile-description {
-    width: ${props => (props.language === "pl") ? "85%" : "90%"};
+    width: ${props => (props.language === "pl") ? "85%" : "95%"};
       @media only screen and ${IDevice.desktopXS} {
           text-align: center;
       }
