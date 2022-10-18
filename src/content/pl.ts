@@ -29,7 +29,7 @@ export const pl = {
         order: ""
       },
       {
-        description: "Dobrze się bawisz i nie martwisz się o powrót",
+        description: "dobrze się bawisz i nie martwisz się o powrót",
         icon: "null",
         order: "2"
       },
