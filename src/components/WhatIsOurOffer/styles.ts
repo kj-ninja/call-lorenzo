@@ -10,7 +10,12 @@ export const StyledWhatIsOurOffer = styled.section`
   }
   
   h2 {
-    text-align: center;
+    height: ${props => props.theme.additionalStyles.heightTitle};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: ${props => props.theme.additionalStyles.borderTitle};
+    border-top: ${props => props.theme.additionalStyles.borderTitle};
     margin: 10px 0;
     
     @media only screen and ${IDevice.desktopXS} {

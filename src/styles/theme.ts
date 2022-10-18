@@ -13,6 +13,8 @@ const theme = {
   additionalStyles: {
     desktop: "900px",
     lineHeight: "1.2",
+    borderTitle: "2px solid black",
+    heightTitle: "50px",
   },
   tileBorder: {
     leftBorders: "10px 0 0 10px",
