@@ -202,7 +202,8 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
       animation-iteration-count: 1;
       margin-left: auto;
       margin-right: auto;
-    
+    }
+
     &:after {
       content: url(${party});
       width: 60px;
@@ -298,31 +299,24 @@ export const StyledHowAreWeDoing = styled.section<IScrollCheckProps>`
     overflow: hidden;
 
     &:before {
-      content: "";
-      width: 300%;
-      height: 330%;
-      bottom: -130px;
-      left: -50px;
+      content: url(${calling});
+      width: 70px;
+      height: 66px;
       position: absolute;
-      background-image: url(${calling});
-      background-repeat: no-repeat;
-      background-size: 70%;
-      background-position-y: 40%;
-      background-position-x: -50%;
+      right: 0;
+      left: 0;
+      top: 10px;
+      bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
       animation: ${shake} 0.5s;
       animation-iteration-count: 1.5;
       animation-delay: 1.9s;
 
       @media only screen and ${IDevice.tablet} {
-        left: -33px;
-        background-size: 30%;
-        background-position-y: 40%;
-        background-position-x: -1%;
       }
 
       @media only screen and ${IDevice.desktopXS} {
-        left: 12px;
-        background-position-x: -7%;
       }
     }
   }
