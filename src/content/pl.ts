@@ -14,7 +14,7 @@ export const pl = {
     title: "Jak działamy?",
     tiles: [
       {
-        description: "jedziesz na impreze swoim samochodem",
+        description: "jedziesz na imprezę swoim samochodem",
         icon: "null",
         order: "1"
       },
