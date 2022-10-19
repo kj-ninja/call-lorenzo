@@ -20,7 +20,7 @@ const StyledNavbar = styled.nav<IIsMobileProps>`
   opacity: ${props => (props.toggleMenu ? "1" : "0")};
   transition: visibility 4s linear 0.33s, opacity 0.4s linear;
   transition-delay: 0s;
-  pointer-events: ${props => (props.toggleMenu ? "initial" : "none")};
+  pointer-events: ${props => ((props.toggleMenu || !props.isMobile) ? "initial" : "none")};
   
   ul {
     display: flex;
